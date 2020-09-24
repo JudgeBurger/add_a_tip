@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&family=Zilla+Slab&display=swap');
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+
+$nav-bar: #3982a6;
+$widget-color: #E5DBD4;
+$light-color: #E6E6E0;
+$dark-color: #3E3E3E;
+
+$font-text: 'Zilla Slab', serif;
+$font-title: 'Grandstander', cursive;
+
+$size-text: calc(16px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+$size-quote:18px;
+$size-footer-text: 10px;
+$size-navbar-text: 18px;
+$size-intermediate :calc(2.5 * var($size-text));
+$size-title: calc(3 * var($size-text));
+
+$padding : 20px;
+$padding-sm : calc(var($padding) *2);
+$padding-lg : calc(var($padding) *4);
+
+$margin: 20px;
+$margin-sm : calc(var($margin) *2);
+$margin-lg : calc(var($margin) *4);
+
+$theme-colors: (
+    "primary": #BBCED7,
+    "danger": #965D5C,
+    "info": #BDC649,
+);

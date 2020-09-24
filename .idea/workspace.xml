@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600887810088</updated>
       <workItem from="1600887811110" duration="3888000" />
-      <workItem from="1600964490075" duration="14163000" />
+      <workItem from="1600964490075" duration="15472000" />
     </task>
     <servers />
   </component>
@@ -182,10 +174,10 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966272707" />
-    <state x="654" y="330" width="602" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600972900579">
+    <state x="654" y="330" width="594" height="413" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600981526699">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
-    <state x="654" y="330" width="602" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1920.1001@0.29.1920.1001" timestamp="1600972900579" />
+    <state x="654" y="330" width="594" height="413" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1920.1001@0.29.1920.1001" timestamp="1600981526699" />
     <state x="727" y="182" width="456" height="701" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1600966316159">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
