@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('new') }}
+{% endblock %}
+
+
+{% block title %}New Tips{% endblock %}
+
+{% block body %}
+    <h1>Create new Tips</h1>
+
+    <h3><span>HTML</span> & <span> CSS</span> form validation using pattern RegEx</h3>
+    <form>
+        <label>No Spaces , No Special Characters <span><strong>Pattern</strong> - [A-Za-z0-9]{5,50}</span></label>
+        <input autocomplete="off" type="text" pattern="[A-Za-z0-9]{5,50}" required="" />
+        <label>Twiter User (@username) <span><strong>Pattern</strong> - @[A-Za-z0-9_{5,50}$</span></label>
+        <input autocomplete="off" type="text" pattern="@[A-Za-z0-9]{5,50}" required="" />
+        <label>Tag (#tag) <span><strong>Pattern</strong> - #[A-Za-z0-9_{3,15}</span></label>
+        <input autocomplete="off" type="text" pattern="#[A-Za-z0-9]{3,15}" required="" />
+    </form>
+    <form>
+        <label>Domain Name (http://www.name.ext) <span><strong>Pattern</strong> - http://www\.[A-Za-z0-9]{3,50}\.[-A-Za-z0-9]{2,3}</span></label>
+        <input autocomplete="off" type="text" pattern="http://www\.[A-Za-z0-9]{3,50}\.[-A-Za-z0-9]{2,3}" required="" />
+        <label>Only Gmail (name@gmail.com) <span><strong>Pattern</strong> - ([A-Za-z0-9]{1,50}@gmail.com)</span></label>
+        <input autocomplete="off" type="text" pattern="([A-Za-z0-9]{1,50}@gmail.com)" required="" />
+        <label>Card Number (0000-0000-0000-0000) <span><strong>Pattern</strong> - (([0-9]{4})-([0-9]{4})-([0-9]{4})-([0-9]{4}))</span></label>
+        <input autocomplete="off" type="text" pattern="(([0-9]{4})-([0-9]{4})-([0-9]{4})-([0-9]{4}))" required="" />
+    </form>
+    <div>
+        By <a href="https://twitter.com/JesGraPa" target="_blank">@JesGraPa</a> -
+        <a href="https://codepen.io/JesGraPa/" target="_blank">More Pens</a>
+        <br><br>
+    </div>
+
+    <a href="{{ path('tips_index') }}">back to list</a>
+{% endblock %}
