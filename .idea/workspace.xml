@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_footer.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -143,7 +164,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Framework" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -163,13 +184,32 @@
       <updated>1600887810088</updated>
       <workItem from="1600887811110" duration="3888000" />
       <workItem from="1600964490075" duration="15472000" />
+      <workItem from="1601018959989" duration="989000" />
+      <workItem from="1601043581390" duration="1840000" />
+      <workItem from="1601276608317" duration="489000" />
+      <workItem from="1601370067498" duration="1742000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2265" y="183" width="740" height="672" key="#Inspections" timestamp="1601373449764">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2265" y="183" width="740" height="672" key="#Inspections/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601373449764" />
     <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600966272707">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
@@ -182,6 +222,10 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="727" y="182" width="456" height="701" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966316159" />
+    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1601277094937">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601277094937" />
     <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1600964661369">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
@@ -202,9 +246,10 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="841" y="421" width="381" height="258" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.29.1920.1001@0.29.1920.1001" timestamp="1600889859476" />
-    <state x="733" y="443" width="443" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600968676195">
-      <screen x="0" y="29" width="1920" height="1001" />
+    <state x="2413" y="447" width="448" height="209" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601045545235">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
+    <state x="2413" y="447" width="448" height="209" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601045545235" />
     <state x="733" y="443" width="443" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.29.1920.1001@0.29.1920.1001" timestamp="1600968676195" />
   </component>
 </project>
