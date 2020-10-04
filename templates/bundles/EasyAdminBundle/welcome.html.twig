@@ -1,8 +1,17 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
 
-{% block page_title 'Bienvenue dans votre Espece Personnel'  %}
+{% block page_title 'Bienvenue dans votre Espece Personnel' %}
 
 {% block page_content %}
-    <div class="container"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 alert-info">
+                <span class="display-3">85</span>Tips
+            </div>
+            <div class="col-6 alert-danger">
+                <span class="display-3">150</span>Commentaires
+            </div>
+        </div>
+    </div>
 {% endblock %}

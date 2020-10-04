@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Repository\TipsRepository;
+use App\Repository\UserRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -11,6 +13,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
+    protected $tipsRepository;
+    protected $userRepository;
+
+    public function __construct(
+        TipsRepository  $tipsRepository,
+        UserRepository  $userRepository
+    )
+    {
+        $this->tipsRepository = $tipsRepository;
+        $this->userRepository = $userRepository;
+    }
+
     /**
      * @Route("/admin", name="admin")
      * @Security("is_granted('ROLE_ADMIN')")

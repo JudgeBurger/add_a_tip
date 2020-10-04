@@ -22,6 +22,8 @@
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TipsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TipsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundles/EasyAdminBundle/welcome.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +200,7 @@
       <workItem from="1601373734800" duration="4019000" />
       <workItem from="1601448745128" duration="1751000" />
       <workItem from="1601749643987" duration="13975000" />
-      <workItem from="1601800115327" duration="18697000" />
+      <workItem from="1601800115327" duration="21833000" />
     </task>
     <servers />
   </component>
