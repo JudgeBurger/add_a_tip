@@ -997,7 +997,7 @@ ALL PRIVILEGES|phpmyadmin:null
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="309" parent="300" name="example">
+    <column id="309" parent="300" name="command">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>

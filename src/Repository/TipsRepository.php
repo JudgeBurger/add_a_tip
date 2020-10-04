@@ -19,16 +19,6 @@ class TipsRepository extends ServiceEntityRepository
         parent::__construct($registry, Tips::class);
     }
 
-    /**
-     * @return int|mixed|string
-     */
-    public function countAllTips() {
-        $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->select('COUNT(a.id) as value');
-
-        return $queryBuilder->getQuery()->getResult();
-    }
-
     // /**
     //  * @return Tips[] Returns an array of Tips objects
     //  */
