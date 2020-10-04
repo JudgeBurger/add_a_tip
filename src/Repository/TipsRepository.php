@@ -22,7 +22,7 @@ class TipsRepository extends ServiceEntityRepository
     /**
      * @return int|mixed|string
      */
-    public function countAllHelp() {
+    public function countAllTips() {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder->select('COUNT(a.id) as value');
 
