@@ -16,7 +16,7 @@ set_time_limit(0);
 require dirname(__DIR__).'/vendor/autoload.php';
 
 if (!class_exists(Application::class) || !class_exists(Dotenv::class)) {
-    throw new LogicException('You need to add "symfony/framework-bundle" and "symfony/dotenv" as Composer dependencies.');
+    throw new LogicException('You need to add "symfony/framework-bundles" and "symfony/dotenv" as Composer dependencies.');
 }
 
 $input = new ArgvInput();

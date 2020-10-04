@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="addATip@localhost" uuid="4cd510ab-d4f9-4d46-835a-41993eac41dc">
+    <data-source name="add_a_tip@localhost" uuid="84564cfa-f305-4e59-a927-2a70d27c8953">
       <database-info product="MySQL" version="8.0.21-0ubuntu0.20.04.4" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="8.0.21" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>

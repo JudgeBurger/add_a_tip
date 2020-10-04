@@ -19,7 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="" />
+    <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/add_a_tip.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/add_a_tip.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4cd510ab-d4f9-4d46-835a-41993eac41dc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4cd510ab-d4f9-4d46-835a-41993eac41dc/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201002102858.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20201002102858.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAutenticathorAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAutenticathorAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +164,11 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hvNsEVAmcXoxQDhMPyKMVaNjOj" />
@@ -160,13 +182,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Framework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/bundles/EasyAdminBundle" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/bundles/EasyAdminBundle" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -186,6 +209,8 @@
       <workItem from="1601370067498" duration="1742000" />
       <workItem from="1601373734800" duration="4019000" />
       <workItem from="1601448745128" duration="1751000" />
+      <workItem from="1601749643987" duration="13975000" />
+      <workItem from="1601800115327" duration="9091000" />
     </task>
     <servers />
   </component>
@@ -209,10 +234,10 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2265" y="183" width="740" height="672" key="#Inspections/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601373449764" />
-    <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600966272707">
+    <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601753187502">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
-    <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966272707" />
+    <state x="555" y="191" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1601753187502" />
     <state x="2334" y="325" width="619" height="446" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601376774062">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
