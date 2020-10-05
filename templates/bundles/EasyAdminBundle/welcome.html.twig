@@ -8,23 +8,24 @@
         <div class="row">
             <div class="col-6 alert-info">
 
-                countAllUser
-                countAllTips
 
-                <span class="display-3">85</span>Tips
+                <span class="display-3">{{ countAllTips['value'] }}</span>Tips
             </div>
             <div class="col-6 alert-danger">
-                <span class="display-3">150</span>Commentaires
+                <span class="display-3">{{ countAllUser['value'] }}</span>Commentaires
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-5">
+                <h3>Vos Tips</h3>
                 <ul class="list-group">
-                    {% for tips in tip %}
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ tips.name }}
-                        <span class="badge badge-primary badge-pill"><i class="far fa-lightbulb">Tips</i></span>
-                    </li>
+                    {% for tip in tips %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                {{ tip.name }} : {{ tip.example }}
+                            </div>
+                            <span class="badge badge-primary badge-pill">{{ tip.language }}</span>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
