@@ -5,9 +5,11 @@ namespace App\Controller\Admin;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Filter\ArrayFilter;
 use phpDocumentor\Reflection\Types\Integer;
 
 class UserCrudController extends AbstractCrudController
@@ -17,18 +19,18 @@ class UserCrudController extends AbstractCrudController
         return User::class;
     }
 
-    /**
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('email'),
-            TextEditorField::new('roles'),
             TextField::new('password'),
+            ImageField::new('image'),
+//            TextField::new('roles'),
 //             Pour determiner des champs associés :
 //             AssociationField::new('user')
         ];
     }
-    */
+
 
 }

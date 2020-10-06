@@ -9,10 +9,12 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\NonUniqueResultException;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\UserMenu;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -50,8 +52,16 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linktoDashboard('Accueil', 'fa fa-home');
         yield MenuItem::linkToCrud('Tips', 'fas fa-lightbulb', Tips::class);
         yield MenuItem::linkToCrud('Utilisateur', 'fas fa-user', User::class);
+    }
+
+    public function configureUserMenu(UserInterface $user): UserMenu {
+        return parent::configureUserMenu($user)
+            ->setName($user->getUsername())
+            ->setAvatarUrl('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScEfvzrIe0ICeKwz-tpYFQnaD9Bavf3tTfmQ&usqp=CAU')
+            ->displayUserAvatar(true);
+            ;
     }
 }
