@@ -62,6 +62,5 @@ class DashboardController extends AbstractDashboardController
             ->setName($user->getUsername())
             ->setAvatarUrl('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScEfvzrIe0ICeKwz-tpYFQnaD9Bavf3tTfmQ&usqp=CAU')
             ->displayUserAvatar(true);
-            ;
     }
 }

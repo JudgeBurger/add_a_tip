@@ -25,7 +25,8 @@ class UserCrudController extends AbstractCrudController
         return [
             TextField::new('email'),
             TextField::new('password'),
-            ImageField::new('image'),
+            TextField::new('role'),
+//            ImageField::new('image'),
 //            TextField::new('roles'),
 //             Pour determiner des champs associés :
 //             AssociationField::new('user')

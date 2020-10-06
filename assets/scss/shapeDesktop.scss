@@ -1,0 +1,36 @@
+@mixin shapeDesktop() {
+
+    .custom-shape-divider-top-1602013315 {
+        position    : absolute;
+        top         : 0;
+        left        : 0;
+        width       : 100%;
+        overflow    : hidden;
+        line-height : 0;
+    }
+
+    .custom-shape-divider-top-1602013315 svg {
+        position  : relative;
+        display   : block;
+        width     : calc(100% + 1.5px);
+        height    : 129px;
+        transform : rotateY(180deg);
+    }
+
+    .custom-shape-divider-top-1602013315 .shape-fill {
+        fill : #3E3E3E;
+    }
+
+    .custom-shape-divider-top-1602013315 {
+        top: 55px;
+        z-index: -1;
+    }
+
+    /** For mobile devices **/
+    @media (max-width : 767px) {
+        .custom-shape-divider-top-1602013315 svg {
+            width  : calc(300% + 1.3px);
+            height : 158px;
+        }
+    }
+}
