@@ -2,7 +2,7 @@
 @import "shapeDesktop";
 
 body {
-    background-color: $nav-bar;
+    background-color: $background;
 }
 
 a, a:hover {
@@ -33,7 +33,7 @@ button {
 }
 
 .navbar {
-    background-color: $widget-color;
+    background-color: $svg-color;
     color: $light-color;
     position : relative;
 }
@@ -44,7 +44,7 @@ button {
 @media screen and (min-width: 780px ) {
     h1 {
         text-align: center;
-        color: $widget-color;
+        color: $svg-color;
     }
 }
 
@@ -53,3 +53,4 @@ button {
         margin-left: 15px;
     }
 }
+
