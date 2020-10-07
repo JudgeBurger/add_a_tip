@@ -4,4 +4,20 @@
 
 {% block body %}
     <h1 class="title-home mt-5">Welcome Wilder</h1>
+    <div class="login-box mt-5">
+        <h1 class="login-title">Acceder à votre espace</h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input id="text" name="text" type="text" placeholder="Identifiant" required>
+            <label for="text"></label>
+        </div>
+
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input id="password" name="password" type="password" placeholder="Mot de passe" required>
+            <label for="password"></label>
+        </div>
+
+        <input type="button" class="btn" value="Se connecter">
+    </div>
 {% endblock %}
