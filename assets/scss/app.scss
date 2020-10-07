@@ -9,6 +9,10 @@ a, a:hover {
     text-decoration: none;
 }
 
+h1 {
+    color: $dark-color;
+}
+
 a:hover {
     color: $light-color;
 }
@@ -29,9 +33,23 @@ button {
 }
 
 .navbar {
-    background-color: #3E3E3E;
+    background-color: $widget-color;
     color: $light-color;
     position : relative;
 }
 
 @include shapeDesktop();
+
+/** For mobile Devices **/
+@media screen and (min-width: 780px ) {
+    h1 {
+        text-align: center;
+        color: $widget-color;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title-home {
+        margin-left: 15px;
+    }
+}

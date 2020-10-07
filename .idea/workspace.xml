@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/shapeDesktop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/shapeDesktop.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
@@ -175,7 +177,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bemind" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
@@ -207,6 +209,9 @@
       <workItem from="1601749643987" duration="13975000" />
       <workItem from="1601800115327" duration="25444000" />
       <workItem from="1601914205348" duration="28219000" />
+      <workItem from="1602066795411" duration="377000" />
+      <workItem from="1602067207729" duration="27000" />
+      <workItem from="1602072273609" duration="2454000" />
     </task>
     <servers />
   </component>
@@ -248,10 +253,11 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="727" y="182" width="456" height="701" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966316159" />
-    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1601277094937">
+    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1602067231362">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601277094937" />
+    <state x="2370" y="217" key="FileChooserDialogImpl/0.27.1680.1005/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602067231362" />
     <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1600964661369">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
