@@ -12,22 +12,29 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a>
+                <a class="nav-link underline" href="{{ path('home') }}">
+                    <i class="fas fa-home"></i>
+                    Accueil
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('tips_index') }}">Les Tips</a>
+                <a class="nav-link underline" href="{{ path('tips_index') }}">
+                    <i class="fas fa-lightbulb"></i>
+                    Les Tips
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Rechercher</a>
+                <a class="nav-link underline" href="#">
+                    <i class="fas fa-search"></i>
+                    Rechercher
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Nous contacter</a>
+                <a class="nav-link underline" href="#">
+                    <i class="fas fa-at"></i>
+                    Nous contacter
+                </a>
             </li>
         </ul>
-        {#     TODO : put this form in search section       #}
-        {#            <form class="form-inline my-2 my-lg-0">#}
-        {#                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}
-        {#                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}
-        {#            </form>#}
     </div>
 </nav>

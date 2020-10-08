@@ -5,37 +5,31 @@
 {% block body %}
     <h1>Tips index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Language</th>
-                <th>Example</th>
-                <th>Picture</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for tip in tips %}
-            <tr>
-                <td>{{ tip.id }}</td>
-                <td>{{ tip.name }}</td>
-                <td>{{ tip.language }}</td>
-                <td>{{ tip.example }}</td>
-                <td>{{ tip.picture }}</td>
-                <td>
-                    <a href="{{ path('tips_show', {'id': tip.id}) }}">show</a>
-                    <a href="{{ path('tips_edit', {'id': tip.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% for tip in tips %}
+            <div class="col-12">
+                <div class="card mt-5 mb-5" style="width: 18rem;">
+                    {{ tip.picture }}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ tip.name }}</h5>
+                        <p class="card-text">{{ tip.example }}</p>
+                        <p class="">{{ tip.language }}</p>
+                        <button class="learn-more">
+                            <a href="{{ path('tips_show', {'id': tip.id}) }}">show</a>
+                        </button>
+                        <button class="learn-more">
+                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">edit</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <tr>
+            <td colspan="6">no records found</td>
+        </tr>
+    {% endfor %}
 
-    <a href="{{ path('tips_new') }}">Create new</a>
+    <button class="learn-more mt-5 ml-5 mb-5">
+        <a href="{{ path('tips_new') }}">Create new</a>
+    </button>
 {% endblock %}
