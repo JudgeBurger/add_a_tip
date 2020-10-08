@@ -1,23 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tips{% endblock %}
+{% block title %}Tips index{% endblock %}
 
 {% block body %}
-
-    <h1>Tips</h1>
+    <h1>Tips index</h1>
 
     <table class="table">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Language</th>
                 <th>Example</th>
                 <th>Picture</th>
+                <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for tip in tips %}
             <tr>
+                <td>{{ tip.id }}</td>
                 <td>{{ tip.name }}</td>
                 <td>{{ tip.language }}</td>
                 <td>{{ tip.example }}</td>

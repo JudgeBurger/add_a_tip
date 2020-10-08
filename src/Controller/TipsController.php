@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Tips;
-use App\Form\TipsType;
+use App\Form\Tips1Type;
 use App\Repository\TipsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,14 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/tips_index")
+ * @Route("/tips")
  */
 class TipsController extends AbstractController
 {
     /**
-     * @Route("/", name="tips_index", methods={"GET"})
-     * @param TipsRepository $tipsRepository
-     * @return Response
+     * @Route("/tips", name="tips_index", methods={"GET"})
      */
     public function index(TipsRepository $tipsRepository): Response
     {
@@ -29,13 +27,11 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/new", name="tips_new", methods={"GET","POST"})
-     * @param Request $request
-     * @return Response
      */
     public function new(Request $request): Response
     {
         $tip = new Tips();
-        $form = $this->createForm(TipsType::class, $tip);
+        $form = $this->createForm(Tips1Type::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -54,8 +50,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}", name="tips_show", methods={"GET"})
-     * @param Tips $tip
-     * @return Response
      */
     public function show(Tips $tip): Response
     {
@@ -66,13 +60,10 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="tips_edit", methods={"GET","POST"})
-     * @param Request $request
-     * @param Tips $tip
-     * @return Response
      */
     public function edit(Request $request, Tips $tip): Response
     {
-        $form = $this->createForm(TipsType::class, $tip);
+        $form = $this->createForm(Tips1Type::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -89,9 +80,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}", name="tips_delete", methods={"DELETE"})
-     * @param Request $request
-     * @param Tips $tip
-     * @return Response
      */
     public function delete(Request $request, Tips $tip): Response
     {

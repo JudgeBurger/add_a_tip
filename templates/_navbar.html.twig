@@ -8,11 +8,6 @@
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
     </div>
-    <div class="custom-shape-divider-top">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
-    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -20,7 +15,7 @@
                 <a class="nav-link" href="{{ path('home') }}">Accueil<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Les Tips</a>
+                <a class="nav-link" href="{{ path('tips_index') }}">Les Tips</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Rechercher</a>
@@ -28,9 +23,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Nous contacter</a>
             </li>
-{#            <li class="nav-item">#}
-{#                <a class="nav-link" href="{{ path('app_login') }}">Sign In</a>#}
-{#            </li>#}
         </ul>
         {#     TODO : put this form in search section       #}
         {#            <form class="form-inline my-2 my-lg-0">#}
