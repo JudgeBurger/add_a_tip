@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/TipsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TipsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TipsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tips.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Tips1Type.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TipsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TipsType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +216,8 @@
       <workItem from="1602067207729" duration="27000" />
       <workItem from="1602072273609" duration="2454000" />
       <workItem from="1602145998544" duration="3814000" />
+      <workItem from="1602330660306" duration="849000" />
+      <workItem from="1602359968995" duration="14653000" />
     </task>
     <servers />
   </component>
@@ -254,6 +259,10 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="727" y="182" width="456" height="701" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966316159" />
+    <state x="608" y="114" width="684" height="845" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602411799762">
+      <screen x="0" y="29" width="1920" height="1001" />
+    </state>
+    <state x="608" y="114" width="684" height="845" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1602411799762" />
     <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1602067231362">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
@@ -283,10 +292,10 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="841" y="421" width="381" height="258" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.29.1920.1001@0.29.1920.1001" timestamp="1600889859476" />
-    <state x="708" y="319" width="494" height="423" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1601845256256">
+    <state x="708" y="319" width="494" height="419" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1602411612715">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
-    <state x="708" y="319" width="494" height="423" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1601845256256" />
+    <state x="708" y="319" width="494" height="419" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1602411612715" />
     <state x="733" y="443" width="438" height="209" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601845828320">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>

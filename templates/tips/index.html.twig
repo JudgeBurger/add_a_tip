@@ -5,31 +5,38 @@
 {% block body %}
     <h1>Tips index</h1>
 
-    {% for tip in tips %}
-            <div class="col-12">
-                <div class="card mt-5 mb-5" style="width: 18rem;">
-                    {{ tip.picture }}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ tip.name }}</h5>
-                        <p class="card-text">{{ tip.example }}</p>
-                        <p class="">{{ tip.language }}</p>
+
+    <div class="row p-0 m-0 justify-content-center w100 mt-5">
+        {% for tip in tips %}
+            <div class="card mt-5 mb-5 my-4 mx-lg-5 col-md-5 col-lg-2 m-2 p-0" style="width: 18rem;">
+                <div class="d-flex justify-content-end align-items-end">
+                    <img class="w-50" src="https://www.nilobstat.com/media/1020/logo-symfony.png?width=250" alt="image">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><u>{{ tip.name }}</u></h5>
+                    <p class="card-text"><strong><i>Description :</i></strong> {{ tip.description }}</p>
+                    <p class="">{{ tip.language }}</p>
+                    <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0">
                         <button class="learn-more">
-                            <a href="{{ path('tips_show', {'id': tip.id}) }}">show</a>
+                            <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
                         </button>
                         <button class="learn-more">
-                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">edit</a>
+                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
-    {% else %}
-        <tr>
-            <td colspan="6">no records found</td>
-        </tr>
-    {% endfor %}
 
-    <button class="learn-more mt-5 ml-5 mb-5">
-        <a href="{{ path('tips_new') }}">Create new</a>
-    </button>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun Résultat</td>
+            </tr>
+        {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <button class="learn-more mt-5 ml-5 mb-5">
+            <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
+        </button>
+    </div>
 {% endblock %}
