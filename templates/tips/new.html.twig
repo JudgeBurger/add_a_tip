@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Tips{% endblock %}
+{% block title %}Nouveau Tip{% endblock %}
 
 {% block body %}
-    <h1>Create new Tips</h1>
+    <h1 class="mt-5">Ajouter un nouveau Tip</h1>
 
-    {{ include('tips/_form.html.twig') }}
+    <div class="mt-5">
+        {{ include('tips/_form.html.twig') }}
+    </div>
 
     <button class="learn-more">
         <a href="{{ path('tips_index') }}">Retour</a>

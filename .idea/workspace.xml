@@ -21,16 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TipsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TipsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tips.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tips.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Tips1Type.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/TipsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TipsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +207,7 @@
       <workItem from="1602072273609" duration="2454000" />
       <workItem from="1602145998544" duration="3814000" />
       <workItem from="1602330660306" duration="849000" />
-      <workItem from="1602359968995" duration="14653000" />
+      <workItem from="1602359968995" duration="16838000" />
     </task>
     <servers />
   </component>
