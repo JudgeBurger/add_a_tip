@@ -14,7 +14,7 @@ class TipsType extends AbstractType
         $builder
             ->add('name')
             ->add('language')
-            ->add('example')
+            ->add('description')
             ->add('picture')
         ;
     }

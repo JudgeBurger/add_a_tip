@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Tips;
-use App\Form\Tips1Type;
+use App\Form\TipsType;
 use App\Repository\TipsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +31,7 @@ class TipsController extends AbstractController
     public function new(Request $request): Response
     {
         $tip = new Tips();
-        $form = $this->createForm(Tips1Type::class, $tip);
+        $form = $this->createForm(TipsType::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +63,7 @@ class TipsController extends AbstractController
      */
     public function edit(Request $request, Tips $tip): Response
     {
-        $form = $this->createForm(Tips1Type::class, $tip);
+        $form = $this->createForm(TipsType::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

@@ -1,36 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tips{% endblock %}
+{% block title %}{{ tip.name }} | {{ tip.language }}{% endblock %}
 
 {% block body %}
-    <h1>Tips</h1>
+
+    {%  for tips in tip %}
+    <div class="card">
+        <div class="card-header">
+            {{ tip.name }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ tip.description }}</h5>
+            <p class="card-text">{{ tip.picture }}</p>
+            <a href="#" class="btn btn-primary">Clipboard</a>
+        </div>
+    </div>
+        {% else %}
+        <h1>Aucun Résultat</h1>
+    {% endfor %}
 
     <table class="table">
         <tbody>
-            <tr>
-                <th>Name</th>
-                <td>{{ tip.name }}</td>
-            </tr>
-            <tr>
-                <th>Language</th>
-                <td>{{ tip.language }}</td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>{{ tip.example }}</td>
-            </tr>
-            <tr>
-                <th>Picture</th>
-                <td>{{ tip.picture }}</td>
-            </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ tip.name }}</td>
+        </tr>
+        <tr>
+            <th>Language</th>
+            <td>{{ tip.language }}</td>
+        </tr>
+        <tr>
+            <th>Example</th>
+            <td>{{ tip.description }}</td>
+        </tr>
+        <tr>
+            <th>Picture</th>
+            <td>{{ tip.picture }}</td>
+        </tr>
         </tbody>
     </table>
 
     <button class="learn-more">
-        <a href="{{ path('tips_index') }}">back to list</a>
+        <a href="{{ path('tips_index') }}">Retour</a>
     </button>
     <button class="learn-more">
-        <a href="{{ path('tips_edit', {'id': tip.id}) }}">edit</a>
+        <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
     </button>
 
 

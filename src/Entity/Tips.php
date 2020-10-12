@@ -30,7 +30,7 @@ class Tips
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $example;
+    private $description;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -66,14 +66,14 @@ class Tips
         return $this;
     }
 
-    public function getExample(): ?string
+    public function getdescription(): ?string
     {
-        return $this->example;
+        return $this->description;
     }
 
-    public function setExample(string $example): self
+    public function setdescription(string $description): self
     {
-        $this->example = $example;
+        $this->description = $description;
 
         return $this;
     }
