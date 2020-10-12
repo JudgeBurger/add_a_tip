@@ -192,10 +192,89 @@ button {
 .card-body {
     background-color: $light-color;
     border-radius: 5px;
-    border: 2px solid $light-color;
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+// Flipping Cards
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    height: 100vh;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 25%;
+    position: relative;
+    height: 25em;
+    perspective: 150em;
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25em;
+        backface-visibility: hidden;
+        transition: all .6s ease;
+        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
+
+        &--front {
+            background-color: $background;
+        }
+
+        &--back {
+            color: $background;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: $svg-color;;
+            }
+
+            &-2 {
+                background-image: $svg-color;
+            }
+
+            &-3 {
+                background-image: $svg-color;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotate(0);
+    }
+
+    &__description {
+        text-transform: uppercase;
+        font-size: 2em;
+        padding: 1em 0;
+
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+            fill: $background;
+        }
+    }
 }
 
 @include shapeDesktop();
@@ -204,7 +283,7 @@ button {
 @media screen and (min-width: 780px ) {
     h1 {
         text-align: center;
-        color: $svg-color;
+        color: $background;
     }
 }
 

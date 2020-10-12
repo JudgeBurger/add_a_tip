@@ -5,6 +5,36 @@
 {% block body %}
     <h1>Tips index</h1>
 
+    <section class="content">
+        <div class="cards">
+            <div class="card">
+                <div class="card__side card__side--front card__side--front-1">
+                    <div class="card__description">Make Crud</div>
+                </div>
+                <div class="card__side card__side--back card__side--back-1">
+                    <div class="card__description">Pour Créer un CRUD dans Symfony</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__side card__side--front card__side--front-2">
+                    <div class="card__description">2</div>
+                </div>
+                <div class="card__side card__side--back card__side--back-2">
+                    <div class="card__description">bin/console make:crud</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__side card__side--front card__side--front-3">
+                    <div class="card__description">3</div>
+                </div>
+                <div class="card__side card__side--back card__side--back-3">
+                    <div class="card__description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     {% for tip in tips %}
             <div class="col-12">
                 <div class="card mt-5 mb-5" style="width: 18rem;">
@@ -22,7 +52,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     {% else %}
         <tr>
             <td colspan="6">no records found</td>

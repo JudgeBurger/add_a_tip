@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a7b9f54-af68-4abe-baf3-8273fa15bff3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/TipsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tips/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tips/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tips/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +208,12 @@
       <workItem from="1602067207729" duration="27000" />
       <workItem from="1602072273609" duration="2454000" />
       <workItem from="1602145998544" duration="3814000" />
+      <workItem from="1602170226269" duration="34000" />
+      <workItem from="1602172047999" duration="44000" />
+      <workItem from="1602226905182" duration="938000" />
+      <workItem from="1602230150824" duration="11000" />
+      <workItem from="1602486281923" duration="244000" />
+      <workItem from="1602490075854" duration="2654000" />
     </task>
     <servers />
   </component>
@@ -254,11 +255,11 @@
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
     <state x="727" y="182" width="456" height="701" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.29.1920.1001@0.29.1920.1001" timestamp="1600966316159" />
-    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1602067231362">
+    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl" timestamp="1602227240800">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl/0.25.1680.1007/1680.0.1920.1080@1680.0.1920.1080" timestamp="1601277094937" />
-    <state x="2370" y="217" key="FileChooserDialogImpl/0.27.1680.1005/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602067231362" />
+    <state x="2370" y="217" width="530" height="605" key="FileChooserDialogImpl/0.27.1680.1005/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602227240800" />
     <state width="1874" height="258" key="GridCell.Tab.0.bottom" timestamp="1600964661369">
       <screen x="0" y="29" width="1920" height="1001" />
     </state>
