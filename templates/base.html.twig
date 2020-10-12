@@ -11,8 +11,12 @@
     </head>
     <body>
         {% include '_navbar.html.twig' %}
-        {% block body %}
-        {% endblock %}
+
+        <div class="container-fluid">
+            {% block body %}
+            {% endblock %}
+        </div>
+
         {% include '_footer.html.twig' %}
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

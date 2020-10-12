@@ -6,44 +6,15 @@
     <h1>Tips index</h1>
 
     <section class="content">
-        <div class="cards">
-            <div class="card">
-                <div class="card__side card__side--front card__side--front-1">
-                    <div class="card__description">Make Crud</div>
-                </div>
-                <div class="card__side card__side--back card__side--back-1">
-                    <div class="card__description">Pour Créer un CRUD dans Symfony</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__side card__side--front card__side--front-2">
-                    <div class="card__description">2</div>
-                </div>
-                <div class="card__side card__side--back card__side--back-2">
-                    <div class="card__description">bin/console make:crud</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card__side card__side--front card__side--front-3">
-                    <div class="card__description">3</div>
-                </div>
-                <div class="card__side card__side--back card__side--back-3">
-                    <div class="card__description"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="row p-0 m-0 justify-content-center w100 mt-5">
-        {% for tip in tips %}
-            <div class="card mt-5 mb-5 my-4 mx-lg-5 col-md-5 col-lg-2 m-2 p-0" style="width: 18rem;">
-                <div class="d-flex justify-content-end align-items-end">
-                    <img class="w-50" src="https://www.nilobstat.com/media/1020/logo-symfony.png?width=250" alt="image">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><u>{{ tip.name }}</u></h5>
-                    <p class="card-text"><strong><i>Description :</i></strong> {{ tip.description }}</p>
-                    <p class="">{{ tip.language }}</p>
+        <div class="cards d-flex flex-wrap mt-5">
+            {% for tip in tips %}
+                <div class="card mb-5">
+                    <div class="card__side card__side--front card__side--front-1">
+                        <div class="card__description">Make Crud</div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__description">Pour Créer un CRUD dans Symfony</div>
+                    </div>
                     <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0">
                         <button class="learn-more">
                             <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
@@ -53,17 +24,19 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        {% else %}
-            <tr>
-                <td colspan="6">Aucun Résultat</td>
-            </tr>
-        {% endfor %}
-    </div>
+            {% else %}
+                <tr>
+                    <td colspan="6">Aucun Résultat</td>
+                </tr>
+            {% endfor %}
+        </div>
 
+    </section>
     <div class="d-flex justify-content-center align-items-center">
         <button class="learn-more mt-5 ml-5 mb-5">
             <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
         </button>
     </div>
+
+
 {% endblock %}
