@@ -1,6 +1,8 @@
 @import "vars";
 @import "shapeDesktop";
 @import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+@import "cards";
+@import "button";
 
 
 body {
@@ -58,7 +60,6 @@ button {
     left: 50%;
     transform: translate(-50%,-50%);
     color: $svg-color;
-    //background-color : $svg-color;
 }
 .login-box h1{
     float: left;
@@ -90,16 +91,6 @@ button {
     float: left;
     margin: 0 10px;
 }
-.btn{
-    width: 100%;
-    background: none;
-    border: 2px solid $svg-color;
-    color: $svg-color;
-    padding: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 12px 0;
-}
 
 a {
     color           : #000;
@@ -112,165 +103,6 @@ a {
     &:hover {
         text-decoration : none;
         color           : black;
-    }
-}
-
-.underline:after {
-    bottom     : 0;
-    content    : "";
-    display    : block;
-    height     : 2px;
-    left       : 50%;
-    position   : absolute;
-    background : $dark-color;
-    transition : width 0.3s ease 0s, left 0.3s ease 0s;
-    width      : 0;
-}
-
-.underline:hover:after {
-    width : 100%;
-    left  : 0;
-}
-
-$bg: #fff;
-$light-pink: #fff0f0;
-$pink: #ffe9e9;
-$dark-pink: #f9c4d2;
-$pink-border: #b18597;
-$pink-shadow: #ffe3e2;
-
-button {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    font-size: inherit;
-    font-family: inherit;
-    &.learn-more {
-        font-weight: 600;
-        color: $dark-color;
-        text-transform: uppercase;
-        background: $svg-color;
-        border: 2px solid $pink-border;
-        border-radius: 0.75em;
-        transform-style: preserve-3d;
-        transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
-        &::before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: $dark-pink;
-            border-radius: inherit;
-            transform: translate3d(0, 0.75em, -1em);
-            transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
-        }
-        &:hover {
-            background: $pink;
-            transform: translate(0, 0.25em);
-            &::before {
-                transform: translate3d(0, 0.5em, -1em);
-            }
-        }
-        &:active {
-            background: $pink;
-            transform: translate(0em, 0.75em);
-            &::before {
-                transform: translate3d(0, 0, -1em);
-            }
-        }
-    }
-}
-
-.card-body {
-    background-color: $light-color;
-    border-radius: 5px;
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-}
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-
-// Flipping Cards
-
-.content {
-    height: 100vh;
-    text-align: center;
-    padding: 4em 0;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.card {
-    width: 600px;
-    margin: 10px;
-    position: relative;
-    height: 25em;
-    perspective: 150em;
-    background-color: transparent;
-    border: none;
-
-    &__side {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 25em;
-        backface-visibility: hidden;
-        transition: all .6s ease;
-        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
-
-        &--front {
-            background-color: $svg-color;
-        }
-
-        &--back {
-            background-color: $svg-color;
-            transform: rotateY(180deg);
-
-            &-1 {
-                background-image: $svg-color;;
-            }
-
-            &-2 {
-                background-image: $svg-color;
-            }
-
-            &-3 {
-                background-image: $svg-color;
-            }
-        }
-    }
-
-    &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover &__side--back {
-        transform: rotate(0);
-    }
-
-    &__description {
-        text-transform: uppercase;
-        font-size: 2em;
-        padding: 1em 0;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: $svg-color;
-        }
     }
 }
 

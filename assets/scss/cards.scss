@@ -1,0 +1,78 @@
+@import "vars";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+// Flipping Cards
+
+.content {
+    height: 100vh;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 600px;
+    margin: 10px;
+    position: relative;
+    height: 25em;
+    perspective: 150em;
+    background-color: transparent;
+    border: none;
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25em;
+        backface-visibility: hidden;
+        transition: all .6s ease;
+        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
+        border-radius: 5px;
+
+        &--front {
+            background-color: $svg-color;
+        }
+
+        &--back {
+            background-color: $svg-color;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: $svg-color;;
+            }
+
+            &-2 {
+                background-image: $svg-color;
+            }
+
+            &-3 {
+                background-image: $svg-color;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotate(0);
+    }
+
+    &__description {
+        text-transform: uppercase;
+        font-size: 2em;
+        padding: 1em 0;
+
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+            fill: $svg-color;
+        }
+    }
+}
