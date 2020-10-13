@@ -16,7 +16,7 @@
     width: 600px;
     margin: 10px;
     position: relative;
-    height: 25em;
+    height: 50em;
     perspective: 150em;
     background-color: transparent;
     border: none;
@@ -26,7 +26,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 25em;
+        height: 45em;
         backface-visibility: hidden;
         transition: all .6s ease;
         box-shadow: 1em 1em 2em rgba(0,0,0,.2);
@@ -63,8 +63,7 @@
     }
 
     &__description {
-        text-transform: uppercase;
-        font-size: 2em;
+        font-size: 1.3em;
         padding: 1em 0;
 
         svg {

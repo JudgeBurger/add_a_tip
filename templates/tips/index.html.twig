@@ -1,31 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tips index{% endblock %}
+{% block title %}Tips{% endblock %}
 
 {% block body %}
-    <h1>Tips index</h1>
+    <h1 class="mt-5">Tips</h1>
 
     <section class="content">
         <div class="cards d-flex flex-wrap mt-5">
             {% for tip in tips %}
                 <div class="card mb-5">
                     <div class="card__side card__side--front card__side--front-1">
-                        <div class="card__description">{{ tip.name }}</div>
+                        <div class="card__description">
+                            <h1>{{ tip.name }}</h1>
+                        </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
                         <div class="card__description">
-                            <img src="{{ tip.picture }}" alt="image uploded by user">
-                            {{ tip.description }}
-                            {{ tip.language }}
+                            <img src="https://via.placeholder.com/500x300" alt="image uploded by user">
+                            <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
+                                <button class="mt-5">
+                                    <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
+                                </button>
+                                <button class="mt-5">
+                                    <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0">
-{#                        <button class="learn-more">#}
-{#                            <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>#}
-{#                        </button>#}
-{#                        <button class="learn-more">#}
-{#                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>#}
-{#                        </button>#}
+                        {{ tip.description }}
+                        {{ tip.language }}
                     </div>
                 </div>
             {% else %}
