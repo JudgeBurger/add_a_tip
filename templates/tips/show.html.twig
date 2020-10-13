@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ tip.name }} | {{ tip.language }}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 
-    {%  for tips in tip %}
+    {% for tips in tip %}
     <div class="card">
         <div class="card-header">
             {{ tip.name }}
@@ -16,37 +16,16 @@
         </div>
     </div>
         {% else %}
-        <h1>Aucun Résultat</h1>
+        <h1 class="mt-5 p-5">Aucun Résultat</h1>
     {% endfor %}
 
-    <table class="table">
-        <tbody>
-        <tr>
-            <th>Name</th>
-            <td>{{ tip.name }}</td>
-        </tr>
-        <tr>
-            <th>Language</th>
-            <td>{{ tip.language }}</td>
-        </tr>
-        <tr>
-            <th>Example</th>
-            <td>{{ tip.description }}</td>
-        </tr>
-        <tr>
-            <th>Picture</th>
-            <td>{{ tip.picture }}</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
+        <button class="mt-5 card-button">
+            <a href="{{ path('tips_index') }}">Retour</a>
+        </button>
+        <button class="mt-5 card-button">
+            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
+        </button>
+    </div>
 
-    <button class="learn-more">
-        <a href="{{ path('tips_index') }}">Retour</a>
-    </button>
-    <button class="learn-more">
-        <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-    </button>
-
-
-    {{ include('tips/_delete_form.html.twig') }}
 {% endblock %}

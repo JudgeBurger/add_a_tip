@@ -14,20 +14,23 @@
     </div>
 
     <div class="row d-flex justify-content-center align-items-center p-0 m-0">
+        {# Boutton Enregistrer #}
         <div class="col-4">
-            <button class="btn learn-more">Effacer</button>
-        </div>
-        <div class="col-4">
-            <button class="learn-more">
-                <a href="{{ path('tips_index') }}">Retour</a>
-            </button>
-        </div>
-        <div class="col-4">
-            <button class="btn learn-more">
+            <button class="card-button">
                 <a href="{{ button_label|default('Save') }}">
                     Enregistrer
                 </a>
             </button>
+        </div>
+        {# Boutton Effacer #}
+        <div class="col-4">
+            <button class="card-button">Effacer</button>
+        </div>
+        <div class="col-4">
+            <button class="card-button">
+                <a href="{{ path('tips_index') }}">Retour</a>
+            </button>
+        </div>
         </div>
     </div>
 
