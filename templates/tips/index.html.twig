@@ -10,18 +10,22 @@
             {% for tip in tips %}
                 <div class="card mb-5">
                     <div class="card__side card__side--front card__side--front-1">
-                        <div class="card__description">Make Crud</div>
+                        <div class="card__description">{{ tip.name }}</div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
-                        <div class="card__description">Pour Créer un CRUD dans Symfony</div>
+                        <div class="card__description">
+                            <img src="{{ tip.picture }}" alt="image uploded by user">
+                            {{ tip.description }}
+                            {{ tip.language }}
+                        </div>
                     </div>
                     <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0">
-                        <button class="learn-more">
-                            <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
-                        </button>
-                        <button class="learn-more">
-                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-                        </button>
+{#                        <button class="learn-more">#}
+{#                            <a href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>#}
+{#                        </button>#}
+{#                        <button class="learn-more">#}
+{#                            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>#}
+{#                        </button>#}
                     </div>
                 </div>
             {% else %}
@@ -30,13 +34,13 @@
                 </tr>
             {% endfor %}
         </div>
-
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="learn-more mt-5 ml-5 mb-5">
+                <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
+            </button>
+        </div>
     </section>
-    <div class="d-flex justify-content-center align-items-center">
-        <button class="learn-more mt-5 ml-5 mb-5">
-            <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
-        </button>
-    </div>
+
 
 
 {% endblock %}
