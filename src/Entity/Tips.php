@@ -36,36 +36,33 @@ class Tips
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @var string
+     * @var string|null
      */
     private $picture;
 
     /**
-     * https://github.com/dustin10/VichUploaderBundle/blob/master/docs/usage.md
-     * Integrating VichUploaderBundle to Upload Files and Images (doc VichUpload)
-     * @Vich\Uploadable(mapping="picture_file", fileNameProperty="picture")
-     * @var File
+     * @Vich\UploadableField(mapping="picture_file", fileNameProperty="picture")
+     * @var File|null
      */
     private $pictureFile;
 
     /**
-     * @ORM\Column(type="string")
-     * @return int|null
-     * @var string|null
+     * @param string|null $picture
+     * @return Tips
      */
-    private $pictureName;
+    public function setPictureFile(?string $picture): Tips
+    {
+        $this->pictureFile = $picture;
+        return $this;
+    }
 
     /**
-     * @ORM\Column(type="integer")
-     * @var int|null
+     * @return File
      */
-    private $imageSize;
-
-    /**
-     * @ORM\Column(type="datetime")
-     * @var int|null
-     */
-    private $upDatedAt;
+    public function getPictureFile(): ?File
+    {
+        return $this->pictureFile;
+    }
 
     public function getId(): ?int
     {
@@ -118,63 +115,6 @@ class Tips
         $this->picture = $picture;
 
         return $this;
-    }
-
-    public function setPictureFile(File $picture = null):Tips {
-        $this->pictureFile = $picture;
-        return $this;
-    }
-
-    public function getPictureFile() {
-        return $this->pictureFile;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getPictureName(): ?string
-    {
-        return $this->pictureName;
-    }
-
-    /**
-     * @param string|null $pictureName
-     */
-    public function setPictureName(?string $pictureName): void
-    {
-        $this->pictureName = $pictureName;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getImageSize(): ?int
-    {
-        return $this->imageSize;
-    }
-
-    /**
-     * @param int|null $imageSize
-     */
-    public function setImageSize(?int $imageSize): void
-    {
-        $this->imageSize = $imageSize;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getUpDatedAt(): ?int
-    {
-        return $this->upDatedAt;
-    }
-
-    /**
-     * @param int|null $upDatedAt
-     */
-    public function setUpDatedAt(?int $upDatedAt): void
-    {
-        $this->upDatedAt = $upDatedAt;
     }
 
 }
