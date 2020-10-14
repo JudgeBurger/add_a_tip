@@ -6,6 +6,7 @@ use App\Entity\Tips;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 
 class TipsType extends AbstractType
 {
@@ -15,7 +16,11 @@ class TipsType extends AbstractType
             ->add('name')
             ->add('language')
             ->add('description')
-            ->add('picture')
+            ->add('picture', VichFileType::class, [
+                'required' => false,
+                'allow_delete' => true,
+                'download_uri' => true,
+            ])
         ;
     }
 
