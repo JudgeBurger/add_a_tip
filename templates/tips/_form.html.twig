@@ -1,24 +1,25 @@
-<form action="post" enctype="multipart/form-data">
+<form class="my-form mt-5" action="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="name">Nom de votre Tip</label>
+        <label for="name"><strong>Nom de votre Tip :</strong></label>
         <input class="form-control" type="text" name="name" id="name">
     </div>
     <div class="form-group">
-        <label for="language">Langage</label>
+        <label for="language"><strong>Langage :</strong></label>
         <input class="form-control" type="text" name="language" id="language">
     </div>
     <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description"><strong>Description :</strong></label>
         <input class="form-control" type="text" name="description" id="description">
     </div>
     <div class="form-group">
-        <label for="image">Image</label>
+        <label for="image"><strong>Image :</strong></label>
         <input class="form-control" type="file" name="image">
     </div>
 
-    <button class="card-button">
-        <a href="{{ button_label|default('Save') }}">
-            Enregistrer
-        </a>
-    </button>
+    {# <button class="card-button"> #}
+    {# <a href="{{ button_label|default('Save') }}"> #}
+    {# Enregistrer #}
+    {# </a> #}
+    {# </button> #}
 </form>
+
