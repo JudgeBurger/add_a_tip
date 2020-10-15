@@ -17,11 +17,7 @@ class TipsType extends AbstractType
             ->add('name')
             ->add('language')
             ->add('description')
-            ->add('picture', VichFileType::class, [
-                'required' => false,
-                'allow_delete' => true,
-                'download_uri' => true,
-            ])
+            ->add('picture')
         ;
     }
 

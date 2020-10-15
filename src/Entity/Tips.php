@@ -41,7 +41,7 @@ class Tips
     private $picture;
 
     /**
-     * @Vich\UploadableField(mapping="picture_file", fileNameProperty="picture")
+     * @Vich\UploadableField(mapping="picture", fileNameProperty="picture")
      * @var File|null
      */
     private $pictureFile;
