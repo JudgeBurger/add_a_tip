@@ -2,10 +2,5 @@
         {% if form.name.vars.errors is not empty %}
             {{ form_errors(form.name) }}
         {% endif %}
-    {{ form_label(form.language) }}
-    {{ form_label(form.description) }}
-    {{ form_label(form.picture) }}
-     <button class="card-button">
-     Enregistrer
-     </button>
 {{ form_end(form) }}
+
