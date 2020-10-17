@@ -5,10 +5,13 @@ namespace App\Controller;
 use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
+// Rajouter @IsGranted("ROLE_USER")
 
 /**
  * @Route("/")
@@ -39,6 +42,7 @@ class TipsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($tip);
             $entityManager->flush();

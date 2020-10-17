@@ -20,13 +20,14 @@
                             {{ tip.description }}
                             {{ tip.language }}
                         </div>
-                        <div class="col-12 d-flex justify-content-end align-items-end">
+                        <div class="button-lign col-12 d-flex justify-content-end align-items-end">
                             <button class="mt-5 card-button">
                                 <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
                             </button>
                             <button class="mt-5 ml-2 card-button">
                                 <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-                            </button>
+                            </button">
+                                {{ include('tips/_delete_form.html.twig') }}
                         </div>
                     </div>
                 </div>
@@ -42,7 +43,4 @@
             </button>
         </div>
     </section>
-
-
-
 {% endblock %}

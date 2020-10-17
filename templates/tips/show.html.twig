@@ -4,21 +4,18 @@
 
 {% block body %}
 
-    {% for tips in tip %}
+<div class="card-group">
     <div class="card">
-        <div class="card-header">
-            {{ tip.name }}
-        </div>
         <div class="card-body">
-            <h5 class="card-title">{{ tip.description }}</h5>
-            <p class="card-text">{{ tip.picture }}</p>
-            <a href="#" class="btn btn-primary">Clipboard</a>
+            <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
         </div>
     </div>
-        {% else %}
-        <h1 class="mt-5 p-5">Aucun Résultat</h1>
-    {% endfor %}
-
+</div>
     <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
         <button class="mt-5 card-button">
             <a href="{{ path('tips_index') }}">Retour</a>
