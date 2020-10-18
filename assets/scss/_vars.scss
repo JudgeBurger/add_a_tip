@@ -7,6 +7,9 @@ $background: rgba(16, 56, 86, 0.8);
 $svg-color: #E5DBD4;
 $light-color: #fff;
 $dark-color: #000;
+$primary: #BBCED7;
+$danger: #965D5C;
+$info: #BDC649;
 
 $font-text: 'Zilla Slab', serif;
 $font-title: 'Grandstander', cursive;
@@ -27,7 +30,7 @@ $margin-sm : calc(var($margin) *2);
 $margin-lg : calc(var($margin) *4);
 
 $theme-colors: (
-    "primary": #BBCED7,
-    "danger": #965D5C,
-    "info": #BDC649,
+    "primary": $primary,
+    "danger": $danger,
+    "info": $info,
 );

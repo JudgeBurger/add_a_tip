@@ -26,7 +26,7 @@
         top: 0;
         left: 0;
         min-width: 100%;
-        min-height: 100%;
+        min-height: 70%;
         backface-visibility: hidden;
         transition: all .6s ease;
         box-shadow: 1em 1em 2em rgba(0,0,0,.2);
@@ -81,6 +81,8 @@
 }
 
 .card-image {
-    border: 1px solid black;
-    border-radius: 5px;
+    padding : 35px;
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
 }
