@@ -1,5 +1,5 @@
-<form class="" method="post" action="{{ path('tips_delete', {'id': tip.id}) }}" onsubmit="return confirm('Êtes-vous de vouloir supprimer ce Tip ?');">
+<form method="post" action="{{ path('tips_delete', {'id': tip.id}) }}" onsubmit="return confirm('Êtes-vous de vouloir supprimer ce Tip ?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tip.id) }}">
-    <button class="card-button ml-2">Effacer</button>
+    <button class="btn btn-outline-primary ml-2">Effacer</button>
 </form>
