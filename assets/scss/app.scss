@@ -36,11 +36,9 @@ a {
 
 .delete-cross {
     display: flex;
-
-
+    justify-content: flex-end;
+    padding: 20px;
 }
-
-
 
 @include shapeDesktop();
 

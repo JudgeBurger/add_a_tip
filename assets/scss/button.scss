@@ -77,3 +77,28 @@ button {
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
 }
+
+.delete-button {
+    border: none;
+    background-color: $svg-color;
+
+    &:active {
+        border: none;
+        background-color: $svg-color;
+    }
+
+    &:focus {
+        border : none;
+        background-color: $svg-color;
+    }
+}
+
+//.button-group {
+//    position : relative;
+//    height : 150px;
+//}
+//
+//.card-button {
+//    position : absolute;
+//    bottom: 0;
+//}
