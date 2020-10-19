@@ -1,7 +1,7 @@
 <form method="post" action="{{ path('tips_delete', {'id': tip.id}) }}" onsubmit="return confirm('Êtes-vous de vouloir supprimer ce Tip ?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tip.id) }}">
-    <button class="mt-5 ml-2">
+    <button class="delete-button ml-2">
         <i class="fas fa-times cross-delete"></i>
     </button>
 </form>

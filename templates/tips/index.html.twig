@@ -21,16 +21,16 @@
                         <div class="delete-cross">
                             {{ include('tips/_delete_form.html.twig') }}
                         </div>
-                        <div class="card__description">
-                            <div class="tip-description mt-3">
+                        <div class="card__description m-3">
+                            <div class="tip-description">
                                 {{ tip.description }}
                             </div>
                         </div>
-                        <div class="button-lign col-12 d-flex justify-content-end align-items-end">
-                            <button class="mt-5 btn btn-outline-primary card-button">
+                        <div class="button-group">
+                            <button class="card-button mt-5 btn btn-outline-primary">
                                 <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
                             </button>
-                            <button class="mt-5 ml-2 btn btn-outline-primary card-button">
+                            <button class="btn btn-outline-primary card-button">
                                 <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
                             </button>
                         </div>
