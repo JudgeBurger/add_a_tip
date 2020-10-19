@@ -7,19 +7,18 @@ $dark-pink: #f9c4d2;
 $pink-border: #b18597;
 $pink-shadow: #ffe3e2;
 
-.button-lign {
-    margin-top: 380px;
-}
-
 .btn{
     width: 100%;
     background: none;
     border: 2px solid $svg-color;
-    color: $svg-color;
     padding: 5px;
     font-size: 18px;
     cursor: pointer;
     margin: 12px 0;
+
+    &.a {
+        color: $dark-color;
+    }
 }
 
 button {
