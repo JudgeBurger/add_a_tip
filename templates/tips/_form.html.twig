@@ -1,41 +1,24 @@
 {{ form_start(form) }}
-<div class="row">
-    <div class="col-3 d-flex justify-content-center align-items-center">
-        {{ form_label(form.name) }}
-    </div>
-    <div class="col-6">
-        {{ form_widget(form.name) }}
-    </div>
-</div>
-
-<div class="col-6">
-    <div class="col-6 d-flex justify-content-center align-items-center">
-        {{ form_label(form.language) }}
-    </div>
-    <div class="col-6">
-        {{ form_widget(form.language) }}
-    </div>
-</div>
-
-<div class="col-6">
-    <div class="col-6 d-flex justify-content-center align-items-center">
-        {{ form_label(form.description) }}
-    </div>
-    <div class="col-6">
-        {{ form_widget(form.description) }}
+<div class="border">
+    <div class="new-form">
+        <div class="new-form-text">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+        <div class="new-form-text">
+            {{ form_label(form.language) }}
+            {{ form_widget(form.language) }}
+        </div>
+        <div class="new-form-text">
+            {{ form_label(form.description) }}
+            {{ form_widget(form.description) }}
+        </div>
+        <div class="new-form-text">
+            {{ form_label(form.picture) }}
+            {{ form_widget(form.picture) }}
+        </div>
     </div>
 </div>
-
-<div class="col-6">
-    <div class="col-6 d-flex justify-content-center align-items-center">
-        {{ form_label(form.picture) }}
-    </div>
-    <div class="col-6">
-        {{ form_widget(form.picture) }}
-    </div>
-</div>
-
-
-<button class="">{{ button_label|default('Save') }}</button>
+<button class="card-button">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 
