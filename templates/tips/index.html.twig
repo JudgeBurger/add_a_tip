@@ -3,41 +3,44 @@
 {% block title %}Tips{% endblock %}
 
 {% block body %}
-<h1 class="mt-5">Tips</h1>
+    <h1>Tips</h1>
 
-            <div class="card">
-                <div class="image">
-                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                         alt="Uploaded-by-user">
+    <section class="content">
+        <div class="cards d-flex flex-wrap mt-5">
+            {% for tip in tips %}
+                <div class="card mb-5">
+                    <div class="card__side card__side--front card__side--front-1">
+                        <div class="card__description">
+                            <h2>{{ tip.name }}</h2>
+                            <img class="card-image" src="https://via.placeholder.com/500x400" alt="image uploded by user">
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__description">
+                            {{ tip.description }}
+                            {{ tip.language }}
+                        </div>
+                        <div class="button-lign col-12 d-flex justify-content-end align-items-end">
+                            <button class="mt-5 card-button">
+                                <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
+                            </button>
+                            <button class="mt-5 ml-2 card-button">
+                                <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
+                            </button">
+                                {{ include('tips/_delete_form.html.twig') }}
+                        </div>
+                    </div>
                 </div>
-                <h2>Tips Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh
-                    pulvinar a. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum
-                    id enim.
-                </p>
-                <div class="media">
-                    {# TODO : put here language logo instead of all i tags #}
-                    <i class="language fab fa-symfony"></i>
-                    <i class="language fab fa-html5"></i>
-                    <i class="language fab fa-css3-alt"></i>
-                    <i class="language fab fa-bootstrap"></i>
-                </div>
-            </div>
-
-
-{#    <div class="button-group">#}
-{#        <button class="card-button mt-5 btn btn-outline-primary">#}
-{#            <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>#}
-{#        </button>#}
-{#        <button class="btn btn-outline-primary card-button">#}
-{#            <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>#}
-{#        </button>#}
-{#    </div>#}
-
-{#    <div class="d-flex justify-content-center align-items-center">#}
-{#        <button class="p-3 mt-5 mb-5 btn btn-outline-info">#}
-{#            <a href="{{ path('tips_new') }}">Ajouter un Tip</a>#}
-{#        </button>#}
-{#    </div>#}
-
+            {% else %}
+                <tr>
+                    <td colspan="6">Aucun Résultat</td>
+                </tr>
+            {% endfor %}
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="learn-more mt-5 ml-5 mb-5">
+                <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
+            </button>
+        </div>
+    </section>
 {% endblock %}
