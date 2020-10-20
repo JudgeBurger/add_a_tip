@@ -1,91 +1,55 @@
 @import "vars";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-.content {
-    height: 100vh;
-    text-align: center;
-    padding: 4em 0;
-}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $svg-color;
+    background-size: cover;
+    font-family: $font-text, sans-serif;
 
-.cards {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .card {
-    width: 600px;
-    margin: 10px;
-    position: relative;
-    height: 40em;
-    perspective: 150em;
-    background-color: transparent;
-    border: none;
-
-    &__side {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        min-height: 70%;
-        backface-visibility: hidden;
-        transition: all .6s ease;
-        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
-        border-radius: 5px;
-
-        &--front {
-            background-color: $svg-color;
-        }
-
-        &--back {
-            background-color: $svg-color;
-            transform: rotateY(180deg);
-
-            &-1 {
-                background-image: $svg-color;;
-            }
-
-            &-2 {
-                background-image: $svg-color;
-            }
-
-            &-3 {
-                background-image: $svg-color;
-            }
-        }
-    }
-
-    &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover &__side--back {
-        transform: rotate(0);
-    }
-
-    &__description {
-        display: flex;
-        border-radius: 5px;
-        border: 1px solid $dark-color !important;
-        font-size: 1.3em;
-        padding: 1em 0;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: $svg-color;
-        }
-    }
+    width: 280px;
+    padding: 20px;
+    background: $svg-color;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    box-shadow: 1px 1px 12px $dark-color;
 }
 
-.card-button {
-    //padding : 10px;
-    border: 1px solid black;
-    border-radius: 5px;
+.image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 28px auto;
+}
+.image img {
+    width: 100%;
+    height: 100%;
 }
 
-.card-image {
-    padding : 35px;
-    border-radius: 5%;
-    max-width: 100%;
-    height: auto;
+h2  {
+    color: $dark-color;
+    margin: 20px 0 0 0;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+span {
+    font-weight: 700;
+}
+
+.media a {
+    width: 40px;
+    font-size: 30px;
+    display: inline-block;
+    margin: 0 8px;
+    transition: 0.4s all;
 }
