@@ -3,7 +3,8 @@
 {% block title %}Tips{% endblock %}
 
 {% block body %}
-    <h1>Tips</h1>
+    <div id="scroll-to-top"></div>
+    <h1 class="mt-5">Tips</h1>
 
     <section class="content">
         <div class="cards d-flex flex-wrap mt-5">
@@ -12,22 +13,26 @@
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
                             <h2>{{ tip.name }}</h2>
-                            <img class="card-image" src="https://via.placeholder.com/500x400" alt="image uploded by user">
+                            <img class="card-image" width="500" height="400"
+                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                 alt="image uploded by user">
                         </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
+                        {{ include('tips/_delete_form.html.twig') }}
                         <div class="card__description">
-                            {{ tip.description }}
-                            {{ tip.language }}
-                        </div>
-                        <div class="button-lign col-12 d-flex justify-content-end align-items-end">
-                            <button class="mt-5 card-button">
-                                <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
-                            </button>
-                            <button class="mt-5 ml-2 card-button">
-                                <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-                            </button">
-                                {{ include('tips/_delete_form.html.twig') }}
+                            <div class="description">
+                                {{ tip.description }}
+                                {{ tip.language }}
+                            </div>
+                            <div class="button-lign col-12 d-flex justify-content-end align-items-end">
+                                <button class="mt-5 card-button">
+                                    <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
+                                </button>
+                                <button class="mt-5 ml-2 card-button">
+                                    <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,9 +43,15 @@
             {% endfor %}
         </div>
         <div class="d-flex justify-content-center align-items-center">
-            <button class="learn-more mt-5 ml-5 mb-5">
+            <button class="card-button mt-5 ml-5 mb-5">
                 <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
             </button>
         </div>
+        <div id="scroll_to_top">
+            <a href="#scroll_to_top">
+                <i class="far fa-lg-arrow-alt-circle-up"></i>
+            </a>
+        </div>
     </section>
+
 {% endblock %}
