@@ -87,8 +87,10 @@
 }
 
 .description {
-    border: 1px solid $dark-color;
-    margin: 10px;
+    border: 2px solid $dark-color;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 5px;
 }
 
 #scroll_to_top {

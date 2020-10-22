@@ -22,7 +22,9 @@ class TipsType extends AbstractType
                 'language'
             )
             ->add(
-                'description',
+                'description', TextareaType::class, [
+
+                ]
             )
             ->add('picture')
         ;

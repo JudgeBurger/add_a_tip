@@ -5,26 +5,27 @@
 {% block body %}
     <h1 class="mt-5">Modifier <strong>{{ tip.name }}</strong></h1>
 
-    <section class="container-fluid">
+    <section>
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center align-items-center">
                 <div class="row">
                     <div class="mr-3 mt-5 mb-5">
-                        {{ include('tips/_form.html.twig', {'button_label': 'Update'}) }}
+                        {{ include('tips/_form.html.twig') }}
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="mr-3 mt-5 mb-5 d-flex justify-content-center align-items-center">
-                    {{ include('tips/_delete_form.html.twig') }}
-                </div>
-                <div class="mr-3 mt-5 mb-5">
-                    <button class="card-button">
-                        <a href="{{ path('tips_index') }}">Retour</a>
-                    </button>
-                </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="mr-3 mt-5 mb-5">
+                <button class="card-button">
+                    <a href="{{ path('tips_index') }}">Retour</a>
+                </button>
+                <button class="card-button">
+                    {{ button_label|default('Enregistrer') }}
+                </button>
             </div>
         </div>
     </section>
+
 
 {% endblock %}
