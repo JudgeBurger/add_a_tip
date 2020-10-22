@@ -107,3 +107,17 @@
         width : 25px;
     }
 }
+
+.circle-language {
+    height : 100px;
+    width : 100px;
+    background-color: $background;
+    border-radius: 50%;
+    display : inline-block;
+}
+
+.language {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}

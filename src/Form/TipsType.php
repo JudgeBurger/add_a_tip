@@ -15,17 +15,11 @@ class TipsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add(
-                'name'
-            )
-            ->add(
-                'language'
-            )
-            ->add(
-                'description', TextareaType::class, [
+            ->add('name')
+            ->add('language')
+            ->add('description', TextareaType::class, [
 
-                ]
-            )
+            ])
             ->add('picture')
         ;
     }

@@ -23,9 +23,13 @@
                         <div class="card__description">
                             <div class="description">
                                 {{ tip.description }}
-                                {{ tip.language }}
                             </div>
                             <div class="button-lign col-12 d-flex justify-content-end align-items-end">
+                                <div class="circle-language">
+                                    <span class="language">
+                                        {{ tip.language }}
+                                    </span>
+                                </div>
                                 <button class="mt-5 card-button">
                                     <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
                                 </button>
@@ -49,7 +53,7 @@
         </div>
         <div id="scroll_to_top">
             <a href="#scroll_to_top">
-                <i class="far fa-lg-arrow-alt-circle-up"></i>
+                <i class="arrow far fa-lg-arrow-alt-circle-up"></i>
             </a>
         </div>
     </section>
