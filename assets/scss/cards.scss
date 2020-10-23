@@ -17,7 +17,7 @@
     min-width: 600px;
     margin: 10px;
     position: relative;
-    min-height: 20em;
+    min-height: 28em;
     perspective: 150em;
     background-color: transparent;
     border: none;
@@ -67,6 +67,7 @@
         font-size: 1.3em;
         padding: 1em 0;
 
+
         svg {
             width: 1.5em;
             height: 1.5em;
@@ -84,6 +85,7 @@
 .card-image {
     border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px;
 }
 
 .description {
@@ -91,6 +93,8 @@
     padding: 50px;
     margin: 20px;
     border-radius: 5px;
+    box-shadow: 3px 3px 3px;
+
 }
 
 #scroll_to_top {
@@ -120,4 +124,5 @@
     display : flex;
     justify-content: center;
     align-items: center;
+    margin-top : 34%;
 }
