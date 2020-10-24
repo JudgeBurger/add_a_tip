@@ -18,6 +18,12 @@ body {
     padding: 0;
 }
 
+.content {
+    height : 0;
+    margin : 0;
+    padding : 0;
+}
+
 h1 {
     color: $background;
 }
@@ -38,6 +44,14 @@ a {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
+}
+
+.none {
+    background: $svg-color;
+    color: $dark-color;
+    padding: 10px;
+    border-radius: $border;
+    box-shadow: $shadow;
 }
 
 @include shapeDesktop();
