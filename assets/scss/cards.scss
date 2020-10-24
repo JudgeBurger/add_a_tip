@@ -14,10 +14,11 @@
 }
 
 .card {
-    min-width: 600px;
+    width: 100%;
+    max-width: 470px;
     margin: 10px;
     position: relative;
-    min-height: 28em;
+    min-height: 470px;
     perspective: 150em;
     background-color: transparent;
     border: none;
@@ -26,7 +27,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        min-width: 100%;
+        width : 100%;
+        max-width : 470px;
         min-height: 65%;
         backface-visibility: hidden;
         transition: all .6s ease;
@@ -65,7 +67,7 @@
 
     &__description {
         font-size: 1.3em;
-        padding: 1em 0;
+        padding: 0.75em 0;
 
 
         svg {
@@ -86,15 +88,27 @@
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 5px 5px 5px;
+    width: 100%;
+}
+
+.absolute-clipboard {
+    position : absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height : 30px;
+    background-color: #55A090;
+    border-radius: $circle;
+    padding: .30em;
 }
 
 .description {
+    position : relative;
     border: 2px solid $dark-color;
-    padding: 50px;
+    padding: 5px;
     margin: 20px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px;
-
 }
 
 #scroll_to_top {
@@ -113,16 +127,18 @@
 }
 
 .circle-language {
-    height : 100px;
-    width : 100px;
-    background-color: $background;
-    border-radius: 50%;
     display : inline-block;
+    height : 70px;
+    width : 70px;
+    padding : .75em;
+    border-radius: $circle;
+    border: 1px solid $dark-color;
+    margin-bottom : 1em;
 }
 
 .language {
     display : flex;
     justify-content: center;
     align-items: center;
-    margin-top : 34%;
 }
+

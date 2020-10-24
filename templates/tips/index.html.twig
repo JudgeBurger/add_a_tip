@@ -13,29 +13,60 @@
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
                             <h2>{{ tip.name }}</h2>
-                            <img class="card-image" width="500" height="200"
-                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                 alt="image uploded by user">
+                            <img
+                                class="card-image"
+                                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                alt="image uploded by user"
+                            >
                         </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
                         {{ include('tips/_delete_form.html.twig') }}
                         <div class="card__description">
                             <div class="description">
-                                {{ tip.description }}
+                                <div class="absolute-clipboard d-flex justify-content-center align-items-center">
+                                    <img
+                                        src="{{ asset('build/copy.svg') }}"
+                                        alt="copyToClipboard"
+                                        onclick="maFonction({{ tip.id }})"
+                                    />
+                                    <script>
+                                        const maFonction = (id) => {
+                                            const copyText = document.getElementById(id);
+                                            copyText.select();
+                                            copyText.setSelectionRange(0, 99999);
+                                            document.execCommand("copy");
+                                            alert("Copied the text: " + copyText.value);
+                                        }
+                                    </script>
+                                </div>
+                                <div id="{{ tip.id }}">
+                                    {{ tip.description | slice(0, 120) }}...
+                                </div>
                             </div>
-                            <div class="button-lign col-12 d-flex justify-content-end align-items-end">
-                                <div class="circle-language">
-                                    <span class="language">
-                                        {{ tip.language }}
+                            <div
+                                class="footer-card col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                <div class="px-2 flex-wrap d-flex flex-row align-items-center">
+                                    {# TODO : make a loop #}
+                                    <span class="circle-language mb-md-0 language mr-2">
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                            alt="uploaded-by-user"
+                                        >
                                     </span>
                                 </div>
-                                <button class="mt-5 card-button">
-                                    <a class="" href="{{ path('tips_show', {'id': tip.id}) }}">Détail</a>
-                                </button>
-                                <button class="mt-5 ml-2 card-button">
-                                    <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-                                </button>
+                                <div class="px-2 button-group d-flex flex-row align-items-center">
+                                    <button class="card-button">
+                                        <a href="{{ path('tips_show', {'id': tip.id}) }}">
+                                            Détail
+                                        </a>
+                                    </button>
+                                    <button class="ml-2 card-button">
+                                        <a href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                            Modifier
+                                        </a>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
