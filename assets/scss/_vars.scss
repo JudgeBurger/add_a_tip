@@ -30,6 +30,8 @@ $margin-sm : calc(var($margin) *2);
 $margin-lg : calc(var($margin) *4);
 
 $circle : 50%;
+$border: 5px;
+$shadow: 3px 3px 3px;
 
 $theme-colors: (
     "primary": $primary,
