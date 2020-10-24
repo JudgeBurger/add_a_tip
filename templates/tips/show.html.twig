@@ -11,11 +11,14 @@
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
+                        <div class="mb-3">
+                            {{ include('tips/_delete_form.html.twig') }}
+                        </div>
                         <img class="card-img-top"
                              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                              alt="Card image cap">
                         <h5 class="card-title">{{ tip.name }}</h5>
-                        <p class="card-text">{{ tip.description }}</p>
+                        <p class="card-text">{{ tip.description | nl2br }}</p>
                         {# TODO loop on logo #}
                         <span class="circle-language mb-md-0 language mr-2">
                     <img
@@ -31,7 +34,7 @@
             <button class="mt-5 card-button">
                 <a href="{{ path('tips_index') }}">Retour</a>
             </button>
-            <button class="mt-5 btn btn-outline-primary card-button">
+            <button class="mt-5 ml-2 card-button">
                 <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
             </button>
         </div>
