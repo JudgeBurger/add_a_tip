@@ -26,11 +26,17 @@
                             <div class="description">
                                 <div class="absolute-clipboard d-flex justify-content-center align-items-center">
                                     {# TODO make a clipboard #}
-                                    <img
-                                        src="{{ asset('build/copy.svg') }}"
-                                        alt="copyToClipboard"
-                                        onclick="maFonction({{ tip.id }})"
-                                    />
+                                    <button
+                                        class="card-button"
+                                        id="copy-button"
+                                        data-clipboard-target="#{{ tip.id }}"
+                                    >
+                                    </button>
+                                    <script>
+                                        (function () {
+                                            new Clipboard(#copy-button);
+                                        })();
+                                    </script>
                                 </div>
                                 <div id="{{ tip.id }}">
                                     {{ tip.description | slice(0, 120) }}...
