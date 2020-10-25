@@ -13,11 +13,9 @@
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
                             <h2>{{ tip.name }}</h2>
-                            <img
-                                class="card-image p-3"
-                                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                alt="image uploded by user"
-                            >
+                            <img class="card-image p-3"
+                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                 alt="image uploded by user">
                         </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
@@ -26,15 +24,11 @@
                             <div class="description">
                                 <div class="absolute-clipboard d-flex justify-content-center align-items-center">
                                     {# TODO make a clipboard #}
-                                    <button
-                                        class="card-button"
-                                        id="copy-button"
-                                        data-clipboard-target="#{{ tip.id }}"
-                                    >
+                                    <button class="card-button" id="copy-button" data-clipboard-target="#{{ tip.id }}">
                                     </button>
                                     <script>
                                         (function () {
-                                            new Clipboard(#copy-button);
+                                            new Clipboard(#copy - button);
                                         })();
                                     </script>
                                 </div>
@@ -54,8 +48,7 @@
                                     <span class="circle-language mb-md-0 language mr-2">
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                            alt="uploaded-by-user"
-                                        >
+                                            alt="uploaded-by-user">
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">
@@ -82,11 +75,6 @@
             <button class="card-button mt-5 ml-5 mb-5">
                 <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
             </button>
-        </div>
-        <div id="scroll_to_top">
-            <a href="#scroll_to_top">
-                <i class="arrow far fa-lg-arrow-alt-circle-up"></i>
-            </a>
         </div>
     </section>
 {% endblock %}

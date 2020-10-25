@@ -1,27 +1,73 @@
 {{ form_start(form) }}
+<section class="d-flex align-items-center mb-5">
+    <div class="w-100 text-center">
+        <div class="form">
+            <h1 class="text-center my-5"></h1>
+            {{ form_start(form.name, {'attr': {'class': 'col-12 d-flex flex-column align-items-center p-0'}}) }}
+            <div class="col-12 d-flex flex-column p-4 align-items-center">
+                <div class="d-flex flex-md-row flex-column col-md-10 p-0">
+                    <div class="form-group d-flex flex-column my-3 col-md-6">
+                        {{ form_label(form.name, 'Nom de votre Tip') }}
+                        {{ form_widget(form.name) }}
+                        {% if form.name.vars.errors is not empty %}
+                            <div class="mt-2 text-left alert alert-danger">
+                                {{ form_errors(form.name) }}
+                            </div>
+                        {% endif %}
+                    </div>
 
-<div class="form-row">
-    <div class="col-md-6 mb-3">
-        {{ form_label(form.name) }}
-        {{ form_widget(form.name) }}
+                    <div class="form-group d-flex flex-column my-3 col-md-6">
+                        {{ form_label(form.language, 'Langue de votre Tip') }}
+                        {{ form_widget(form.language) }}
+                        {% if form.language.vars.errors is not empty %}
+                            <div class="mt-2 text-left alert alert-danger">
+                                {{ form_errors(form.language) }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="d-flex flex-lg-row flex-column col-md-10 p-0">
+                    <div class="form-group d-flex flex-column my-3 col-lg-6">
+                        {{ form_label(form.code, 'Ligne de code de votre Tip') }}
+                        {{ form_widget(form.code) }}
+                        {% if form.code.vars.errors is not empty %}
+                            <div class="mt-2 text-left alert alert-danger">
+                                {{ form_errors(form.code) }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group d-flex flex-column my-3 col-lg-6 align-items-center">
+                        {{ form_label(form.picture,'Une Capture d\'écran') }}
+                        {{ form_widget(form.picture,{'attr': {'class': 'mx-lg-3 w-100'}}) }}
+                        {% if form.picture.vars.errors is not empty %}
+                            <div class="mt-2 text-left alert alert-danger w-100">
+                                {{ form_errors(form.picture) }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="form-group d-flex flex-column my-3 col-lg-6 text-truncate">
+                    {{ form_label(form.description, 'Description de votre Tip') }}
+                    {{ form_widget(form.description, {'attr': {'class': 'text-truncate'}}) }}
+                    {% if form.description.vars.errors is not empty %}
+                        <div class="mt-2 text-left alert alert-danger">
+                            {{ form_errors(form.description) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="card-button mr-5">
+                    <a href="{{ path('tips_index') }}">Retour</a>
+                </button>
+                <button class="card-button">{{ button_label|default('Enregistrer') }}</button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6 mb-3">
-        {{ form_label(form.language) }}
-        {{ form_widget(form.language) }}
-    </div>
-    <div class="col-md-6 mb-3">
-        {{ form_label(form.code) }}
-        {{ form_widget(form.code) }}
-    </div>
-    <div class="col-md-6 mb-3">
-        {{ form_label(form.description) }}
-        {{ form_widget(form.description) }}
-    </div>
-    <div class="col-md-3 mb-3">
-        {{ form_label(form.picture) }}
-        {{ form_widget(form.picture) }}
-    </div>
-</div>
-<button class="card-button">{{ button_label|default('Save') }}</button>
+</section>
 {{ form_end(form) }}
+
 

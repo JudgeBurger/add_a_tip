@@ -20,7 +20,9 @@ class TipsType extends AbstractType
             ->add('language')
             ->add('code')
             ->add('description', TextareaType::class, [
-
+                'attr' => [
+                    'rows' => '8',
+                ]
             ])
             ->add('picture')
         ;
