@@ -38,11 +38,13 @@
                                         })();
                                     </script>
                                 </div>
-                                <div class="block-code">
-                                    {{ tip.code }}
-                                </div>
+                                <span class="block-code">
+                                    <code>
+                                        {{ tip.code }}
+                                    </code>
+                                </span>
                             </div>
-                            <div>
+                            <div class="mt-5">
                                 {{ tip.description | slice(0, 120) }}...
                             </div>
                             <div

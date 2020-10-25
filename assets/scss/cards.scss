@@ -100,7 +100,7 @@ img {
 .absolute-clipboard {
     position : absolute;
     top: -15px;
-    right: -15px;
+    right: 65px;
     width: 30px;
     height : 30px;
     background-color: #55A090;
@@ -145,9 +145,10 @@ img {
 }
 
 .block-code {
-    padding : 0;
-    margin : 0;
     color: $svg-color;
     background: $dark-color;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
 }
 
