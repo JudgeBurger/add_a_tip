@@ -8,10 +8,6 @@
 @import "underline";
 @import "form";
 
-img {
-    width : 100%;
-}
-
 body {
     background-color: $background;
     margin: 0;
@@ -24,34 +20,9 @@ body {
     padding : 0;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6,  {
     color: $background;
-}
-
-a {
-    color: #000;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-
-    &:hover {
-        text-decoration: none;
-        color: $dark-color;
-    }
-}
-
-.delete-cross {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-}
-
-.none {
-    background: $svg-color;
-    color: $dark-color;
-    padding: 10px;
-    border-radius: $border;
-    box-shadow: $shadow;
+    font-size: $size-title;
 }
 
 @include shapeDesktop();

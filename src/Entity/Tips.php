@@ -20,7 +20,7 @@ class Tips
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=25)
      */
     private $name;
 
@@ -45,6 +45,11 @@ class Tips
      * @var File|null
      */
     private $pictureFile;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $code;
 
     /**
      * @param string|null $picture
@@ -113,6 +118,18 @@ class Tips
     public function setPicture(?string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(?string $code): self
+    {
+        $this->code = $code;
 
         return $this;
     }

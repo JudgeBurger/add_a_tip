@@ -38,9 +38,12 @@
                                         })();
                                     </script>
                                 </div>
-                                <div id="{{ tip.id }}">
-                                    {{ tip.description | slice(0, 120) }}...
+                                <div class="block-code">
+                                    {{ tip.code }}
                                 </div>
+                            </div>
+                            <div>
+                                {{ tip.description | slice(0, 120) }}...
                             </div>
                             <div
                                 class="footer-card col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">

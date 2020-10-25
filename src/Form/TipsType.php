@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 
 
 class TipsType extends AbstractType
@@ -17,6 +18,7 @@ class TipsType extends AbstractType
         $builder
             ->add('name')
             ->add('language')
+            ->add('code')
             ->add('description', TextareaType::class, [
 
             ])

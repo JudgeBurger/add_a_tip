@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
+img {
+    width : 80%;
+}
+
 .content {
     height: 100vh;
     text-align: center;
@@ -106,11 +110,8 @@
 
 .description {
     position : relative;
-    border: 2px solid $dark-color;
     padding: 5px;
     margin: 20px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px;
 }
 
 #scroll_to_top {
@@ -141,5 +142,12 @@
     display : flex;
     justify-content: center;
     align-items: center;
+}
+
+.block-code {
+    padding : 0;
+    margin : 0;
+    color: $svg-color;
+    background: $dark-color;
 }
 

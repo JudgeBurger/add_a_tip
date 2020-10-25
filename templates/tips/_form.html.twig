@@ -1,25 +1,27 @@
 {{ form_start(form) }}
 
-    <div class="form-row">
-        <div class="col-md-6 mb-3">
-            {{ form_label(form.name) }}
-            {{ form_widget(form.name) }}
-        </div>
-        <div class="col-md-6 mb-3">
-            {{ form_label(form.language) }}
-            {{ form_widget(form.language) }}
-        </div>
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name) }}
     </div>
-    <div class="form-row">
-        <div class="col-md-6 mb-3">
-            {{ form_label(form.description) }}
-            {{ form_widget(form.description) }}
-        </div>
-        <div class="col-md-3 mb-3">
-            {{ form_label(form.picture) }}
-            {{ form_widget(form.picture) }}
-        </div>
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.language) }}
+        {{ form_widget(form.language) }}
     </div>
-    <button class="card-button">{{ button_label|default('Save') }}</button>
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.code) }}
+        {{ form_widget(form.code) }}
+    </div>
+    <div class="col-md-6 mb-3">
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description) }}
+    </div>
+    <div class="col-md-3 mb-3">
+        {{ form_label(form.picture) }}
+        {{ form_widget(form.picture) }}
+    </div>
+</div>
+<button class="card-button">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 
