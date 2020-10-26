@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
+use App\Service\MessagesFlash;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,9 +34,10 @@ class TipsController extends AbstractController
     /**
      * @Route("/new", name="tips_new", methods={"GET","POST"})
      * @param Request $request
+     * @param MessagesFlash $messagesFlash
      * @return Response
      */
-    public function new(Request $request): Response
+    public function new(Request $request, MessagesFlash $messagesFlash): Response
     {
         $tip = new Tips();
         $form = $this->createForm(TipsType::class, $tip);
@@ -44,6 +46,7 @@ class TipsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $entityManager = $this->getDoctrine()->getManager();
+            $this->addFlash('create', $messagesFlash->create('tips'));
             $entityManager->persist($tip);
             $entityManager->flush();
 
@@ -72,14 +75,16 @@ class TipsController extends AbstractController
      * @Route("/{id}/edit", name="tips_edit", methods={"GET","POST"})
      * @param Request $request
      * @param Tips $tip
+     * @param MessagesFlash $messagesFlash
      * @return Response
      */
-    public function edit(Request $request, Tips $tip): Response
+    public function edit(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
         $form = $this->createForm(TipsType::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('update', $messagesFlash->update('tips'));
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('tips_index');
@@ -95,12 +100,15 @@ class TipsController extends AbstractController
      * @Route("/{id}", name="tips_delete", methods={"DELETE"})
      * @param Request $request
      * @param Tips $tip
+     * @param MessagesFlash $messagesFlash
      * @return Response
      */
-    public function delete(Request $request, Tips $tip): Response
+    public function delete(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
         if ($this->isCsrfTokenValid('delete'.$tip->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
+            $this->addFlash('delete', $messagesFlash->delete('tips'));
+
             $entityManager->remove($tip);
             $entityManager->flush();
         }
