@@ -36,12 +36,14 @@ class Tips
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     *
      * @var string|null
      */
     private $picture;
 
     /**
      * @Vich\UploadableField(mapping="picture", fileNameProperty="picture")
+     *
      * @var File|null
      */
     private $pictureFile;
@@ -51,13 +53,10 @@ class Tips
      */
     private $code;
 
-    /**
-     * @param string|null $picture
-     * @return Tips
-     */
     public function setPictureFile(?string $picture): Tips
     {
         $this->pictureFile = $picture;
+
         return $this;
     }
 
@@ -133,5 +132,4 @@ class Tips
 
         return $this;
     }
-
 }
