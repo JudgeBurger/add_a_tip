@@ -1,4 +1,4 @@
-var clipboard = new ClipboardJS('.btn');
+const clipboard = new ClipboardJS('.btn');
 
 clipboard.on('success', function(e) {
     console.info('Action:', e.action);

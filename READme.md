@@ -56,3 +56,7 @@ run ```yarn encore dev --watch```
 * ```bin/console make:migrations```
 
 * ```bin/console doctrine:migration:migrate```
+
+ # Avant chaque commit : 
+ 
+ * ```php ./vendor/bin/php-cs-fixer fix -v --show-progress=dots``` 
