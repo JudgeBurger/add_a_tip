@@ -9,7 +9,7 @@
     <section class="content">
         <div class="cards d-flex flex-wrap mt-5">
             {% for tip in tips %}
-                <div class="card mb-5">
+                <div class="card tip mb-5" id="tip-{{ tip.id }}">
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
                             <h2>{{ tip.name }}</h2>
@@ -26,7 +26,7 @@
                                     <div class="absolute-clipboard d-flex justify-content-center align-items-center">
                                         {# TODO make a clipboard #}
                                         <button class="card-button" id="copy-button"
-                                                data-clipboard-target="#{{ tip.id }}">
+                                                data-clipboard-target="#tip-{{ tip.id }}-code">
                                         </button>
                                         <script>
                                             (function () {
@@ -35,7 +35,7 @@
                                         </script>
                                     </div>
                                     <span class="block-code">
-                                    <code>
+                                    <code id="tip-{{ tip.id }}-code">
                                         {{ tip.code }}
                                     </code>
                                 </span>
