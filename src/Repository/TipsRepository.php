@@ -22,9 +22,11 @@ class TipsRepository extends ServiceEntityRepository
 
     /**
      * @return int|mixed|string|null
+     *
      * @throws NonUniqueResultException
      */
-    public function countAllTips() {
+    public function countAllTips()
+    {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder->select('COUNT(a.id) as value');
 

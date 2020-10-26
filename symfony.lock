@@ -2,6 +2,12 @@
     "composer/package-versions-deprecated": {
         "version": "1.11.99"
     },
+    "composer/semver": {
+        "version": "1.7.1"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.4"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -108,6 +114,18 @@
     "egulias/email-validator": {
         "version": "2.1.21"
     },
+    "friendsofphp/php-cs-fixer": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cc05ab6abf6894bddb9bbd6a252459010ebe040b"
+        },
+        "files": [
+            ".php_cs.dist"
+        ]
+    },
     "jms/metadata": {
         "version": "2.3.0"
     },
@@ -131,6 +149,9 @@
     },
     "php": {
         "version": "7.4"
+    },
+    "php-cs-fixer/diff": {
+        "version": "v1.3.1"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
