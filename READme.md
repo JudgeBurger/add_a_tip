@@ -1,45 +1,45 @@
-# Add_a_tip c'est quoi ?
+# What is Add_a_itp ?
 
 Add a tip, permet de stocker et de retoruver l'ensemble des trucs et astuces dont vous avez besoin au quotidien, tous les 6 mois, tous les 10 ans ... . <br>
 
 Grâce à un simple système de card, il est possible d'ajouter tous les trucs et astuces dont vous voulez vous souvenir.
 
 
-# Composition d'une Card : 
+# Card Composition : 
 #####Name : 
-* nom de votre tip
+* tip name
 #####Language: 
-* le language ou la technologie concernée
+* tip language or tech 
 #####Description: 
-* Une courte description du Tip
+* a short description 
 #####Picture: 
-* Une capture d'écran de votre Tip
+* a screenshot of your tip
 ####Code: 
-* une ligne de code qu'il est possible de copier/coller directement dans votre terminal, votre IDE...
+* lign code
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Fonctionnalités disponible :
+### Features available :
 
-* Ajouter un Tip
+* add a tip in DB
 
-### Fonctionnalité en cours de developpement :
+### Functionality under development :
 
 * Clipboard 
 
-### Fonctionnalité à venir : 
+### Feature to come : 
 
-* Créer un Compte personnel
-* Ajouter des tips à votre collection
-* Effectuer une recherche dans tous vos Tips
-* Consulter les Tips de la communauté
-* Commenter un tip
-* Liker un Tip
-* Enregistrer un Tip dans votre collection
+* Create a Personal Account
+* Add tips to your collection
+* Search through all your Tips
+* Consult the Community Tips
+* Comment on a tip
+* Liker a Tip
+* Save a Tip in your collection
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
- # Installation du projet :
+ # Project installation :
  
 * ```git clone https://github.com/JudgeBurger/add_a_tip.git```
  
@@ -56,3 +56,7 @@ run ```yarn encore dev --watch```
 * ```bin/console make:migrations```
 
 * ```bin/console doctrine:migration:migrate```
+
+# Before each Commit : 
+
+* ```php ./vendor/bin/php-cs-fixer fix -v --show-progress=dots```
