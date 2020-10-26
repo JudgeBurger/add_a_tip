@@ -14,27 +14,33 @@
                         <div class="mb-3">
                             {{ include('tips/_delete_form.html.twig') }}
                         </div>
-                        <img class="card-img-top"
-                             src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                             alt="Card image cap">
+                        <img class="card-img-top" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Card image cap">
                         <h5 class="card-title mt-3">{{ tip.name }}</h5>
-                        <div class="block-code">
-                            <code>
-                                {{ tip.code }}
-                            </code>
-                        </div>
+
+                        {% if tip.code is not empty %}
+                            <div class="absolute-clipboard d-flex justify-content-center align-items-center">
+                                {# TODO make a clipboard #}
+                                <button class="card-button" id="copy-button"
+                                        data-clipboard-target="#tip-{{ tip.id }}-code">
+                                </button>
+                            </div>
+                            <span class="block-code">
+                                        <code id="tip-{{ tip.id }}-code">
+                                            {{ tip.code }}
+                                        </code>
+                                    </span>
+                        {% endif %}
+
                         <p class="card-text">{{ tip.description | nl2br }}</p>
                         {# TODO loop on logo #}
                         <span class="circle-language mb-md-0 language mr-2">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                        alt="uploaded-by-user"
-                    >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="uploaded-by-user">
                 </span>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
             <button class="mt-5 card-button">
                 <a href="{{ path('tips_index') }}">Retour</a>
