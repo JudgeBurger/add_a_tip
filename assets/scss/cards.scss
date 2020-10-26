@@ -17,6 +17,14 @@ img {
     justify-content: space-evenly;
 }
 
+.card-body {
+    background-color: $svg-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+}
+
 .card {
     width: 100%;
     max-width: 470px;
@@ -114,21 +122,6 @@ img {
     margin: 20px;
 }
 
-#scroll_to_top {
-    position : fixed;
-    width : 25px;
-    height : 25px;
-    bottom : 50px;
-    right: 30px;
-}
-
-#scroll_to_top {
-
-    .arrow {
-        width : 25px;
-    }
-}
-
 .circle-language {
     display : inline-block;
     height : 70px;
@@ -148,7 +141,7 @@ img {
     color: $svg-color;
     background: $dark-color;
     border-radius: 4px;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
 }
 

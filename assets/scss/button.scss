@@ -67,14 +67,6 @@ button {
     }
 }
 
-.card-body {
-    background-color: $light-color;
-    border-radius: 5px;
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-}
-
 .delete-button {
     border: none;
     background-color: $svg-color;
