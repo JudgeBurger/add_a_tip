@@ -19,5 +19,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="clipboard" level="application" />
+    <orderEntry type="library" name="clipboard" level="application" />
   </component>
 </module>
