@@ -22,14 +22,14 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 ### Features available :
 
 * add a tip in DB
+* Clipboard
 
 ### Functionality under development :
 
-* Clipboard 
+ * Create a Personal Account
 
 ### Feature to come : 
 
-* Create a Personal Account
 * Add tips to your collection
 * Search through all your Tips
 * Consult the Community Tips
