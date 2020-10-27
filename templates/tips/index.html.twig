@@ -25,8 +25,9 @@
                                 {% if tip.code is not empty %}
                                     <div class="absolute-clipboard d-flex justify-content-center align-items-center">
                                         {# TODO make a clipboard #}
-                                        <button class="card-button" id="copy-button"
+                                        <button class="card-button m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
+                                            <small class="copy-button">copy</small>
                                         </button>
                                     </div>
                                     <span class="block-code">
