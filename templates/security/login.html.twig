@@ -9,26 +9,24 @@
 
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input id="text" name="text" type="text" placeholder="Identifiant" required>
             <label for="text"></label>
+            <input id="text" name="text" type="text" placeholder="Identifiant" required>
         </div>
 
         <div class="textbox">
             <i class="fas fa-lock"></i>
-            <input id="password" name="password" type="password" placeholder="Mot de passe" required>
             <label for="password"></label>
+            <input id="password" name="password" type="password" placeholder="Mot de passe" required>
         </div>
 
-        <input type="hidden" name="_csrf_token"
-               value="{{ csrf_token('authenticate') }}"
-        >
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
         <div class="mt-5 d-flex justify-content-center align-items-center">
             <button class="card-button">
                 <a href="{{ path('user_index') }}">Se connecter</a>
             </button>
             <button class="card-button ml-5">
-                <a href="{{ path('user_index') }}">Créer un compte</a>
+                <a href="{{ path('user_new') }}">Créer un compte</a>
             </button>
         </div>
     </div>
