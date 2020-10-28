@@ -6,6 +6,7 @@
     <h1 class="title-home mt-5">¡ Bienvenue !</h1>
     <div class="login-box mt-5">
         <h1 class="login-title text-center">Acceder à votre espace</h1>
+
         <div class="textbox">
             <i class="fas fa-user"></i>
             <input id="text" name="text" type="text" placeholder="Identifiant" required>
@@ -18,9 +19,17 @@
             <label for="password"></label>
         </div>
 
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
         <div class="mt-5 d-flex justify-content-center align-items-center">
-            <input type="submit" class="card-button" value="Se connecter">
-            <input type="submit" class="card-button ml-5" value="Créer un compte">
+            <button class="card-button">
+                <a href="{{ path('user_index') }}">Se connecter</a>
+            </button>
+            <button class="card-button ml-5">
+                <a href="{{ path('user_index') }}">Créer un compte</a>
+            </button>
         </div>
     </div>
 {% endblock %}
