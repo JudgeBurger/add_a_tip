@@ -26,7 +26,9 @@
                                         {% if app.user and app.user.roles.0 is same as ('ROLE.USER') %}
                                         <button class="card-button m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
-                                            <small class="copy-button">copy</small>
+                                            <small class="copy-button">
+                                                <i class="fas fa-clone"></i>
+                                            </small>
                                         </button>
                                         {% endif %}
                                     </div>

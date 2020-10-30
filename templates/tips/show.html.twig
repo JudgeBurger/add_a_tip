@@ -18,13 +18,13 @@
                         <h5 class="card-title mt-3">{{ tip.name }}</h5>
 
                         {% if tip.code is not empty %}
-                            <div class="absolute-clipboard d-flex justify-content-center align-items-center">
-                                {# TODO make a clipboard #}
+                            <div class="d-flex justify-content-end align-items-end">
                                 <button class="card-button" id="copy-button"
                                         data-clipboard-target="#tip-{{ tip.id }}-code">
+                                    <i class="fas fa-clone"></i>
                                 </button>
                             </div>
-                            <span class="block-code">
+                                <span class="block-code">
                                         <code id="tip-{{ tip.id }}-code">
                                             {{ tip.code }}
                                         </code>
