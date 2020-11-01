@@ -58,9 +58,11 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="d-flex justify-content-center mt-5">
-                    <a class="card-button mr-5" href="{{ path('tips_index') }}">Retour</a>
-                <a class="card-button" href="{{ button_label|default('Enregistrer') }}">Enregistrer</a>
+            <div class="d-flex justify-content-center">
+                    <a class="card-button mr-5 btn-info" href="{{ path('tips_index') }}">Retour</a>
+                <button class="card-button btn-info">
+                    {{ button_label|default('Enregistrer') }}
+                </button>
             </div>
         </div>
     </div>
