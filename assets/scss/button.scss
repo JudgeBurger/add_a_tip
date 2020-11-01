@@ -87,3 +87,19 @@ button {
     display: flex;
     justify-content: flex-end;
 }
+
+.add_a_tip {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: $background;
+
+    &:hover {
+        box-shadow: 3px 3px 3px ;
+        color: $dark-color;
+    }
+}
+
+.plus-cross {
+    margin-top: 13px;
+}
