@@ -5,11 +5,11 @@ a {
     text-decoration: none;
     display: inline-block;
     position: relative;
+    background-color: $svg-color;
 
     &:hover {
         text-decoration: none;
-        color: $svg-color;
-        background-color: $svg-color;
+        color: $dark-color;
     }
 }
 
@@ -86,5 +86,4 @@ button {
 .delete-cross {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
 }

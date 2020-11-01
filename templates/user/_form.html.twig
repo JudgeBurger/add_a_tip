@@ -1,4 +1,5 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+{{ form_label(form.email) }}
+    {{ form_widget(form.email) }}
+    {{ form_label(form.password) }}
+    {{ form_widget(form.password) }}
+<button class="card-button">{{ button_label|default('Save') }}</button>
