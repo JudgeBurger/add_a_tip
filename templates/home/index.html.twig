@@ -22,7 +22,6 @@
                             <div class="description">
                                 {% if tip.code is not empty %}
                                     <div class="d-flex justify-content-center align-items-center">
-                                        {# TODO make a clipboard #}
                                         {% if app.user and app.user.roles.0 is same as ('ROLE.USER') %}
                                         <button class="card-button m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
@@ -45,7 +44,7 @@
                             <div
                                 class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
                                 <div class="px-2 flex-wrap d-flex flex-row align-items-center">
-                                    {# TODO : make a loop #}
+                                    {# TODO : make a loop on image in DataBase #}
                                     <span class="circle-language mb-md-0 language mr-2">
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
