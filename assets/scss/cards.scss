@@ -92,8 +92,27 @@ img {
 
 .card-button {
     padding : 10px;
-    border: 1px solid black;
+    border: 1px solid $dark-color;
     border-radius: 5px;
+}
+
+.copy-to {
+    padding: 10px;
+    border: 1px solid $dark-color;
+    border-radius: 5px;
+    top: 30px;
+    background-color: $dark-color;
+    color: $svg-color;
+}
+
+.copy-in-show {
+    padding: 10px;
+    border: 1px solid $dark-color;
+    border-radius: 5px;
+    background-color: $dark-color;
+    color: $svg-color;
+    top: 43px;
+    left: -5px;
 }
 
 .card-image {
@@ -111,8 +130,6 @@ img {
     right: 10px;
     width: 30px;
     height : 30px;
-    background-color: #55A090;
-    border-radius: $circle;
     padding: .30em;
 }
 
@@ -138,9 +155,10 @@ img {
 }
 
 .block-code {
+    display: block;
     color: $svg-color;
     background: $dark-color;
     border-radius: 4px;
     margin: 5px;
-    padding: 5px;
+    padding: 30px;
 }
