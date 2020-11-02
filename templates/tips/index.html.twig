@@ -26,7 +26,9 @@
                                         {# TODO make a clipboard #}
                                         <button class="card-button m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
-                                            <small class="copy-button">copy</small>
+                                            <small title="Copy to Clipboard" class="copy-button">
+                                                <i class="fas fa-clone"></i>
+                                            </small>
                                         </button>
                                     </div>
                                     <span class="block-code">
@@ -50,12 +52,12 @@
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">
-                                        <a class="card-button btn-info" href="{{ path('tips_show', {'id': tip.id}) }}">
-                                            <i class="fas fa-info-circle"></i>
-                                        </a>
-                                        <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
-                                            <i class="fas fa-exchange-alt"></i>
-                                        </a>
+                                    <a class="card-button btn-info" href="{{ path('tips_show', {'id': tip.id}) }}">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                    <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
