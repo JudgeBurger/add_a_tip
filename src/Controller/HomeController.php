@@ -11,7 +11,7 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
-     * @param TipsRepository $tipsRepository
+     *
      * @return Response
      */
     public function index(TipsRepository $tipsRepository)

@@ -65,10 +65,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="tips_edit", methods={"GET","POST"})
-     * @param Request $request
-     * @param Tips $tip
-     * @param MessagesFlash $messagesFlash
-     * @return Response
      */
     public function edit(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
