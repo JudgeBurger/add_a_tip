@@ -26,7 +26,7 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 
 ### Functionality under development :
 
- * Create a Personal Account
+* Add all languages 
 
 ### Feature to come : 
 
@@ -36,6 +36,7 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Comment on a tip
 * Liker a Tip
 * Save a Tip in your collection
+* Create a Personal Account
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
