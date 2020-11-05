@@ -13,8 +13,8 @@
                         <div class="card__description">
                             <h2>{{ tip.name }}</h2>
                             <img class="card-image p-3"
-                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                 alt="image uploded by user">
+                                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                alt="image uploded by user">
                         </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
@@ -25,7 +25,7 @@
                                     <div class="absolute-clipboard d-flex justify-content-center align-items-center">
                                         <button class="copy-to m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
-                                            <small title="Copy to Clipboard" class="copy-button">
+                                            <small title="Copier" class="copy-button">
                                                 <i class="fas fa-clone"></i>
                                             </small>
                                         </button>
@@ -46,16 +46,17 @@
                                     {# TODO : make a loop #}
                                     <span class="circle-language mb-md-0 language mr-2">
                                         <img
-                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                                alt="uploaded-by-user">
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                            title="CSS 3"
+                                            alt="uploaded-by-user">
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">
                                     <a class="card-button btn-info" href="{{ path('tips_show', {'id': tip.id}) }}">
-                                        <i class="fas fa-info-circle"></i>
+                                        <i class="fas fa-info-circle" title="Plus d'informations"></i>
                                     </a>
                                     <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
-                                        <i class="fas fa-exchange-alt"></i>
+                                        <i class="fas fa-edit" title="Modifier"></i>
                                     </a>
                                 </div>
                             </div>
