@@ -8,42 +8,75 @@
     <section class="content">
         <div class="cards d-flex flex-wrap mt-5">
             {% for tip in tips %}
-            <div class="card tip mb-5" id="tip-{{ tip.id }}">
-                <div class="card__side card__side--front card__side--front-1">
-                    <div class="card__description">
-                        <h2>{{ tip.name }}</h2>
-                        <img class="card-image p-3" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="image uploded by user">
+                <div class="card tip mb-5" id="tip-{{ tip.id }}">
+                    <div class="card__side card__side--front card__side--front-1">
+                        <div class="card__description">
+                            <h2>{{ tip.name }}</h2>
+                            <img class="card-image p-3"
+                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                 alt="image uploded by user">
+                        </div>
                     </div>
-                </div>
-                <div class="card__side card__side--back card__side--back-1">
-                    <div class="card__description">
-                        <div class="description">
-                            {% if tip.code is not empty %}
-                                <span class="block-code unselectable">
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__description">
+                            <div class="description">
+                                {% if tip.code is not empty %}
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        {% if app.user and app.user.roles.0 is same as ('ROLE.USER') %}
+                                        <button class="card-button m-1 p-1" id="copy-button"
+                                                data-clipboard-target="#tip-{{ tip.id }}-code">
+                                            <small class="copy-button">
+                                                <i class="fas fa-clone"></i>
+                                            </small>
+                                        </button>
+                                        {% endif %}
+                                    </div>
+                                    <span class="block-code unselectable">
                                         <code id="tip-{{ tip.id }}-code">
                                             {{ tip.code }}
                                         </code>
                                     </span>
-                            {% endif %}
-                        </div>
-                        <div class="description mt-5 mb-5">
-                            {{ tip.description }}
-                        </div>
-                        <div
+                                {% endif %}
+                            </div>
+                            <div class="description mt-5 mb-5">
+                                {{ tip.description }}
+                            </div>
+                            <div
                                 class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
-                            <div class="px-2 flex-wrap d-flex flex-row align-items-center">
-                                {# TODO : make a loop on image in DataBase #}
-                                <span class="circle-language mb-md-0 language mr-2">
+                                <div class="px-2 flex-wrap d-flex flex-row align-items-center">
+                                    {# TODO : make a loop on image in DataBase #}
+                                    <span class="circle-language mb-md-0 language mr-2">
                                         <img
-                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                                alt="uploaded-by-user">
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                            alt="uploaded-by-user">
                                     </span>
+                                </div>
+                                {% if app.user and app.user.roles.0 is same as ('ROLE_USER') %}
+                                <div class="px-2 button-group d-flex flex-row align-items-center">
+                                    <button class="card-button">
+                                        <a href="{{ path('tips_show', {'id': tip.id}) }}">
+                                            Détail
+                                        </a>
+                                    </button>
+                                    <button class=" ml-2 card-button">
+                                        <a href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                            Modifier
+                                        </a>
+                                    </button>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% else %}
+                <h1 class="none">AUCUN RÉSULTAT</h1>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="card-button mt-5 mb-5">
+                <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
+            </button>
+        </div>
     </section>
 {% endblock %}
