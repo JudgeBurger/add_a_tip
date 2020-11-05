@@ -14,7 +14,6 @@ class TipsType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('language')
             ->add('code')
             ->add('description', TextareaType::class, [
                 'attr' => [
