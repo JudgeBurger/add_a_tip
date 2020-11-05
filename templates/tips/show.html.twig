@@ -7,7 +7,7 @@
     <h1 class="mt-5">{{ tip.name }}</h1>
 
     <section class="content p-0 mt-3">
-        <div class="cards d-flex flex-wrap mt-5">
+        <div class="cards d-flex flex-wrap">
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -35,19 +35,34 @@
 
                         <p class="card-text">{{ tip.description | nl2br }}</p>
                         {# TODO loop on logo #}
-                        <span class="circle-language mb-md-0 language mr-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                         alt="uploaded-by-user">
-                </span>
+                        <div
+                                class="footer-card col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                            <div class="px-2 flex-wrap d-flex flex-row align-items-center">
+                                {# TODO : make a loop #}
+                                <span class="circle-language mb-md-0 language mr-2">
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                        alt="uploaded-by-user">
+                                </span>
+                            </div>
+                            <div class="px-2 button-group d-flex flex-row align-items-center">
+                                <a class="card-button btn-info" href="{{ path('tips_index') }}">
+                                    <i class="fas fa-arrow-circle-left" title="Retour"></i>
+                                </a>
+                                <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                    <i class="fas fa-save" title="Enregistrer"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
-            <a class="mt-5 card-button btn-info" href="{{ path('tips_index') }}">Retour</a>
-            <a class="mt-5 ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-        </div>
+        {# <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center"> #}
+        {# #}
+        {# #}
+        {# </div> #}
     </section>
 
 {% endblock %}
