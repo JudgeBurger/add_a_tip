@@ -117,7 +117,6 @@ img {
 
 .card-image {
     border-radius: 5px;
-    width: 100%;
 
         img {
         border-radius: 5px;
@@ -159,7 +158,7 @@ img {
     color: $svg-color;
     background: $dark-color;
     border-radius: 4px;
-    margin: 5px;
+    width: 100%;
     padding: 30px;
 }
 
