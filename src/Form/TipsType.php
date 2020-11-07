@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Language;
 use App\Entity\Tips;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,7 +23,12 @@ class TipsType extends AbstractType
                 ],
             ])
             ->add('picture')
-            ->add('languages')
+            ->add('languages', EntityType::class, [
+                'class' => Language::class,
+                'choice_label' => 'name',
+                'multiple' => true,
+                'label' => 'Choisissez un language',
+            ])
         ;
     }
 
