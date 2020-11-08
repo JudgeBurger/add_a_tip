@@ -23,10 +23,11 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 
 * add a tip in DB
 * Clipboard
+* Most used languages
 
 ### Functionality under development :
 
-* Add all languages 
+* Create a Personal Account
 
 ### Feature to come : 
 
@@ -36,7 +37,6 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Comment on a tip
 * Liker a Tip
 * Save a Tip in your collection
-* Create a Personal Account
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
