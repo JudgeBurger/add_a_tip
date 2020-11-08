@@ -11,10 +11,15 @@
                 <div class="card tip mb-5" id="tip-{{ tip.id }}">
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
-                            <h2>{{ tip.name }}</h2>
+                            <h2>{{ tip.name }}
+                                |
+                                {% for tip in tip.languages %}
+                                    {{ tip.name }}
+                                {% endfor %}
+                            </h2>
                             <img class="card-image p-3"
-                                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                alt="image uploded by user">
+                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                 alt="image uploded by user">
                         </div>
                     </div>
                     <div class="card__side card__side--back card__side--back-1">
@@ -46,9 +51,9 @@
                                     {# TODO : make a loop #}
                                     <span class="circle-language mb-md-0 language mr-2">
                                         <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                            title="CSS 3"
-                                            alt="uploaded-by-user">
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                                title="CSS 3"
+                                                alt="uploaded-by-user">
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">
