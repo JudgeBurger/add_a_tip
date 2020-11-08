@@ -31,8 +31,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/tips", name="tips_index", methods={"GET"})
-     * @param TipsRepository $tipsRepository
-     * @return Response
      */
     public function index(TipsRepository $tipsRepository): Response
     {
@@ -43,9 +41,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/new", name="tips_new", methods={"GET","POST"})
-     * @param Request $request
-     * @param MessagesFlash $messagesFlash
-     * @return Response
      */
     public function new(Request $request, MessagesFlash $messagesFlash): Response
     {
@@ -80,10 +75,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="tips_edit", methods={"GET","POST"})
-     * @param Request $request
-     * @param Tips $tip
-     * @param MessagesFlash $messagesFlash
-     * @return Response
      */
     public function edit(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
@@ -105,10 +96,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}", name="tips_delete", methods={"DELETE"})
-     * @param Request $request
-     * @param Tips $tip
-     * @param MessagesFlash $messagesFlash
-     * @return Response
      */
     public function delete(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
