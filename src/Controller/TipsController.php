@@ -12,15 +12,27 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-// Rajouter @IsGranted("ROLE_USER")
+// Rajouter IsGranted pour l'ensenble de TipsController
 
 /**
  * @Route("/")
  */
 class TipsController extends AbstractController
 {
+    /***
+     * @var string
+     */
+    private $messageFlash;
+
+    public function __construct(MessagesFlash $flash)
+    {
+        $this->messageFlash = $flash;
+    }
+
     /**
      * @Route("/tips", name="tips_index", methods={"GET"})
+     * @param TipsRepository $tipsRepository
+     * @return Response
      */
     public function index(TipsRepository $tipsRepository): Response
     {
@@ -31,6 +43,9 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/new", name="tips_new", methods={"GET","POST"})
+     * @param Request $request
+     * @param MessagesFlash $messagesFlash
+     * @return Response
      */
     public function new(Request $request, MessagesFlash $messagesFlash): Response
     {
@@ -40,7 +55,7 @@ class TipsController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $this->addFlash('create', $messagesFlash->create('tips'));
+            $this->messageFlash->messageFlash('create');
             $entityManager->persist($tip);
             $entityManager->flush();
 
@@ -65,6 +80,10 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="tips_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Tips $tip
+     * @param MessagesFlash $messagesFlash
+     * @return Response
      */
     public function edit(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
@@ -72,7 +91,7 @@ class TipsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('update', $messagesFlash->update('tips'));
+            $this->messageFlash->messageFlash('update');
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('tips_index');
@@ -86,12 +105,16 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/{id}", name="tips_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Tips $tip
+     * @param MessagesFlash $messagesFlash
+     * @return Response
      */
     public function delete(Request $request, Tips $tip, MessagesFlash $messagesFlash): Response
     {
         if ($this->isCsrfTokenValid('delete'.$tip->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
-            $this->addFlash('delete', $messagesFlash->delete('tips'));
+            $this->messageFlash->messageFlash('delete');
 
             $entityManager->remove($tip);
             $entityManager->flush();

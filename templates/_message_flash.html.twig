@@ -1,0 +1,15 @@
+{% for messages in app.flashes %}
+    {% for message in messages %}
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header ">
+                <strong class="notification mr-auto text-center">
+                    <i class="notification fas fa-bell"></i>
+                    Nouvelle Notification
+                </strong>
+            </div>
+            <div class="toast-body">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}

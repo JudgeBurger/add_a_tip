@@ -7,6 +7,7 @@
 @import "login";
 @import "underline";
 @import "form";
+@import "flash";
 
 body {
     background-color: $background;
@@ -24,6 +25,10 @@ h1  {
     color: $background;
     font-size: $size-title;
     margin-top : 30px;
+}
+
+.notification {
+    color: $info;
 }
 
 @include shapeDesktop();

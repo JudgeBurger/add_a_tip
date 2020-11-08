@@ -7,9 +7,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MessagesFlash extends AbstractController
 {
     const MESSAGE_FLASH = [
-        'create' => 'Votre tip à été crée avec succès',
-        'delete' => 'Votre tip à été supprimé avec succès',
-        'update' => 'Votre tip à été mit à jour avec succès',
+        'create' => 'Création effectuée',
+        'delete' => 'Suppression effectuée',
+        'update' => 'Mise à jour effectuée',
         'denied' => 'YOU SHALL NOT PASS!!',
     ];
 
