@@ -1,0 +1,32 @@
+@import "vars";
+
+.toast {
+  position: absolute;
+  right: 50px;
+  top: 75px;
+  opacity: 1;
+  min-width: 275px;
+
+  img {
+    width: auto;
+  }
+
+  .toast-header {
+    padding: .5rem .75rem;
+    background-color: $dark-color;
+  }
+
+  .delete, .denied {
+    background-color: $dark-color;
+    color: $danger;
+  }
+
+  .update, .create {
+    background-color: $dark-color;
+    color: $info;
+
+    .toast-body {
+      color: $dark-color;
+    }
+  }
+}
