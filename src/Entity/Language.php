@@ -29,6 +29,11 @@ class Language
      */
     private $tips;
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     public function __construct()
     {
         $this->tips = new ArrayCollection();
