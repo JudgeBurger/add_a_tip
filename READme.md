@@ -25,6 +25,8 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Clipboard
 * Most used languages
 * Message Flash
+* Pagination
+* Display last Tip on Home Page
 
 ### Functionality under development :
 
@@ -36,7 +38,7 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Search through all your Tips
 * Consult the Community Tips
 * Comment on a tip
-* Liker a Tip
+* Like a Tip
 * Save a Tip in your collection
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
