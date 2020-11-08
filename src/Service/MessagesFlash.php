@@ -2,20 +2,22 @@
 
 namespace App\Service;
 
-class MessagesFlash
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+class MessagesFlash extends AbstractController
 {
-    public function create(string $data): string
-    {
-        return $data.'à été ajouté a votre collection.';
-    }
+    const MESSAGE_FLASH = [
+        'create' => 'Votre tip à été crée avec succès',
+        'delete' => 'Votre tip à été supprimé avec succès',
+        'update' => 'Votre tip à été mit à jour avec succès',
+        'denied' => 'YOU SHALL NOT PASS!!',
+    ];
 
-    public function delete(string $data): string
+    /**
+     * @param string $type
+     */
+    public function messageFlash(string $type)
     {
-        return $data.'à été supprimé de votre collection.';
-    }
-
-    public function update(string $data): string
-    {
-        return $data.'à bien été modifié.';
+        return $this->addFlash($type, (string) self::MESSAGE_FLASH[$type]);
     }
 }
