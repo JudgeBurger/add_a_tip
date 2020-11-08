@@ -17,8 +17,13 @@
                         <img class="card-img-top"
                              src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                              alt="Card image cap">
-                        <h5 class="card-title mt-3">{{ tip.name }}</h5>
-
+                        <h5 class="card-title mt-3">
+                            {{ tip.name }}
+                            |
+                            {% for tip in tip.languages %}
+                                {{ tip.name }}
+                            {% endfor %}
+                        </h5>
                         {% if tip.code is not empty %}
                             <div class="d-flex justify-content-end align-items-end">
                                 <button class="copy-in-show" id="copy-button"
@@ -41,8 +46,8 @@
                                 {# TODO : make a loop #}
                                 <span class="circle-language mb-md-0 language mr-2">
                                     <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                        alt="uploaded-by-user">
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                            alt="uploaded-by-user">
                                 </span>
                             </div>
                             <div class="px-2 button-group d-flex flex-row align-items-center">
@@ -58,11 +63,6 @@
                 </div>
             </div>
         </div>
-
-        {# <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center"> #}
-        {# #}
-        {# #}
-        {# </div> #}
     </section>
 
 {% endblock %}
