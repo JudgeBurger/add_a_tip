@@ -11,12 +11,7 @@
                 <div class="card tip mb-5" id="tip-{{ tip.id }}">
                     <div class="card__side card__side--front card__side--front-1">
                         <div class="card__description">
-                            <h2>{{ tip.name }}
-                                |
-                                {% for tip in tip.languages %}
-                                    {{ tip.name }}
-                                {% endfor %}
-                            </h2>
+                            <h2>{{ tip.name }}</h2>
                             <img class="card-image p-3"
                                  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
                                  alt="image uploded by user">
@@ -25,6 +20,9 @@
                     <div class="card__side card__side--back card__side--back-1">
                         {{ include('tips/_delete_form.html.twig') }}
                         <div class="card__description">
+                            {% for tip in tip.languages %}
+                                {{ tip.name }}
+                            {% endfor %}
                             <div class="description">
                                 {% if tip.code is not empty %}
                                     <div class="absolute-clipboard d-flex justify-content-center align-items-center">
