@@ -13,9 +13,6 @@ class MessagesFlash extends AbstractController
         'denied' => 'YOU SHALL NOT PASS!!',
     ];
 
-    /**
-     * @param string $type
-     */
     public function messageFlash(string $type)
     {
         return $this->addFlash($type, (string) self::MESSAGE_FLASH[$type]);
