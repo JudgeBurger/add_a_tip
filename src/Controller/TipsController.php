@@ -6,6 +6,7 @@ use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
 use App\Service\MessagesFlash;
+use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,6 +20,8 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TipsController extends AbstractController
 {
+    const TIPS_PER_PAGE = 3;
+
     /***
      * @var string
      */
@@ -32,10 +35,19 @@ class TipsController extends AbstractController
     /**
      * @Route("/tips", name="tips_index", methods={"GET"})
      */
-    public function index(TipsRepository $tipsRepository): Response
+    public function index(TipsRepository $tipsRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        $tips = $tipsRepository->findAll();
+
+        $pagination = $paginator->paginate(
+            $tips,
+            $request->query->getInt('page', 1),
+            self::TIPS_PER_PAGE
+        );
+
         return $this->render('tips/index.html.twig', [
-            'tips' => $tipsRepository->findAll(),
+            'pagination' => $pagination,
+            'tips' => $pagination,
         ]);
     }
 

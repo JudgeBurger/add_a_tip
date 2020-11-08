@@ -21,9 +21,10 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 
 ### Features available :
 
-* add a tip in DB
+* Add a tip in DB
 * Clipboard
 * Most used languages
+* Message Flash
 
 ### Functionality under development :
 
