@@ -70,18 +70,20 @@
                 <h1 class="none">AUCUN RÉSULTAT</h1>
             {% endfor %}
         </div>
+
+
+        <div class="navigation d-flex justify-content-center">
+            {{ knp_pagination_render(tips) }}
+        </div>
+
         <div class="col-md-12">
             <div class="d-flex justify-content-end align-items-end mr-5">
-                <a class="add_a_tip card-button mt-5 mb-5 btn-info" title="Ajouter un Tip" href="{{ path('tips_new') }}">
+                <a class="add_a_tip card-button mt-5 mb-5 btn-info" title="Ajouter un Tip"
+                   href="{{ path('tips_new') }}">
                     <h3 class="plus-cross">
                         <i class="fas fa-plus"></i>
                     </h3>
                 </a>
-            </div>
-            <div>
-                <div class="navigation d-flex justify-content-center">
-                    {{ knp_pagination_render(tips) }}
-                </div>
             </div>
         </div>
 
