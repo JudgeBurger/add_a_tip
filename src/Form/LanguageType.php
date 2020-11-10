@@ -3,9 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Language;
-use App\Entity\Tips;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,10 +13,8 @@ class LanguageType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('tips', ChoiceType::class, [
-                'choices' => 'title',
-                'class' => Tips::class,
-            ]);
+            ->add('tips')
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
