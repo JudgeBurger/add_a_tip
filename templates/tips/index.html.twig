@@ -41,7 +41,7 @@
                                 {% endif %}
                             </div>
                             <div class="mt-5 mb-5">
-                                {{ tip.description | slice(0, 40) ~ '...' }}
+                                {{ tip.description | slice(0, 40) ~ '...' | nl2br }}
                             </div>
                             <div
                                     class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
