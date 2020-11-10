@@ -7,11 +7,11 @@ use App\Form\TipsType;
 use App\Repository\TipsRepository;
 use App\Service\MessagesFlash;
 use Knp\Component\Pager\PaginatorInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 // Rajouter IsGranted pour l'ensenble de TipsController
 

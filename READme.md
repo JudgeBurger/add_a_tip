@@ -4,17 +4,26 @@ Add a tip, permet de stocker et de retoruver l'ensemble des trucs et astuces don
 
 Grâce à un simple système de card, il est possible d'ajouter tous les trucs et astuces dont vous voulez vous souvenir.
 
+## Card Composition :
 
-# Card Composition : 
-#####Name : 
+### Name :
+
 * tip name
-#####Language: 
-* tip language or tech 
-#####Description: 
-* a short description 
-#####Picture: 
+
+### Language :
+
+* tip language or tech
+
+### Description :
+
+* a short description
+
+### Picture :
+
 * a screenshot of your tip
-####Code: 
+
+### Code :
+
 * lign code
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +41,7 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 
 * Create a Personal Account
 
-### Feature to come : 
+### Feature to come :
 
 * Add tips to your collection
 * Search through all your Tips
@@ -43,24 +52,41 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
- # Project installation :
- 
-* ```git clone https://github.com/JudgeBurger/add_a_tip.git```
- 
-* ```composer install```
+## Project installation :
 
-* ```yarn install``` <br>
-run ```yarn encore dev --watch```
+```
+git clone https://github.com/JudgeBurger/add_a_tip.git
+```
 
- 
-* Copy .env in .env.local and modify User, Password and Database Name
- 
-* ```bin/console doctrine:database:create``` 
+```
+composer install
+```
 
-* ```bin/console make:migrations```
+```
+yarn install
+```
 
-* ```bin/console doctrine:migration:migrate```
+Run :
+```
+yarn encore dev --watch
+```
 
-# Before each Commit : 
+Copy .env in .env.local and modify User, Password and Database Name
 
-* ```php ./vendor/bin/php-cs-fixer fix -v --show-progress=dots```
+```
+bin/console doctrine:database:create
+```
+
+```
+bin/console make:migrations
+```
+
+```
+bin/console doctrine:migration:migrate
+```
+
+## Before each Commit :
+
+```
+php ./vendor/bin/php-cs-fixer fix -v --show-progress=dots
+```
