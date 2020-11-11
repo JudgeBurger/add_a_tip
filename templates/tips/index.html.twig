@@ -3,7 +3,6 @@
 {% block title %}Tips{% endblock %}
 
 {% block body %}
-    <div id="scroll-to-top"></div>
     <h1 class="mt-5">Tips</h1>
 
     <section class="content">
@@ -21,12 +20,17 @@
                     <div class="card__side card__side--back card__side--back-1">
                         {{ include('tips/_delete_form.html.twig') }}
                         <div class="card__description">
+                            {% for tip in tip.languages %}
+                                {{ tip.name }}
+                            {% endfor %}
                             <div class="description">
                                 {% if tip.code is not empty %}
                                     <div class="absolute-clipboard d-flex justify-content-center align-items-center">
-                                        {# TODO make a clipboard #}
-                                        <button class="card-button" id="copy-button"
+                                        <button class="copy-to m-1 p-1" id="copy-button"
                                                 data-clipboard-target="#tip-{{ tip.id }}-code">
+                                            <small title="Copier" class="copy-button">
+                                                <i class="fas fa-clone"></i>
+                                            </small>
                                         </button>
                                     </div>
                                     <span class="block-code">
@@ -37,29 +41,26 @@
                                 {% endif %}
                             </div>
                             <div class="mt-5 mb-5">
-                                {{ tip.description | slice(0, 40) ~ '...' }}
+                                {{ tip.description | slice(0, 40) ~ '...' | nl2br }}
                             </div>
                             <div
-                                class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                                    class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
                                 <div class="px-2 flex-wrap d-flex flex-row align-items-center">
                                     {# TODO : make a loop #}
                                     <span class="circle-language mb-md-0 language mr-2">
                                         <img
-                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                            alt="uploaded-by-user">
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                                title="CSS 3"
+                                                alt="uploaded-by-user">
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">
-                                    <button class="card-button">
-                                        <a href="{{ path('tips_show', {'id': tip.id}) }}">
-                                            Détail
-                                        </a>
-                                    </button>
-                                    <button class=" ml-2 card-button">
-                                        <a href="{{ path('tips_edit', {'id': tip.id}) }}">
-                                            Modifier
-                                        </a>
-                                    </button>
+                                    <a class="card-button btn-info" href="{{ path('tips_show', {'id': tip.id}) }}">
+                                        <i class="fas fa-info-circle" title="Plus d'informations"></i>
+                                    </a>
+                                    <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                        <i class="fas fa-edit" title="Modifier"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -69,10 +70,22 @@
                 <h1 class="none">AUCUN RÉSULTAT</h1>
             {% endfor %}
         </div>
-        <div class="d-flex justify-content-center align-items-center">
-            <button class="card-button mt-5 mb-5">
-                <a href="{{ path('tips_new') }}">Ajouter un Tip</a>
-            </button>
+
+
+        <div class="navigation d-flex justify-content-center">
+            {{ knp_pagination_render(tips) }}
         </div>
+
+        <div class="col-md-12">
+            <div class="d-flex justify-content-end align-items-end mr-5">
+                <a class="add_a_tip card-button mt-5 mb-5 btn-info" title="Ajouter un Tip"
+                   href="{{ path('tips_new') }}">
+                    <h3 class="plus-cross">
+                        <i class="fas fa-plus"></i>
+                    </h3>
+                </a>
+            </div>
+        </div>
+
     </section>
 {% endblock %}

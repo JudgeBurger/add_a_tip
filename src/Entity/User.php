@@ -24,7 +24,7 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="array")
      */
     private $roles = [];
 
@@ -33,11 +33,6 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
-
-    public function __toString()
-    {
-        return $this->getId().' - '.$this->getUsername();
-    }
 
     public function getId(): ?int
     {

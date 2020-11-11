@@ -4,24 +4,31 @@
 
 {% block body %}
     {# TODO Replace tip.language by logo #}
-    <h1 class="mt-5">{{ tip.name }} | {{ tip.language }}</h1>
+    <h1 class="mt-5">{{ tip.name }}</h1>
 
     <section class="content p-0 mt-3">
-        <div class="cards d-flex flex-wrap mt-5">
+        <div class="cards d-flex flex-wrap">
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
-                        <div class="mb-3">
+                        <div class="mb-3 delete-cross">
                             {{ include('tips/_delete_form.html.twig') }}
                         </div>
-                        <img class="card-img-top" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Card image cap">
-                        <h5 class="card-title mt-3">{{ tip.name }}</h5>
-
+                        <img class="card-img-top"
+                             src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                             alt="Card image cap">
+                        <h5 class="card-title mt-3">
+                            {{ tip.name }}
+                            |
+                            {% for tip in tip.languages %}
+                                {{ tip.name }}
+                            {% endfor %}
+                        </h5>
                         {% if tip.code is not empty %}
-                            <div class="absolute-clipboard d-flex justify-content-center align-items-center">
-                                {# TODO make a clipboard #}
-                                <button class="card-button" id="copy-button"
+                            <div class="d-flex justify-content-end align-items-end">
+                                <button class="copy-in-show" id="copy-button"
                                         data-clipboard-target="#tip-{{ tip.id }}-code">
+                                    <i class="fas fa-clone"></i>
                                 </button>
                             </div>
                             <span class="block-code">
@@ -33,21 +40,28 @@
 
                         <p class="card-text">{{ tip.description | nl2br }}</p>
                         {# TODO loop on logo #}
-                        <span class="circle-language mb-md-0 language mr-2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="uploaded-by-user">
-                </span>
+                        <div
+                                class="footer-card col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                            <div class="px-2 flex-wrap d-flex flex-row align-items-center">
+                                {# TODO : make a loop #}
+                                <span class="circle-language mb-md-0 language mr-2">
+                                    <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                            alt="uploaded-by-user">
+                                </span>
+                            </div>
+                            <div class="px-2 button-group d-flex flex-row align-items-center">
+                                <a class="card-button btn-info" href="{{ path('tips_index') }}">
+                                    <i class="fas fa-arrow-circle-left" title="Retour"></i>
+                                </a>
+                                <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                    <i class="fas fa-save" title="Enregistrer"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-12 mx-lg-5 col-md-5 col-lg-2 m-2 p-0 d-flex justify-content-center align-content-center">
-            <button class="mt-5 card-button">
-                <a href="{{ path('tips_index') }}">Retour</a>
-            </button>
-            <button class="mt-5 ml-2 card-button">
-                <a href="{{ path('tips_edit', {'id': tip.id}) }}">Modifier</a>
-            </button>
         </div>
     </section>
 

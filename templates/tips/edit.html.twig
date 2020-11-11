@@ -5,15 +5,9 @@
 {% block body %}
     <h1 class="mt-5">Modifier <strong>{{ tip.name }}</strong></h1>
 
-    <section>
-            <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                <div class="row">
-                    <div class="mr-3 mt-5 mb-5">
-                        {{ include('tips/_form.html.twig') }}
-                    </div>
-                </div>
-            </div>
-    </section>
+    <div class="mt-5">
+        {{ include('tips/_form.html.twig') }}
+    </div>
 
 
 {% endblock %}

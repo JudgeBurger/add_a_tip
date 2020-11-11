@@ -1,4 +1,6 @@
-const clipboard = new ClipboardJS('.btn');
+const ClipboardJS = require('clipboard/dist/clipboard.min');
+
+const clipboard = new ClipboardJS('button[data-clipboard-target]');
 
 clipboard.on('success', function(e) {
     console.info('Action:', e.action);

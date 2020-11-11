@@ -39,6 +39,25 @@
                     Nous contacter
                 </a>
             </li>
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link underline" href="{{ path('admin') }}">
+                        <i class="fas fa-portrait"></i>
+                        Votre Compte
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline" href="{{ path('app_logout') }}">
+                        <i class="fas fa-stop"></i>
+                        Se déconnecter
+                    </a>
+                </li>
+            {% else %}
+                <a class="nav-link underline" href="{{ path('app_login') }}">
+                    <i class="fas fa-user-circle"></i>
+                    Se connecter
+                </a>
+            {% endif %}
         </ul>
     </div>
 </nav>
