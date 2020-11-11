@@ -6,7 +6,7 @@
     <h1 class="mt-5">Tips</h1>
 
     <section class="content">
-        <div class="cards d-flex flex-wrap mt-5">
+        <div class="cards d-flex flex-wrap">
             {% for tip in tips %}
                 <div class="card tip mb-5" id="tip-{{ tip.id }}">
                     <div class="card__side card__side--front card__side--front-1">
@@ -48,10 +48,7 @@
                                 <div class="px-2 flex-wrap d-flex flex-row align-items-center">
                                     {# TODO : make a loop #}
                                     <span class="circle-language mb-md-0 language mr-2">
-                                        <img
-                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                                title="CSS 3"
-                                                alt="uploaded-by-user">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" title="CSS 3" alt="uploaded-by-user">
                                     </span>
                                 </div>
                                 <div class="px-2 button-group d-flex flex-row align-items-center">

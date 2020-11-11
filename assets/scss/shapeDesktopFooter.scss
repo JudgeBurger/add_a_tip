@@ -1,0 +1,27 @@
+@import "vars";
+
+.footer {
+    background-color: $svg-color;
+    color: $light-color;
+    position : relative;
+}
+
+.custom-shape-divider-bottom-1605090159 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1605090159 svg {
+    position: relative;
+    display: block;
+    width: calc(148% + 1.3px);
+    height: 90px;
+}
+
+.custom-shape-divider-bottom-1605090159 .shape-fill {
+    fill: #E5DBD4;
+}
