@@ -1,11 +1,5 @@
 @import "vars";
 
-.navbar {
-  background-color: $svg-color;
-  color: $light-color;
-  position : relative;
-}
-
 .custom-shape-divider-bottom-1605090159 {
   position: absolute;
   bottom: 0;
@@ -23,5 +17,5 @@
 }
 
 .custom-shape-divider-bottom-1605090159 .shape-fill {
-  fill: #E5DBD4;
+  fill: $background;
 }
