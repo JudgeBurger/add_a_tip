@@ -19,7 +19,6 @@
                              alt="Card image cap">
                         <h5 class="card-title mt-3">
                             {{ tip.name }}
-                            |
                             {% for tip in tip.languages %}
                                 {{ tip.name }}
                             {% endfor %}
@@ -51,10 +50,10 @@
                                 </span>
                             </div>
                             <div class="px-2 button-group d-flex flex-row align-items-center">
-                                <a class="card-button btn-info" href="{{ path('tips_index') }}">
+                                <a class="card-button" href="{{ path('tips_index') }}">
                                     <i class="fas fa-arrow-circle-left" title="Retour"></i>
                                 </a>
-                                <a class="ml-2 card-button btn-info" href="{{ path('tips_edit', {'id': tip.id}) }}">
+                                <a class="ml-2 card-button" href="{{ path('tips_edit', {'id': tip.id}) }}">
                                     <i class="fas fa-save" title="Enregistrer"></i>
                                 </a>
                             </div>

@@ -12,6 +12,10 @@ img {
     padding: 4em 0;
 }
 
+.language-title {
+    color: $svg-color;
+}
+
 .cards {
     display: flex;
     justify-content: space-evenly;
@@ -48,11 +52,11 @@ img {
         border-radius: 5px;
 
         &--front {
-            background-color: $svg-color;
+            background-color: $background;
         }
 
         &--back {
-            background-color: $svg-color;
+            background-color: $background;
             transform: rotateY(180deg);
 
             &-1 {
@@ -118,8 +122,9 @@ img {
 .card-image {
     border-radius: 5px;
 
-        img {
+    img {
         border-radius: 5px;
+        box-shadow: 5px 5px 5px $dark-color;
     }
 }
 
@@ -133,18 +138,21 @@ img {
 }
 
 .description {
-    position : relative;
+    position: relative;
     padding: 5px;
     margin: 20px;
+    color: $svg-color;
 }
 
 .circle-language {
+    background-color: $svg-color;
     display : inline-block;
     height : 70px;
     width : 70px;
     padding : .75em;
     border-radius: $circle;
     margin-bottom : 1em;
+    box-shadow: 5px 5px 5px $dark-color;
 }
 
 .language {
@@ -160,9 +168,11 @@ img {
     border-radius: 4px;
     width: 100%;
     padding: 30px;
+    box-shadow: 5px 5px 5px $dark-color;
 }
 
 .unselectable {
+    box-shadow: 5px 5px 5px $dark-color;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
