@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,24 +10,28 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/admin/login", name="admin_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
-
-        // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('@EasyAdmin/page/login.html.twig', [
+            'error' => $error,
+            'last_username' => $lastUsername,
+            'translation_domain' => 'admin',
+            'csrf_token_intention' => 'authenticate',
+            'page_title' => 'CRM Template',
+            'target_path' => $this->generateUrl('dashboard'),
+            'username_label' => 'Your username',
+            'password_label' => 'Your password',
+            'sign_in_label' => 'Log in',
+        ]);
     }
 
     /**
-     * @Route("/logout", name="app_logout")
+     * @Route("/admin/logout", name="admin_logout")
      */
     public function logout()
     {
