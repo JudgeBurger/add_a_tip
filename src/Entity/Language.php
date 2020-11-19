@@ -29,6 +29,12 @@ class Language
      */
     private $tips;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=LanguageCategory::class, inversedBy="languages")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $languageCategory;
+
     public function __toString()
     {
         return $this->name;
@@ -80,6 +86,18 @@ class Language
             $this->tips->removeElement($tip);
             $tip->removeLanguage($this);
         }
+
+        return $this;
+    }
+
+    public function getLanguageCategory(): ?LanguageCategory
+    {
+        return $this->languageCategory;
+    }
+
+    public function setLanguageCategory(?LanguageCategory $languageCategory): self
+    {
+        $this->languageCategory = $languageCategory;
 
         return $this;
     }
