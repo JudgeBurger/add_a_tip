@@ -1,7 +1,11 @@
 @import "vars";
 
 .navbar {
-    background-color: $background;
+    background-color: $svg-color;
     color: $light-color;
     position : relative;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $dark-color;
 }

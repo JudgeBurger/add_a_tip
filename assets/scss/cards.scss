@@ -2,8 +2,30 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-img {
-    width : 80%;
+h1.title-show {
+    color: $svg-color;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1%;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    transition: .3s all;
+    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
+    background-color: $svg-color;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.img {
+    width: 100%;
+    border-radius: 4px;
 }
 
 .content {
@@ -18,7 +40,20 @@ img {
 
 .cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
+}
+
+.button-more {
+    background-color: $dark-color;
+    color: $svg-color;
+    padding: 5px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $background;
+        color: $svg-color;
+        border-radius: 4px;
+    }
 }
 
 .card-body {
@@ -36,55 +71,11 @@ img {
     position: relative;
     min-height: 470px;
     perspective: 150em;
-    background-color: transparent;
     border: none;
-
-    &__side {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width : 100%;
-        max-width : 470px;
-        min-height: 65%;
-        backface-visibility: hidden;
-        transition: all .6s ease;
-        box-shadow: 1em 1em 2em rgba(0,0,0,.2);
-        border-radius: 5px;
-
-        &--front {
-            background-color: $background;
-        }
-
-        &--back {
-            background-color: $background;
-            transform: rotateY(180deg);
-
-            &-1 {
-                background-image: $svg-color;;
-            }
-
-            &-2 {
-                background-image: $svg-color;
-            }
-
-            &-3 {
-                background-image: $svg-color;
-            }
-        }
-    }
-
-    &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-
-    &:hover &__side--back {
-        transform: rotate(0);
-    }
 
     &__description {
         font-size: 1.3em;
         padding: 0.75em 0;
-
 
         svg {
             width: 1.5em;
@@ -147,12 +138,12 @@ img {
 .circle-language {
     background-color: $svg-color;
     display : inline-block;
-    height : 70px;
-    width : 70px;
-    padding : .75em;
+    height : 40px;
+    width : 40px;
     border-radius: $circle;
-    margin-bottom : 1em;
-    box-shadow: 5px 5px 5px $dark-color;
+    box-shadow: 2px 2px 2px $dark-color;
+    margin: 0;
+    padding: 0;
 }
 
 .language {

@@ -70,7 +70,7 @@ button {
 
 .delete-button {
     border: none;
-    background-color: $background;
+    background-color: $svg-color;
 
     &:active {
         border: none;
@@ -90,12 +90,11 @@ button {
 
 .cross-delete {
     width: 50px;
-    height: 50px;
-    color: $svg-color;
+    color: $background;
     margin: 5px;
 
     &:hover{
-        background-color: $background;
+        background-color: $svg-color;
         border: none;
     }
 
@@ -108,11 +107,10 @@ button {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: $background;
 
     :hover {
         box-shadow: 1px 1px 1px ;
-        color: $svg-color;
+        color: $background;
     }
 }
 
