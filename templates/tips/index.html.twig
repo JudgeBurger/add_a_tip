@@ -4,66 +4,18 @@
 
 {% block body %}
     <h1 class="mt-5">Tips</h1>
-
     <section class="content">
-        <div class="cards d-flex flex-wrap">
+        <div class="cards d-flex justify-content-between align-items-center">
             {% for tip in tips %}
-                <div class="card tip mb-5" id="tip-{{ tip.id }}">
-                    <div class="card__side card__side--front card__side--front-1">
-                        <div class="card__description">
-                            <h2>{{ tip.name }}</h2>
-                            <img class="card-image p-3"
-                                 src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-                                 alt="image uploded by user">
-                        </div>
-                    </div>
-                    <div class="card__side card__side--back card__side--back-1">
-                        {{ include('tips/_delete_form.html.twig') }}
-                        <div class="card__description">
-                            {% for tip in tip.languages %}
-                                <div class="language-title">
-                                    {{ tip.name }}
-                                </div>
-                            {% endfor %}
-                            <div class="description">
-                                {% if tip.code is not empty %}
-                                    <div class="absolute-clipboard d-flex justify-content-center align-items-center">
-                                        <button class="copy-to m-1 p-1" id="copy-button"
-                                                data-clipboard-target="#tip-{{ tip.id }}-code">
-                                            <small title="Copier" class="copy-button">
-                                                <i class="fas fa-clone"></i>
-                                            </small>
-                                        </button>
-                                    </div>
-                                    <span class="block-code">
-                                        <code id="tip-{{ tip.id }}-code">
-                                            {{ tip.code }}
-                                        </code>
-                                    </span>
-                                {% endif %}
-                            </div>
-                            <div class="description mt-5 mb-5">
-                                {{ tip.description | slice(0, 40) ~ '...' | nl2br }}
-                            </div>
-                            <div
-                                    class="footer-card mt-5 col-12 d-flex flex-column flex-md-row justify-content-between align-items-center">
-                                <div class="px-2 flex-wrap d-flex flex-row align-items-center">
-                                    {# TODO : make a loop #}
-                                    <span class="circle-language mb-md-0 language mr-2">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                                             title="CSS 3" alt="uploaded-by-user">
-                                    </span>
-                                </div>
-                                <div class="px-2 button-group d-flex flex-row align-items-center">
-                                    <a class="card-button" href="{{ path('tips_show', {'id': tip.id}) }}">
-                                        <i class="fas fa-info-circle" title="Plus d'informations"></i>
-                                    </a>
-                                    <a class="ml-2 card-button" href="{{ path('tips_edit', {'id': tip.id}) }}">
-                                        <i class="fas fa-edit" title="Modifier"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card">
+                    <img class="img"
+                         src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                         alt="upload"
+                    >
+                    <h3 class="mt-3">{{ tip.name }}</h3>
+                    <p>{{ tip.description | slice(0, 20) }}...</p>
+                    <div class="pad-top">
+                        <a href="{{ path('tips_show', {'id': tip.id}) }}" class="button-more">En savoir plus</a>
                     </div>
                 </div>
             {% else %}
@@ -71,8 +23,7 @@
             {% endfor %}
         </div>
 
-
-        <div class="navigation d-flex justify-content-center">
+        <div class="navigation d-flex justify-content-center mt-3">
             {{ knp_pagination_render(tips) }}
         </div>
 
@@ -80,10 +31,11 @@
             <div class="d-flex justify-content-end align-items-end mr-5">
                 <a class="add_a_tip card-button mt-5 mb-5" title="Ajouter un Tip"
                    href="{{ path('tips_new') }}">
-                    <i class="cross-delete fas fa-plus fa-3x"></i>
+                    <i class="fas fa-plus fa-3x"></i>
                 </a>
             </div>
         </div>
 
     </section>
+
 {% endblock %}
