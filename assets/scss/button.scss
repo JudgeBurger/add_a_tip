@@ -89,7 +89,6 @@ button {
 }
 
 .cross-delete {
-    width: 50px;
     color: $background;
     margin: 5px;
 
@@ -110,7 +109,6 @@ button {
     border-radius: 50%;
 
     :hover {
-        box-shadow: 1px 1px 1px ;
         color: $background;
     }
 }

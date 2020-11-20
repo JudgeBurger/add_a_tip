@@ -26,16 +26,14 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('CRM Template')
+            ->setTitle('Add a Tip - Esapce Administrateur')
             ;
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('User', 'fa fa-user');
-
-        //User Section
-        yield MenuItem::section('Users');
-        yield MenuItem::linkToCrud('Users', 'fa fa-users', User::class);
+        yield MenuItem::section('Profils');
+        yield MenuItem::linkToCrud('Administrateur', 'fa fa-user', User::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-users', User::class);
     }
 }
