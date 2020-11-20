@@ -64,6 +64,7 @@ class UserCrudController extends AbstractCrudController
         $accountInformationsPanel = FormField::addPanel('Account informations')->setIcon('fa fa-user');
         $passwordPanel = FormField::addPanel('Password')->setIcon('fa fa-key');
 
+        $usernameField = TextField::new('username');
         $firstnameField = TextField::new('firstname');
         $lastnameField = TextField::new('lastname');
         $rolesField = ArrayField::new('roles');
@@ -76,9 +77,9 @@ class UserCrudController extends AbstractCrudController
             ->setFormType(RepeatedType::class)
             ->setFormTypeOptions([
                 'type' => PasswordType::class,
-                'invalid_message' => 'The password fields must match.',
-                'first_options' => ['label' => 'New password'],
-                'second_options' => ['label' => 'Repeat password'],
+                'invalid_message' => 'Les mots de passe doivent correspondre.',
+                'first_options' => ['label' => 'Nouveau Mot de passe'],
+                'second_options' => ['label' => 'Répétez votre nouveau mot de passe'],
             ])
             ->setRequired(false)
         ;
@@ -86,7 +87,6 @@ class UserCrudController extends AbstractCrudController
         $enabledAtField = DateTimeField::new('enabledAt');
         $lockedField = BooleanField::new('locked');
         $lockedAtField = DateTimeField::new('lockedAt');
-        $companiesField = AssociationField::new('companies');
         $createdAtField = DateTimeField::new('createdAt');
 
         if (Crud::PAGE_INDEX === $pageName) {
@@ -103,7 +103,6 @@ class UserCrudController extends AbstractCrudController
             // Account informations panel
             yield $accountInformationsPanel;
             yield $emailField;
-            yield $companiesField;
             yield $rolesField;
             yield $enabledField;
             yield $enabledAtField;
@@ -122,7 +121,6 @@ class UserCrudController extends AbstractCrudController
             // Account informations panel
             yield $accountInformationsPanel;
             yield $emailField;
-            yield $companiesField;
             yield $rolesField;
             yield $enabledField;
             yield $lockedField;

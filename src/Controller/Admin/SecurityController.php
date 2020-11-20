@@ -11,6 +11,8 @@ class SecurityController extends AbstractController
 {
     /**
      * @Route("/admin/login", name="admin_login")
+     * @param AuthenticationUtils $authenticationUtils
+     * @return Response
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -22,11 +24,11 @@ class SecurityController extends AbstractController
             'last_username' => $lastUsername,
             'translation_domain' => 'admin',
             'csrf_token_intention' => 'authenticate',
-            'page_title' => 'CRM Template',
+            'page_title' => 'Espace Administrateur',
             'target_path' => $this->generateUrl('dashboard'),
-            'username_label' => 'Your username',
-            'password_label' => 'Your password',
-            'sign_in_label' => 'Log in',
+            'username_label' => 'Identifiant',
+            'password_label' => 'Mot de passe',
+            'sign_in_label' => 'Se connecter',
         ]);
     }
 
