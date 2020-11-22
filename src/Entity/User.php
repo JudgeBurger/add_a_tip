@@ -27,6 +27,11 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $username;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $firstname;
@@ -82,11 +87,6 @@ class User implements UserInterface
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $lockedAt;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $username;
 
     public function getId(): ?int
     {
