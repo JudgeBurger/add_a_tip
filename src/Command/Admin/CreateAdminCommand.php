@@ -33,6 +33,7 @@ class CreateAdminCommand extends Command
     {
         $this
             ->setDescription('Permet de créer un Administrateur')
+            ->addArgument('username', InputArgument::OPTIONAL, 'username')
             ->addArgument('email', InputArgument::OPTIONAL, 'email')
             ->addArgument('password', InputArgument::OPTIONAL, 'password')
         ;
@@ -44,11 +45,13 @@ class CreateAdminCommand extends Command
 
         $returnCode = 0;
 
+        $username = $input->getArgument('username');
         $email = $input->getArgument('email');
         $password = $input->getArgument('password');
 
         //Require Value
-        if (null === $email || null === $password) {
+        if (null === $username || null === $email || null === $password) {
+            $username = $io->ask('Entrez votre pseudo', 'admin');
             $email = $io->ask('Entrez votre adresse email', 'admin@example.com');
             $password = $io->ask('Entrez votre mot de passe', 'password');
         }
@@ -59,6 +62,8 @@ class CreateAdminCommand extends Command
         $user->setPassword($encoded);
 
         // Required value form User entity
+        $user->setUsername($username);
+
         $user->setFirstname('Prénom');
         $user->setLastname('Nom');
         $user->setEmail($email);

@@ -1,0 +1,20 @@
+@import "vars";
+
+.copy-to {
+  padding: 10px;
+  border: 1px solid $dark-color;
+  border-radius: 5px;
+  top: 30px;
+  background-color: $dark-color;
+  color: $svg-color;
+}
+
+.copy-in-show {
+  padding: 10px;
+  border: 1px solid $dark-color;
+  border-radius: 5px;
+  background-color: $dark-color;
+  color: $svg-color;
+  top: 43px;
+  left: -5px;
+}
