@@ -27,10 +27,10 @@
             </li>
             <li class="nav-item">
 {#                {% if app.user and app.user.roles.0 is same as ('ROLE_USER') %}#}
-                <a class="nav-link underline" href="#">
-                    <i class="fas fa-search"></i>
-                    Rechercher
-                </a>
+{#                <a class="nav-link underline" href="#">#}
+{#                    <i class="fas fa-search"></i>#}
+{#                    Rechercher#}
+{#                </a>#}
 {#                {% endif %}#}
             </li>
             <li class="nav-item">
@@ -39,25 +39,25 @@
                     Nous contacter
                 </a>
             </li>
-            {% if app.user %}
-                <li class="nav-item">
-                    <a class="nav-link underline" href="{{ path('admin_login') }}">
-                        <i class="fas fa-portrait"></i>
-                        Votre Compte
-                    </a>
-                </li>
+{#            {% if app.user %}#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link underline" href="{{ path('admin_login') }}">#}
+{#                        <i class="fas fa-portrait"></i>#}
+{#                        Votre Compte#}
+{#                    </a>#}
+{#                </li>#}
 {#                <li class="nav-item">#}
 {#                    <a class="nav-link underline" href="{{ path('logout') }}">#}
 {#                        <i class="fas fa-stop"></i>#}
 {#                        Se déconnecter#}
 {#                    </a>#}
 {#                </li>#}
-            {% else %}
+{#            {% else %}#}
                 <a class="nav-link underline" href="{{ path('admin_login') }}">
                     <i class="fas fa-user-circle"></i>
                     Se connecter
                 </a>
-            {% endif %}
+{#            {% endif %}#}
         </ul>
     </div>
 </nav>
