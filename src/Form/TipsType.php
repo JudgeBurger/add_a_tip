@@ -25,11 +25,7 @@ class TipsType extends AbstractType
                     return $choice->getLanguageCategory()->getName();
                 },
             ])
-            ->add('code', TextareaType::class, [
-                'attr' => [
-                    'rows' => '2',
-                ],
-            ])
+            ->add('code')
             ->add('description', TextareaType::class, [
                 'attr' => [
                     'rows' => '13',
