@@ -61,9 +61,6 @@ class TipsController extends AbstractController
 
     /**
      * @Route("/tips/{id}", name="tips_show", methods={"GET"})
-     * @param Tips $tip
-     * @param Language $language
-     * @return Response
      */
     public function show(Tips $tip, Language $language): Response
     {

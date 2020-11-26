@@ -3,5 +3,25 @@
 {% block title %}Add A Tip{% endblock %}
 
 {% block body %}
-
+<h1 class="mt-5">Les derniers tips</h1>
+<section class="content">
+    <div class="cards d-flex justify-content-around align-items-center">
+        {% for tip in tips %}
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ tip.name }}</h5>
+                        <p class="card-text">{{ tip.description }}</p>
+                        <p class="block-code unselectable">
+                            {{ tip.code }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <h1 class="none">AUCUN RÉSULTAT</h1>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}

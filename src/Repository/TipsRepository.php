@@ -4,9 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Tips;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
-use function Doctrine\ORM\QueryBuilder;
 
 /**
  * @method Tips|null find($id, $lockMode = null, $lockVersion = null)

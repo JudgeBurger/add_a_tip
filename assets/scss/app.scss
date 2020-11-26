@@ -8,14 +8,10 @@
 @import "underline";
 @import "form";
 @import "pagination";
-@import "footer";
 
 body {
     background-color: $background;
-}
-
-.content {
-    padding : 0;
+    height: 80vh;
 }
 
 h1  {
@@ -54,7 +50,7 @@ a {
 }
 
 @media screen  and  (max-width: 700px){
-    .cards {
+    .card {
         min-width: 100%;
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Language;
 use App\Repository\TipsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;

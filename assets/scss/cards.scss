@@ -2,10 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-h1.title-show {
-    color: $svg-color;
-}
-
 .card {
     display: flex;
     justify-content: center;
@@ -14,8 +10,6 @@ h1.title-show {
     padding: 30px;
     border-radius: 8px;
     position: relative;
-    transition: .3s all;
-    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
     background-color: $svg-color;
 
     &:hover {
@@ -23,45 +17,9 @@ h1.title-show {
     }
 }
 
-.img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.content {
-    height: 100vh;
-    text-align: center;
-    padding: 4em 0;
-}
-
-.language-title {
-    color: $svg-color;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-evenly !important;
-}
-
-.button-more {
-    background-color: $dark-color;
-    color: $svg-color;
-    padding: 5px;
-    border-radius: 4px;
-
-    &:hover {
-        background-color: $background;
-        color: $svg-color;
-        border-radius: 4px;
-    }
-}
 
 .card-body {
     background-color: $svg-color;
-    border-radius: 5px;
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
 }
 
 .card {
@@ -84,29 +42,39 @@ h1.title-show {
     }
 }
 
+.img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.content {
+    height: 80vh;
+    text-align: center;
+    padding: 4em 0;
+}
+
+.show-card {
+    display: flex;
+    justify-content: space-evenly !important;
+}
+
+.button-more {
+    background-color: $dark-color;
+    color: $svg-color;
+    padding: 5px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $background;
+        color: $svg-color;
+        border-radius: 4px;
+    }
+}
+
 .card-button {
     padding : 10px;
     border: 1px solid $dark-color;
     border-radius: 5px;
-}
-
-.copy-to {
-    padding: 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-    top: 30px;
-    background-color: $dark-color;
-    color: $svg-color;
-}
-
-.copy-in-show {
-    padding: 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-    background-color: $dark-color;
-    color: $svg-color;
-    top: 43px;
-    left: -5px;
 }
 
 .card-image {
@@ -116,39 +84,6 @@ h1.title-show {
         border-radius: 5px;
         box-shadow: 5px 5px 5px $dark-color;
     }
-}
-
-.absolute-clipboard {
-    position : absolute;
-    top: -15px;
-    right: 10px;
-    width: 30px;
-    height : 30px;
-    padding: .30em;
-}
-
-.description {
-    position: relative;
-    padding: 5px;
-    margin: 20px;
-    color: $svg-color;
-}
-
-.circle-language {
-    background-color: $svg-color;
-    display : inline-block;
-    height : 40px;
-    width : 40px;
-    border-radius: $circle;
-    box-shadow: 2px 2px 2px $dark-color;
-    margin: 0;
-    padding: 0;
-}
-
-.language {
-    display : flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .block-code {

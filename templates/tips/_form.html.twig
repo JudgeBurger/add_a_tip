@@ -1,77 +1,79 @@
 {{ form_start(form) }}
 
-<section class="d-flex align-items-center mb-5">
-    <div class="w-100 text-center">
+<section class="form d-flex justify-content-center align-items-center mb-5">
+    <div class="text-center">
+
         <div class="form">
             <h1 class="text-center my-5"></h1>
 
             {{ form_start(form.name, {'attr': {'class': 'col-12 d-flex flex-column align-items-center p-0'}}) }}
 
-            <div class="col-12 d-flex flex-column p-4 align-items-center">
-                <div class="d-flex flex-md-row flex-column col-md-6 p-0">
-                    <div class="label_tip form-group d-flex flex-column my-3 col-md-12">
-                        {{ form_label(form.name, 'Nom') }}
-                        {{ form_widget(form.name, {'attr': {'placeholder': 'Créer des fixtures'}}) }}
-                        {% if form.name.vars.errors is not empty %}
-                            <div class="mt-2 text-left alert alert-danger">
-                                {{ form_errors(form.name) }}
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="d-flex flex-md-row flex-column col-md-6 p-0">
-                    <div class="label_tip form-group d-flex flex-column my-3 col-md-12 align-items-center">
-                        {{ form_label(form.picture,'Image') }}
-                        {{ form_widget(form.picture,{'attr': {'class': 'mx-lg-3 w-100', 'placeholder': 'Choisissez une image'}}) }}
-                        {% if form.picture.vars.errors is not empty %}
-                            <div class="mt-2 text-left alert alert-danger w-100">
-                                {{ form_errors(form.picture) }}
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="d-flex flex-lg-row flex-column col-md-6 p-0">
-                    <div class="label_tip form-group d-flex flex-column my-3 col-md-12">
-                        {{ form_label(form.code, 'Code') }}
-                        {{ form_widget(form.code, {'attr': {'placeholder': 'bin/console doctrine:fixture:load' }}) }}
-                        {% if form.code.vars.errors is not empty %}
-                            <div class="mt-2 text-left alert alert-danger">
-                                {{ form_errors(form.code) }}
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="d-flex flex-lg-row flex-column col-md-6 p-0">
-                    <div class="select-language label_tip form-group d-flex flex-column my-3 col-md-12">
-                        {{ form_label(form.languages, 'Langage') }}
-                        {{ form_widget(form.languages, {'attr': {'class': 'select-language'}}) }}
-                        {% if form.languages.vars.errors is not empty %}
-                            <div class="mt-2 text-left alert alert-danger">
-                                {{ form_errors(form.languages) }}
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div class="label_tip form-group d-flex flex-column my-3 col-lg-6 text-truncate">
-                    {{ form_label(form.description, 'Description') }}
-                    {{ form_widget(form.description, {'attr': {'class': 'text-truncate'}}) }}
-                    {% if form.description.vars.errors is not empty %}
-                        <div class="mt-2 text-left alert alert-danger">
-                            {{ form_errors(form.description | nl2br) }}
+            <form>
+                <div class="row p-0 m-0">
+                    <div class="col">
+                        <div class="label_tip form-group d-flex flex-column justify-content-center my-3 col-md-12">
+                            <legend>Nom</legend>
+                            {{ form_widget(form.name, {'attr': {'placeholder': 'Créer des fixtures'}}) }}
+                            {% if form.name.vars.errors is not empty %}
+                                <div class="mt-2 text-left alert alert-danger">
+                                    {{ form_errors(form.name) }}
+                                </div>
+                            {% endif %}
                         </div>
-                    {% endif %}
+                    </div>
+                    <div class="col">
+                        <div class="label_tip form-group d-flex flex-column my-3 col-md-12 align-items-center">
+                            <legend>Image</legend>
+                            {{ form_widget(form.picture,{'attr': {'class': 'mx-lg-3 w-100', 'placeholder': 'Choisissez une image'}}) }}
+                            {% if form.picture.vars.errors is not empty %}
+                                <div class="mt-2 text-left alert alert-danger w-100">
+                                    {{ form_errors(form.picture) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column col-md-6 p-0">
+                        <div class="label_tip form-group d-flex flex-column my-3 col-md-12">
+                            <legend>Code</legend>
+                            {{ form_widget(form.code, {'attr': {'placeholder': 'bin/console doctrine:fixture:load' }}) }}
+                            {% if form.code.vars.errors is not empty %}
+                                <div class="mt-2 text-left alert alert-danger">
+                                    {{ form_errors(form.code) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="d-flex flex-lg-row flex-column col-md-3 p-0 justify-content-center">
+                        <div class="select-language label_tip form-group d-flex flex-column my-3 col-md-10">
+                            <legend>Langage</legend>
+                            {{ form_widget(form.languages, {'attr': {'class': 'select-language'}}) }}
+                            {% if form.languages.vars.errors is not empty %}
+                                <div class="mt-2 text-left alert alert-danger">
+                                    {{ form_errors(form.languages) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="label_tip form-group d-flex flex-column my-3 col-lg-9 text-truncate">
+                        <legend>Description</legend>
+                        {{ form_widget(form.description, {'attr': {'class': 'text-truncate'}}) }}
+                        {% if form.description.vars.errors is not empty %}
+                            <div class="mt-2 text-left alert alert-danger">
+                                {{ form_errors(form.description | nl2br) }}
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center">
+                <div class="btn-group d-flex justify-content-center mt-3 mb-3">
                     <a class="card-button mr-5 btn-info" href="{{ path('tips_index') }}">Retour</a>
-                <button class="card-button btn-info">
-                    {{ button_label|default('Enregistrer') }}
-                </button>
-            </div>
+                    <button class="card-button btn-info mr-5">
+                        {{ button_label|default('Enregistrer') }}
+                    </button>
+                    <button type="reset" class="btn-info card-button">Réinitialiser</button>
+                </div>
+            </form>
+
         </div>
     </div>
 </section>
