@@ -4,7 +4,6 @@ namespace App\Repository;
 
 use App\Entity\Tips;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -20,17 +19,15 @@ class TipsRepository extends ServiceEntityRepository
         parent::__construct($registry, Tips::class);
     }
 
-    /**
-     * @return int|mixed|string|null
-     *
-     * @throws NonUniqueResultException
-     */
-    public function countAllTips()
+    public function lastTips()
     {
-        $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->select('COUNT(a.id) as value');
+        $qb = $this->createQueryBuilder('t')
+            ->orderBy('t.createdAt', 'DESC')
+            ->setMaxResults('3');
 
-        return $queryBuilder->getQuery()->getOneOrNullResult();
+        $query = $qb->getQuery();
+
+        return $query->getResult();
     }
 
     // /**

@@ -1,11 +1,49 @@
 @import "vars";
 
-.navbar {
-    background-color: $svg-color;
-    color: $light-color;
-    position : relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: $dark-color;
+h3 {
+  font-family: $font-nav-title;
+  font-size: 3rem;
+  color: $light-color;
+}
+
+a {
+  font-family: $font-title;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $light-color;
+
+  &:hover  {
+    background-color: $dark-color;
+  }
+}
+
+.navbar {
+  background-color: $nav-color;
+}
+
+.nav-link-href {
+  color: $light-color;
+  margin: 1rem;
+}
+
+.nav-item {
+  color: $light-color;
+}
+
+.collapse {
+  justify-content: flex-end;
+  margin: 1.5rem;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

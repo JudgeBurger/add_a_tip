@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Language;
 use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
@@ -61,10 +62,11 @@ class TipsController extends AbstractController
     /**
      * @Route("/tips/{id}", name="tips_show", methods={"GET"})
      */
-    public function show(Tips $tip): Response
+    public function show(Tips $tip, Language $language): Response
     {
         return $this->render('tips/show.html.twig', [
             'tip' => $tip,
+            'language' => $language,
         ]);
     }
 

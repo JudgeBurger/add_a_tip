@@ -2,156 +2,44 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-h1.title-show {
-    color: $svg-color;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.card {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 1%;
-    padding: 30px;
-    border-radius: 8px;
-    position: relative;
-    transition: .3s all;
-    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
-    background-color: $svg-color;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-.img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.content {
-    height: 100vh;
+.title {
     text-align: center;
-    padding: 4em 0;
-}
-
-.language-title {
-    color: $svg-color;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-evenly !important;
-}
-
-.button-more {
-    background-color: $dark-color;
-    color: $svg-color;
-    padding: 5px;
-    border-radius: 4px;
-
-    &:hover {
-        background-color: $background;
-        color: $svg-color;
-        border-radius: 4px;
-    }
+    padding: 20px;
 }
 
 .card-body {
-    background-color: $svg-color;
-    border-radius: 5px;
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+
 }
 
 .card {
-    width: 100%;
-    max-width: 470px;
-    margin: 10px;
-    position: relative;
-    perspective: 150em;
-    border: none;
-
-    &__description {
-        font-size: 1.3em;
-        padding: 0.75em 0;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: $svg-color;
-        }
-    }
+    background-color: $nav-color;
 }
 
-.card-button {
-    padding : 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-}
-
-.copy-to {
-    padding: 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-    top: 30px;
-    background-color: $dark-color;
+h4 {
     color: $svg-color;
-}
-
-.copy-in-show {
-    padding: 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-    background-color: $dark-color;
-    color: $svg-color;
-    top: 43px;
-    left: -5px;
-}
-
-.card-image {
-    border-radius: 5px;
-
-    img {
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px $dark-color;
-    }
-}
-
-.absolute-clipboard {
-    position : absolute;
-    top: -15px;
-    right: 10px;
-    width: 30px;
-    height : 30px;
-    padding: .30em;
-}
-
-.description {
-    position: relative;
-    padding: 5px;
-    margin: 20px;
-    color: $svg-color;
-}
-
-.circle-language {
-    background-color: $svg-color;
-    display : inline-block;
-    height : 40px;
-    width : 40px;
-    border-radius: $circle;
-    box-shadow: 2px 2px 2px $dark-color;
-    margin: 0;
-    padding: 0;
-}
-
-.language {
-    display : flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .block-code {
+    text-align: center;
     display: block;
     color: $svg-color;
     background: $dark-color;
@@ -161,13 +49,6 @@ h1.title-show {
     box-shadow: 5px 5px 5px $dark-color;
 }
 
-.unselectable {
-    box-shadow: 5px 5px 5px $dark-color;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #cc0000;
+.text-muted {
+    color: $light-color !important;
 }
-

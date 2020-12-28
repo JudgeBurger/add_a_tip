@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
-
+$nav-color: rgba(0,0,0,0.7);
 $card: #55A090;
 $background: #103856;
 $svg-color: #E5DBD4;
@@ -14,6 +15,7 @@ $info: #BDC649;
 
 $font-text: 'Zilla Slab', serif;
 $font-title: 'Grandstander', cursive;
+$font-nav-title: 'Permanent Marker', cursive;
 
 $size-text: calc(16px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
 $size-quote:18px;

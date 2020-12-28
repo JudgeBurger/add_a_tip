@@ -55,6 +55,11 @@ class Tips
      */
     private $languages;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
     public function __construct()
     {
         $this->languages = new ArrayCollection();
@@ -150,6 +155,18 @@ class Tips
         if ($this->languages->contains($language)) {
             $this->languages->removeElement($language);
         }
+
+        return $this;
+    }
+
+    public function getDatetime(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setDatetime(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
