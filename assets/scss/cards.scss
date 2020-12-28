@@ -2,91 +2,44 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
 
-.card {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 1%;
-    padding: 30px;
-    border-radius: 8px;
-    position: relative;
-    background-color: $svg-color;
-
-    &:hover {
-        transform: scale(1.05);
-    }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
+.title {
+    text-align: center;
+    padding: 20px;
+}
 
 .card-body {
-    background-color: $svg-color;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+
 }
 
 .card {
-    width: 100%;
-    max-width: 470px;
-    margin: 10px;
-    position: relative;
-    perspective: 150em;
-    border: none;
-
-    &__description {
-        font-size: 1.3em;
-        padding: 0.75em 0;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: $svg-color;
-        }
-    }
+    background-color: $nav-color;
 }
 
-.img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.content {
-    height: 80vh;
-    text-align: center;
-    padding: 4em 0;
-}
-
-.show-card {
-    display: flex;
-    justify-content: space-evenly !important;
-}
-
-.button-more {
-    background-color: $dark-color;
+h4 {
     color: $svg-color;
-    padding: 5px;
-    border-radius: 4px;
-
-    &:hover {
-        background-color: $background;
-        color: $svg-color;
-        border-radius: 4px;
-    }
-}
-
-.card-button {
-    padding : 10px;
-    border: 1px solid $dark-color;
-    border-radius: 5px;
-}
-
-.card-image {
-    border-radius: 5px;
-
-    img {
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px $dark-color;
-    }
 }
 
 .block-code {
+    text-align: center;
     display: block;
     color: $svg-color;
     background: $dark-color;
@@ -96,13 +49,6 @@
     box-shadow: 5px 5px 5px $dark-color;
 }
 
-.unselectable {
-    box-shadow: 5px 5px 5px $dark-color;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #cc0000;
+.text-muted {
+    color: $light-color !important;
 }
-

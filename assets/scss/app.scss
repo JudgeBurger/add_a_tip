@@ -1,22 +1,25 @@
 @import "vars";
-@import "shapeDesktopNavbar";
+
 @import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
 @import "cards";
 @import "button";
 @import "navbar";
-@import "login";
-@import "underline";
-@import "form";
-@import "pagination";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $nav-color;
+}
 
 body {
-    background-color: $background;
-    height: 80vh;
+    background-color: $svg-color;
 }
 
 h1  {
     text-align: center;
-    color: $svg-color;
+    color: $background;
     font-size: $size-title;
     margin-top : 30px;
 }
@@ -25,33 +28,10 @@ h2 {
     color: $svg-color;
 }
 
-a {
-    border: none;
+p {
+    color: $svg-color;
 }
 
-.notification {
-    color: $info;
+.home-title, .tips-title {
+    color: $dark-color;
 }
-
-@include shapeDesktop();
-
-/** For mobile Devices **/
-@media screen and (max-width: 780px ) {
-    h1 {
-        text-align: center;
-        color: $background;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .title-home {
-        margin-left: 15px;
-    }
-}
-
-@media screen  and  (max-width: 700px){
-    .card {
-        min-width: 100%;
-    }
-}
-
