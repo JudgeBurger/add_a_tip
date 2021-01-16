@@ -19,9 +19,25 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ tip.name }}</h4>
                             <p class="card-text">{{ tip.description }}</p>
-                            <div class="block-code">
-                                <p class="card-text">{{ tip.code }}</p>
-                            </div>
+
+                            {% if tip.code is not empty %}
+                                <span class="block-code">
+                                        <code id="tip-{{ tip.id }}-code">
+                                            {{ tip.code }}
+                                        </code>
+                                    </span>
+                                <div class="d-flex justify-content-end align-items-end">
+                                    <button class="button col-md-3" id="copy-button"
+                                            data-clipboard-target="#tip-{{ tip.id }}-code">
+                                        Copy
+                                    </button>
+                                </div>
+                                <div>
+                                    {% for language in tip.languages %}
+                                        {{ language.name }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                         </div>
                         <div class="nav col-md-12 flex-row mt-3">
                             <p class="card-text align-content-start col-md-6"><small class="text-muted">Crée le

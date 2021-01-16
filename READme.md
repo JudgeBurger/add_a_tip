@@ -36,19 +36,21 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Message Flash
 * Pagination
 * Display last Tip on Home Page
+* Create a Personal Account
+
 
 ### Functionality under development :
 
-* Create a Personal Account
+* Add Language/CreatedAt/CreatedBy on cards
 
 ### Feature to come :
 
 * Add tips to your collection
-* Search through all your Tips
+* Search in all Tips
 * Consult the Community Tips
-* Comment on a tip
-* Like a Tip
-* Save a Tip in your collection
+* Comment a tip
+* Like/save a Tip
+* Form Contact
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 

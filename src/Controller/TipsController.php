@@ -7,13 +7,10 @@ use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
 use Knp\Component\Pager\PaginatorInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-// Rajouter IsGranted pour l'ensenble de TipsController
 
 /**
  * @Route("/")
@@ -28,12 +25,9 @@ class TipsController extends AbstractController
     public function index(TipsRepository $tipsRepository, PaginatorInterface $paginator, Request $request): Response
     {
         return $this->render('tips/index.html.twig', [
-            'tips' => $paginator->paginate(
-                $tipsRepository->findAll(),
-                $request->query->getInt('page', 1),
-                self::TIPS_PER_PAGE
-            ),
-        ]);
+            'tips' => $tipsRepository->findAll(),
+            ]
+        );
     }
 
     /**

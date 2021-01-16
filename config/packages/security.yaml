@@ -6,8 +6,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users:
-            entity:
-                class: App\Entity\User
+            entity: { class: App\Entity\User, property: email }
 
     firewalls:
         dev:
