@@ -6,7 +6,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users:
-            entity: { class: App\Entity\User, property: email }
+            entity: { class: App\Entity\User }
 
     firewalls:
         dev:
@@ -21,7 +21,7 @@ security:
                 check_path: admin_login
             logout:
                 path: /admin/logout
-                target: /admin
+                target: /
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
