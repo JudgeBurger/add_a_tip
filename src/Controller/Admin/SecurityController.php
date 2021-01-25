@@ -12,7 +12,7 @@ class SecurityController extends AbstractController
     /**
      * @Route("/admin/login", name="admin_login")
      */
-    public function login(AuthenticationUtils $authenticationUtils): Response
+    public function adminlogin(AuthenticationUtils $authenticationUtils): Response
     {
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
@@ -22,11 +22,11 @@ class SecurityController extends AbstractController
             'last_username' => $lastUsername,
             'translation_domain' => 'admin',
             'csrf_token_intention' => 'authenticate',
-            'page_title' => 'Espace Administrateur',
+            'page_title' => 'Admin Access',
             'target_path' => $this->generateUrl('dashboard'),
-            'username_label' => 'Identifiant',
-            'password_label' => 'Mot de passe',
-            'sign_in_label' => 'Se connecter',
+            'username_label' => 'Username',
+            'password_label' => 'Password',
+            'sign_in_label' => 'Connect',
         ]);
     }
 

@@ -26,14 +26,13 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Add a Tip - Esapce Administrateur')
-            ;
+            ->setTitle('Add Tip - Administrator Area');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::section('Profils');
-        yield MenuItem::linkToCrud('Administrateur', 'fa fa-user', User::class);
-        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-users', User::class);
+        yield MenuItem::linkToCrud('Administrator', 'fa fa-user', User::class);
+        yield MenuItem::linkToCrud('User', 'fa fa-users', User::class);
     }
 }
