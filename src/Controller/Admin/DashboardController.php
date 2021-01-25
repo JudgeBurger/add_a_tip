@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
+use App\Controller\Admin\Crud\AdminCrudController;
+use App\Controller\Admin\Crud\UserCrudController;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -32,7 +34,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::section('Profils');
-        yield MenuItem::linkToCrud('Administrator', 'fa fa-user', User::class);
-        yield MenuItem::linkToCrud('User', 'fa fa-users', User::class);
+        yield MenuItem::linkToCrud('Administrators', 'fa fa-user', User::class)
+            ->setController(AdminCrudController::class);
+        yield MenuItem::linkToCrud('Users', 'fa fa-users', User::class)
+            ->setController(UserCrudController::class);
     }
 }

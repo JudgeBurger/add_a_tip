@@ -19,15 +19,32 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ tip.name }}</h4>
                             <p class="card-text">{{ tip.description }}</p>
-                            <div class="block-code">
-                                <p class="card-text">{{ tip.code }}</p>
-                            </div>
+
+                            {% if tip.code is not empty %}
+                                <span class="block-code">
+                                        <code id="tip-{{ tip.id }}-code">
+                                            {{ tip.code }}
+                                        </code>
+                                    </span>
+                                <div class="d-flex justify-content-end align-items-end">
+                                    <button class="button col-md-3" id="copy-button"
+                                            data-clipboard-target="#tip-{{ tip.id }}-code">
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="card-text">
+                                    {% for language in tip.languages %}
+                                        <div class="card-text">
+                                            Langages :
+                                            <div class="language col-md-2">{{ language.name }}</div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
                         </div>
                         <div class="nav col-md-12 flex-row mt-3">
-                            <p class="card-text align-content-start col-md-6"><small class="text-muted">Crée le
-                                    : </small></p>
-                            <p class="card-text align-items-end col-md-6"><small class="text-muted">Crée par
-                                    : </small></p>
+                            <p class="card-text align-content-start col-md-6"><small class="text-muted">Crée le : 21/12/2020</small></p>
+                            <p class="card-text align-items-end col-md-6"><small class="text-muted">Crée par : Damiz</small></p>
                         </div>
                     </div>
                 </ul>
