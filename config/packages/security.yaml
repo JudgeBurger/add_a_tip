@@ -20,8 +20,11 @@ security:
                 login_path: admin_login
                 check_path: admin_login
             logout:
-                path: /admin/logout
+                path: app_logout
                 target: /
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -34,4 +37,4 @@ security:
     access_control:
         - { path: ^/admin/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/profile, roles: ROLE_USER }

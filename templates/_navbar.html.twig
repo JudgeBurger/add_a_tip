@@ -20,16 +20,10 @@
 
             <li><a class="nav-link-href" href="#">Contact</a></li>
 
-{#            {% if app.user is same as 'ROLE_USER' %}#}
-{#                <li><a class="nav-link-href" href="{{ path('admin_logout') }}">Logout</a></li>#}
-{#            {% else %}#}
-{#                <li><a class="nav-link-href" href="{{ path('admin_login') }}">Login</a></li>#}
-{#            {% endif %}#}
-
-            {% if app.user is same as 'ROLE_ADMIN' %}
-            <li><a class="nav-link-href" href="{{ path('admin_logout') }}">Logout Admin</a></li>
+            {% if app.user %}
+                <li><a class="nav-link-href" href="{{ path('app_logout') }}">Logout</a></li>
             {% else %}
-            <li><a class="nav-link-href" href="{{ path('admin_login') }}">Login Admin</a></li>
+                <li><a class="nav-link-href" href="{{ path('app_login') }}">Login</a></li>
             {% endif %}
         </ul>
     </div>
