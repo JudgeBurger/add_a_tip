@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <h1>Create an Account</h1>
+
+    {{ form_start(registrationForm) }}
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class=" d-flex col-3 align-items-center justify-content-center mb-0 mt-5">
+            {{ form_row(registrationForm.firstname) }}
+            {{ form_row(registrationForm.lastname) }}
+        </div>
+    </div>
+
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center mt-5">
+            {{ form_row(registrationForm.email) }}
+        </div>
+    </div>
+
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class=" d-flex col-3 align-items-center justify-content-center mb-0 mt-5">
+            {{ form_row(registrationForm.username) }}
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }}
+        </div>
+    </div>
+
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class=" d-flex col-3 align-items-center justify-content-center mb-0 mt-5">
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-3 col-sm-3 col-xs-3 d-flex align-items-center justify-content-center">
+            <button type="submit" class="btn">Register</button>
+        </div>
+    </div>
+
+    {{ form_end(registrationForm) }}
+{% endblock %}
