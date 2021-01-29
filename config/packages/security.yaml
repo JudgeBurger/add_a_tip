@@ -19,6 +19,11 @@ security:
             form_login:
                 login_path: admin_login
                 check_path: admin_login
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 604800
+                path: /
+                always_remember_me: true
             logout:
                 path: app_logout
                 target: /
