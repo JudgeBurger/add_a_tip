@@ -9,16 +9,19 @@
 
             <li><a class="nav-link-href" href="{{ path('home') }}">Accueil</a></li>
 
-
-            {% if app.user and app.user.roles.0 is same as ('ROLE_ADMIN', 'ROLE_USER') %}
+            {% if app.user %}
             <li><a class="nav-link-href" href="{{ path('tips_index') }}">Mes tips</a></li>
             {% endif %}
 
-            {% if app.user and app.user.roles.0 is same as ('ROLE_ADMIN') %}
+            {% if app.user %}
                 <li><a class="nav-link-href" href="#">Recherche</a></li>
             {% endif %}
 
             <li><a class="nav-link-href" href="#">Contact</a></li>
+
+            {% if app.user and app.user.roles.0 is same as 'ROLE_ADMIN' %}
+                <li><a class="nav-link-href" href="{{ path('dashboard') }}">Admin</a></li>
+            {% endif %}
 
             {% if app.user %}
                 <li><a class="nav-link-href" href="{{ path('app_logout') }}">Logout</a></li>
