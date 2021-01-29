@@ -38,15 +38,14 @@ Grâce à un simple système de card, il est possible d'ajouter tous les trucs e
 * Display last Tip on Home Page
 * Create a Personal Account
 
-
 ### Functionality under development :
 
-* Add Language/CreatedAt/CreatedBy on cards
+* Search in all Tips
 
 ### Feature to come :
 
+* Add Language/CreatedAt/CreatedBy on cards
 * Add tips to your collection
-* Search in all Tips
 * Consult the Community Tips
 * Comment a tip
 * Like/save a Tip

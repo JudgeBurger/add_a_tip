@@ -6,7 +6,7 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users:
-            entity: { class: App\Entity\User, property: email }
+            entity: { class: App\Entity\User }
 
     firewalls:
         dev:
@@ -19,9 +19,17 @@ security:
             form_login:
                 login_path: admin_login
                 check_path: admin_login
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 604800
+                path: /
+                always_remember_me: true
             logout:
-                path: /admin/logout
-                target: /admin
+                path: app_logout
+                target: /
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -34,4 +42,4 @@ security:
     access_control:
         - { path: ^/admin/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/profile, roles: ROLE_USER }

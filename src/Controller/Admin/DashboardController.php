@@ -28,7 +28,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Add a Tip - Esapce Administrateur');
+            ->setTitle('Add Tip - Administrator Area');
     }
 
     public function configureMenuItems(): iterable
