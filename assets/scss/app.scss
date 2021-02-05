@@ -6,6 +6,11 @@
 @import "button";
 @import "navbar";
 @import "login";
+@import "register";
+
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -16,16 +21,26 @@
 
 body {
     background-color: $svg-color;
+    margin-top: 150px;
 }
 
 h1  {
-    text-align: center;
-    color: $background;
+    text-align: start;
+    color: $dark-color;
     font-size: $size-title;
-    margin-top : 30px;
 }
 
 h2 {
+    color: $svg-color;
+}
+
+h3 {
+    font-family: $font-nav-title;
+    font-size: 3rem;
+    color: $light-color;
+}
+
+h4 {
     color: $svg-color;
 }
 
@@ -38,13 +53,9 @@ a {
 
     &:hover {
         text-decoration: none;
-        color: $light-color;
+        color: $dark-color;
+        background-color: $light-color;
     }
-}
-
-li:hover {
-    background-color: $dark-color;
-    border-radius: 4px;
 }
 
 .home-title, .tips-title {
@@ -56,4 +67,35 @@ li:hover {
     background-color: $svg-color;
     border-radius: 4px;
     box-shadow: 4px 4px 4px;
+}
+
+@media screen and (max-width: 992px){
+    .navbar {
+        background-color: $dark-color;
+        color: $dark-color;
+    }
+
+    .navbar-toggler-icon, .navbar-toggler {
+        background-color: $light-color;
+    }
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 60px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: $nav-color;
+    color: $light-color;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: $light-color;
 }

@@ -1,0 +1,21 @@
+@import "vars";
+
+.register-title {
+  margin-top: 250px;
+}
+
+.register-form {
+    background-color: $light-color;
+    margin-top: 250px;
+    border-radius: $border;
+}
+
+.register a:hover {
+  color: $dark-color;
+}
+
+input {
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}

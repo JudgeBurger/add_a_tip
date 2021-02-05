@@ -6,40 +6,35 @@
   box-sizing: border-box;
 }
 
-h3 {
-  font-family: $font-nav-title;
-  font-size: 3rem;
-  color: $light-color;
-}
-
-li:hover {
-  background-color: $dark-color;
-  color: $light-color;
-  transition: 0.5s;
-  border-radius: 4px;
-}
-
 a {
   font-family: $font-title;
   border: none;
   text-decoration: none;
   text-transform: capitalize;
   color: $light-color;
-}
 
-a:hover {
-  border: none;
-  text-decoration: none;
-  color: $light-color;
+  & a:hover {
+    background-color: $light-color;
+    color: $light-color;
+    transition: 0.5s;
+    border-radius: 4px;
+  }
 }
 
 .navbar {
   background-color: $nav-color;
 }
 
+.home_logo {
+  max-width: 100px;
+  color: $light-color;
+}
+
 .nav-link-href {
+  border-radius: 4px;
   color: $light-color;
   margin: 1rem;
+  padding: 7px;
 }
 
 .nav-item {

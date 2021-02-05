@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Entity\Traits\TimestampableEntityTrait;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -95,6 +96,11 @@ class User implements UserInterface
      */
     private $isVerified = false;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Tips::class, mappedBy="author")
+     */
+    private $tips;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -138,6 +144,7 @@ class User implements UserInterface
     {
         $this->roles = [];
         $this->companies = new ArrayCollection();
+        $this->tips = new ArrayCollection();
     }
 
     public function getRoles(): ?array
@@ -305,6 +312,36 @@ class User implements UserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tips[]
+     */
+    public function getTips(): Collection
+    {
+        return $this->tips;
+    }
+
+    public function addTip(Tips $tip): self
+    {
+        if (!$this->tips->contains($tip)) {
+            $this->tips[] = $tip;
+            $tip->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTip(Tips $tip): self
+    {
+        if ($this->tips->removeElement($tip)) {
+            // set the owning side to null (unless already changed)
+            if ($tip->getAuthor() === $this) {
+                $tip->setAuthor(null);
+            }
+        }
 
         return $this;
     }

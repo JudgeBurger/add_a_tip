@@ -6,7 +6,7 @@ use App\Entity\Language;
 use App\Entity\Tips;
 use App\Form\TipsType;
 use App\Repository\TipsRepository;
-use Knp\Component\Pager\PaginatorInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,44 +17,33 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TipsController extends AbstractController
 {
-    const TIPS_PER_PAGE = 3;
-
     /**
      * @Route("/tips", name="tips_index", methods={"GET"})
      */
-    public function index(TipsRepository $tipsRepository, PaginatorInterface $paginator, Request $request): Response
+    public function index(TipsRepository $tipsRepository, Request $request): Response
     {
-        return $this->render('tips/index.html.twig', [
-            'tips' => $tipsRepository->findAll(),
-            ]
-        );
-    }
-
-    /**
-     * @Route("/new", name="tips_new", methods={"GET","POST"})
-     */
-    public function new(Request $request): Response
-    {
-        $tip = new Tips();
-        $form = $this->createForm(TipsType::class, $tip);
+        $tips = new Tips();
+        $form = $this->createForm(TipsType::class, $tips);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'Tips Created! Knowledge is power');
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($tip);
+            $entityManager->persist($tips);
             $entityManager->flush();
 
             return $this->redirectToRoute('tips_index');
         }
 
-        return $this->render('tips/new.html.twig', [
-            'tip' => $tip,
+        return $this->render('tips/index.html.twig', [
+            'tips' => $tipsRepository->findAll(),
             'form' => $form->createView(),
-        ]);
+            ]);
     }
 
     /**
      * @Route("/tips/{id}", name="tips_show", methods={"GET"})
+     * @ParamConverter("tips", options={"id" = "tips_id"})
      */
     public function show(Tips $tip, Language $language): Response
     {
@@ -73,6 +62,7 @@ class TipsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'Well done, Tip Modified!');
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('tips_index');
@@ -90,6 +80,7 @@ class TipsController extends AbstractController
     public function delete(Request $request, Tips $tip): Response
     {
         if ($this->isCsrfTokenValid('delete'.$tip->getId(), $request->request->get('_token'))) {
+            $this->addFlash('success', 'It wasn\'t that important anyway!');
             $entityManager = $this->getDoctrine()->getManager();
 
             $entityManager->remove($tip);

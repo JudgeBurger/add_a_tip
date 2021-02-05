@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <h3>ADD TIP</h3>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,26 +7,30 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
 
-            <li><a class="nav-link-href" href="{{ path('home') }}">Accueil</a></li>
+            <a class="nav-link-href" href="{{ path('home') }}">Accueil</a>
 
             {% if app.user %}
-            <li><a class="nav-link-href" href="{{ path('tips_index') }}">Mes tips</a></li>
+                <a class="nav-link-href" href="{{ path('tips_index') }}">Mes tips</a>
             {% endif %}
 
             {% if app.user %}
-                <li><a class="nav-link-href" href="#">Recherche</a></li>
+                <a class="nav-link-href" href="#">Recherche</a>
             {% endif %}
 
-            <li><a class="nav-link-href" href="#">Contact</a></li>
+            <a class="nav-link-href" href="#">Contact</a>
 
             {% if app.user and app.user.roles.0 is same as 'ROLE_ADMIN' %}
-                <li><a class="nav-link-href" href="{{ path('dashboard') }}">Admin</a></li>
+                <a class="nav-link-href" href="{{ path('dashboard') }}">Admin</a>
             {% endif %}
 
             {% if app.user %}
-                <li><a class="nav-link-href" href="{{ path('app_logout') }}">Logout</a></li>
+                <a class="nav-link-href" href="{{ path('app_logout') }}">Logout</a>
             {% else %}
-                <li><a class="nav-link-href" href="{{ path('app_login') }}">Login</a></li>
+                <a class="nav-link-href" href="{{ path('app_login') }}">Login</a>
+            {% endif %}
+
+            {% if not app.user %}
+                <a href="{{ path('app_register') }}" class="nav-link-href">Create an Account</a>
             {% endif %}
         </ul>
     </div>
