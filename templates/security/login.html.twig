@@ -4,11 +4,11 @@
 
 {% block body %}
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid d-flex mt-5">
         <div class="row main-content bg-success text-center">
             <div class="col-md-4 text-center company__info">
                 <h4 class="company_title">
-                    <img class="login-img" src="{{ asset('') }}" alt="logo">
+                    <img class="login-img" src="{{ asset('build/Add_tip_logo.png') }}" alt="logo">
                 </h4>
             </div>
             <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
@@ -20,32 +20,38 @@
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                         {% endif %}
-                    <div class="">
-                        <form control="" class="form-group">
-                            <div class="">
-                                <label class="mt-5" for="inputUsername">Username</label>
-                                <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control"
-                                       required autofocus>
-                            </div>
-                            <div class="">
-                                <label class="mt-5" for="inputPassword">Password</label>
-                                <input type="password" name="password" id="inputPassword" class="form-control" required>
-                            </div>
-                            <input type="hidden" name="_csrf_token"
-                                   value="{{ csrf_token('authenticate') }}"
-                            >
-                            <div class="mt-5">
-                                <input type="checkbox" name="remember_me" id="remember_me" class="">
-                                <label for="remember_me">Remember Me!</label>
-                            </div>
-                            <div class="">
-                                <input type="submit" value="Submit" class="btn">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="">
-                        <p style="color: #000000">Don't have an account? <a class="register" style="color: #000000" href="{{ path('app_register') }}">Register Here</a></p>
-                    </div>
+                        <div class="">
+                            <form control="" class="form-group">
+                                <div class="">
+                                    <label class="mt-5" for="inputUsername">Username</label>
+                                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername"
+                                           class="form-control"
+                                           required autofocus>
+                                </div>
+                                <div class="">
+                                    <label class="mt-5" for="inputPassword">Password</label>
+                                    <input type="password" name="password" id="inputPassword" class="form-control"
+                                           required>
+                                </div>
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ csrf_token('authenticate') }}"
+                                >
+                                <div class="mt-5">
+                                    <input type="checkbox" name="remember_me" id="remember_me" class="">
+                                    <label for="remember_me">Remember Me!</label>
+                                </div>
+                                <div class="">
+                                    <input type="submit" value="Submit" class="btn">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="">
+                            <p style="color: #000000">Don't have an account?</p>
+                            <p>
+                                <a class="register" style="color: #000000" href="{{ path('app_register') }}">Register Here</a>
+                            </p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

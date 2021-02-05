@@ -3,39 +3,52 @@
 {% block title %}Add A Tip{% endblock %}
 
 {% block body %}
-    <h3 class="home-title mt-5 ml-5">Les derniers tips</h3>
-        <div class="col-12 d-flex flex-column align-items-center">
-            <div class="mb-3 mt-5 col-md-6 col-sm-6 col-xs-6">
-                {% for tip in tips %}
-                <div class="card tip-list mb-5">
-                    <ul class="nav flex-row mt-5">
-                        <div class="col-md-6">
-                            <img class="card-img-top mb-5"
-                                 src="https://www.slate.fr/sites/default/files/styles/1060x523/public/code_3.jpg"
-                                 alt="Card image cap">
-                        </div>
 
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <h4 class="card-title">{{ tip.name }}</h4>
-                                <p class="card-text">{{ tip.description }}</p>
-                                <div class="block-code">
-                                    <p class="card-text">{{ tip.code }}</p>
-                                </div>
-                            </div>
-                            <div class="nav col-md-12 flex-row mt-3">
-                                <p class="card-text align-content-start col-md-6"><small class="text-muted">Crée le
-                                        : </small></p>
-                                <p class="card-text align-items-end col-md-6"><small class="text-muted">Crée par
-                                        : </small></p>
-                            </div>
-                        </div>
-                    </ul>
+    <div class="intro col-12 mt-5 mb-5">
+        <h1>Welcome to you dear user,</h1>
+
+        <h2>I'm sure I'm sure you're wondering what this new site can be? So what is <u>Add Tip</u> ?</h2>
+        <h4>Add tip is more than a reminder.
+            With Add Tip you can add tips and tricks about your projects, you can also discuss around your tips or tips
+            from
+            other users.
+            Thanks to a simple system of Cards, Add Tip helps you never forget what you need. A piece of code, a tip for
+            a
+            current or upcoming project, you can count on Add Tip to store your tips and tricks.
+            You will now discover how your new best friend works.</h4>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-6 justify-content-center">
+                <h4>
+                    First, you should create your own personal space in order to access to the tips.
+                </h4>
+                <div class="d-flex justify-content-center align-items-center mt-5">
+                    <video controls width="500" autoplay>
+
+                        <source src="{{ asset('build/.webm') }}"
+                                type="video/webm">
+
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
                 </div>
-                {% else %}
-                Aucun résultats
             </div>
-            {% endfor %}
 
+            <div class="col-6">
+                <h4>
+                    After creating your personal space, you just need to log in using the login form.
+                </h4>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <video controls width="500" autoplay>
+
+                        <source src="{{ asset('build/login.webm') }}"
+                                type="video/webm">
+
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                </div>
+            </div>
         </div>
+    </div>
 {% endblock %}

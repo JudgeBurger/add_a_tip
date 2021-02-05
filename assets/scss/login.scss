@@ -1,9 +1,5 @@
 @import "vars";
 
-.register a:hover {
-  color: $dark-color;
-}
-
 .login-img {
   background: none;
 }
@@ -85,6 +81,6 @@ form{
   margin-bottom: 1em;
 }
 .btn:hover, .btn:focus{
-  background-color: #008080;
+  background-color: $nav-color;
   color:#fff;
 }

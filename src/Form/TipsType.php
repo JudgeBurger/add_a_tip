@@ -19,17 +19,22 @@ class TipsType extends AbstractType
             ->add('picture')
             ->add('languages', EntityType::class, [
                 'class' => Language::class,
-                'placeholder' => 'Choisissez un langage',
+                'placeholder' => 'Choose a Language',
                 'multiple' => true,
                 'group_by' => function ($choice, $key, $value) {
                     return $choice->getLanguageCategory()->getName();
                 },
+                'attr' => [
+                    'rows' => '5',
+                    'cols' => '75',
+                ],
             ])
             ->add('code')
             ->add('description', TextareaType::class, [
                 'attr' => [
-                    'rows' => '13',
-                    'placeholder' => 'Les fixtures permettent de créer de fausses données pour...',
+                    'rows' => '5',
+                    'cols' => '75',
+                    'placeholder' => 'Fixtures can be used to create false data for...',
                 ],
             ])
         ;
