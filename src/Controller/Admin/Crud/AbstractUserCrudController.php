@@ -92,6 +92,7 @@ abstract class AbstractUserCrudController extends AbstractCrudController
         if (Crud::PAGE_INDEX === $pageName) {
             yield $firstnameField;
             yield $lastnameField;
+            yield $usernameField;
             yield $emailField;
             yield $rolesField;
         } elseif (Crud::PAGE_DETAIL === $pageName) {
@@ -99,6 +100,7 @@ abstract class AbstractUserCrudController extends AbstractCrudController
             yield $legalInformationsPanel;
             yield $firstnameField;
             yield $lastnameField;
+            yield $usernameField;
 
             // Account informations panel
             yield $accountInformationsPanel;
@@ -117,6 +119,8 @@ abstract class AbstractUserCrudController extends AbstractCrudController
             yield $legalInformationsPanel;
             yield $firstnameField;
             yield $lastnameField;
+            yield $usernameField;
+
 
             // Account informations panel
             yield $accountInformationsPanel;

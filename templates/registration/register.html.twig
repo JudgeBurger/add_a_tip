@@ -7,79 +7,79 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-
-    <div class="register-form container">
-        <h3 class="register-title col-12 d-flex align-items-center justify-content-center mb-5" style="color: #000">
-            Create an Account</h3>
-        <div class="col-12 d-flex align-item-center justify-content-center">
-            <div class="signup__container">
-                <div class="container__child signup__thumbnail">
+        <div class="container-fluid d-flex mt-5">
+            <div class="row main-content bg-success text-center">
+                <div class="col-md-4 text-center company__info">
+                    <h4 class="company_title">
+                        <img class="login-img" src="{{ asset('build/Add_tip_logo.png') }}" alt="logo">
+                    </h4>
                 </div>
-
-                <div class="container__child signup__form">
-
-                    {{ form_start(registrationForm) }}
-                    <div class="col-12 d-flex align-items-center justify-content-center">
-                        <div class="form-group col-6">
-                            <p><label class="register-label" for="firstname">Firstname</label></p>
-                            {{ form_widget(registrationForm.firstname) }}
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                    <div class="container-fluid">
+                        <div class="">
+                            <h3 style="color: #000000">Create an Account</h3>
                         </div>
-                        <div class="form-group col-6">
-                            <p><label for="lastname">Lastname</label></p>
-                            {{ form_widget(registrationForm.lastname) }}
-                        </div>
-                    </div>
-
-                    <div class="col-12 d-flex align-item-center justify-content-center">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <p><label for="username">Username</label></p>
-                                {{ form_widget(registrationForm.username) }}
+                        {{ form_start(registrationForm) }}
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <div class="form-group col-6">
+                                <p><label class="register-label" for="firstname">Firstname</label></p>
+                                {{ form_widget(registrationForm.firstname) }}
+                            </div>
+                            <div class="form-group col-6">
+                                <p><label for="lastname">Lastname</label></p>
+                                {{ form_widget(registrationForm.lastname) }}
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <p><label for="email">Email</label></p>
-                                {{ form_widget(registrationForm.email) }}
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 d-flex align-item-center justify-content-center">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <p><label for="password">Password</label></p>
-                                {{ form_widget(registrationForm.password) }}
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <p><label for="passwordRepeat">Confirm Password</label></p>
-                                {{ form_widget(registrationForm.plainPassword, {
-                                    label: 'Password'
-                                }) }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-t-lg">
-                        <ul class="list-inline">
-                            <div class="col-12 d-flex align-items-center justify-content-center">
-                                <div class="col-6 d-flex align-items-center justify-content-center">
-                                    <input class="btn btn--form" type="submit" value="Register"/>
-                                </div>
-                                <div class="col-6 d-flex align-items-center justify-content-center">
-                                    <input class="btn btn--form" type="reset" value="Reset"/>
+                        <div class="col-12 d-flex align-item-center justify-content-center">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p><label for="username">Username</label></p>
+                                    {{ form_widget(registrationForm.username) }}
                                 </div>
                             </div>
-                        </ul>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p><label for="email">Email</label></p>
+                                    {{ form_widget(registrationForm.email) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex align-item-center justify-content-center">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p><label for="password">Password</label></p>
+                                    {{ form_widget(registrationForm.password) }}
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <p><label for="passwordRepeat">Confirm Password</label></p>
+                                    {{ form_widget(registrationForm.plainPassword, {
+                                        label: 'Password'
+                                    }) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-t-lg">
+                            <ul class="list-inline">
+                                <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <div class="col-6 d-flex align-items-center justify-content-center">
+                                        <input class="btn btn--form" type="submit" value="Register"/>
+                                    </div>
+                                    <div class="col-6 d-flex align-items-center justify-content-center">
+                                        <input class="btn btn--form" type="reset" value="Reset"/>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        {{ form_end(registrationForm) }}
                     </div>
-                    {{ form_end(registrationForm) }}
                     <div class="d-flex align-items-center justify-content-center">
-                        <p><a style="color: #000000" class="signup__link" href="{{ path('app_login') }}">I am already a member</a></p>
+                        <p><a style="color: #000000" class="signup__link" href="{{ path('app_login') }}">Already Member ?</a></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
 {% endblock %}
