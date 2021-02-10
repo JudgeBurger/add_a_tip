@@ -28,12 +28,12 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Add Tip - Administrator Area');
+            ->setTitle('ADD TIP');
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::section('Profils');
+        yield MenuItem::section('Profiles');
         yield MenuItem::linkToCrud('Administrators', 'fa fa-user', User::class)
             ->setController(AdminCrudController::class);
         yield MenuItem::linkToCrud('Users', 'fa fa-users', User::class)

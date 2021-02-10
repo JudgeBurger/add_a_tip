@@ -19,7 +19,7 @@
 
             <a class="nav-link-href" href="#">Contact</a>
 
-            {% if app.user and app.user.roles.0 is same as 'ROLE_ADMIN' %}
+            {% if is_granted('ROLE_ADMIN') %}
                 <a class="nav-link-href" href="{{ path('dashboard') }}">Admin</a>
             {% endif %}
 
