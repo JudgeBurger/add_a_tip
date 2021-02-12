@@ -86,6 +86,8 @@ bin/console make:migrations
 bin/console doctrine:migration:migrate
 ```
 
+Configure DNS in .env.local
+
 ## Before each Commit :
 
 ```

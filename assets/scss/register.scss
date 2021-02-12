@@ -5,13 +5,13 @@
 }
 
 .register-form {
-    background-color: $light-color;
+    background-color: $navbar-color;
     margin-top: 250px;
     border-radius: $border;
 }
 
 .register a:hover {
-  color: $dark-color;
+  color: $button-color;
 }
 
 input {

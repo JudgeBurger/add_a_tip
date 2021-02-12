@@ -47,7 +47,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="array", length=255)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -142,7 +142,7 @@ class User implements UserInterface
 
     public function __construct()
     {
-        $this->roles = [];
+        $this->addRole('ROLE_USER');
         $this->companies = new ArrayCollection();
         $this->tips = new ArrayCollection();
     }

@@ -5,14 +5,14 @@
 {% block body %}
 
     <div class="d-flex justify-content-end mx-3 m-0">
-        <h3 style="color: #000000">Welcome back, {{ app.user.firstname }} !</h3>
+        <h3>Welcome back, {{ app.user.firstname }} !</h3>
     </div>
 
     <div class="container">
         <div class="f-card align-items-center justify-content-center">
             <div class="d-flex align-items-center justify-content-center">
 
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addATip">
+                <button type="button" class="btn" data-toggle="modal" data-target="#addATip">
                     Do you want to add a tip ?
                 </button>
 
@@ -27,9 +27,9 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 {% for message in app.flashes('success') %}
-                                <div class="alert-alert success">
-                                    {{ message }}
-                                </div>
+                                    <div class="alert-alert success">
+                                        {{ message }}
+                                    </div>
                                 {% endfor %}
                             </div>
                             <div class="modal-body">
@@ -47,11 +47,11 @@
                             </div>
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="col-12 modal-footer d-flex align-items-center justify-content-center">
-                                    <button type="button" class="col-3 btn btn-primary mx-3">
-                                        {{ button_label|default('Enregistrer') }}
+                                    <button type="button" class="col-3 btn mx-3">
+                                        {{ button_label|default('Save') }}
                                     </button>
-                                    <button type="reset" class=" col-3 btn btn-primary btn-xs">
-                                        Réinitialiser
+                                    <button type="reset" class="col-3 btn btn-xs">
+                                        Reset
                                     </button>
                                 </div>
                             </div>
@@ -60,6 +60,7 @@
                 </div>
             </div>
         </div>
+
         {% for tip in tips %}
             <div class="f-card mt-5">
                 <div class="header">
@@ -72,14 +73,13 @@
                         <img class="reference-thumb" src="{{ asset('build/code_img.jpg') }}" alt="{{ tip.name }}"/>
                         {% if tip.code is not empty %}
                             <div class="reference-subtitle block-code mt-3">
-                                <code id="tip-{{ tip.id }}-code">
+                                <div class="code" id="tip-{{ tip.id }}-code">
                                     {{ tip.code }}
-                                </code>
+                                </div>
                             </div>
-                            <div class="header d-flex justify-content-end mt-2">
-                                <button class="badge badge-light" id="copy-button"
-                                        data-clipboard-target="#tip-{{ tip.id }}-code">
-                                    Copy Code
+                            <div class="header d-flex align-items-end justify-content-end mt-2">
+                                <button class="col-3 btn copy-button" data-clipboard-target="#tip-{{ tip.id }}-code">
+                                    Copy
                                 </button>
                             </div>
                         {% endif %}
@@ -103,15 +103,23 @@
         {% endfor %}
     </div>
 
-    <script>function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    <script>
+
+        function enableCopyButtons(copyButtons) {
+            for (let i = 0; i < copyButtons.length; i++) {
+                copyButtons[i].addEventListener('click', (e) => {
+                    e.target.textContent = "Copied !";
+                }, false)
+            }
         }
 
-        //Get the button:
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
         window.onload = () => {
             mybutton = document.getElementById("myBtn");
-// When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function () {
                 scrollFunction()
             };
@@ -124,10 +132,17 @@
                 }
             }
         }
+
+        const copyButtons = document.getElementsByClassName('copy-button');
+        enableCopyButtons(copyButtons);
     </script>
 
     <button onclick="topFunction()" id="myBtn" title="Back to top">
         <i class="fas fa-angle-up"></i>
     </button>
+
+    <div class="d-flex align-items-center justify-content-center">
+        Created by Damien with <i class="fa fa-heart ml-2"></i>
+    </div>
 
 {% endblock %}

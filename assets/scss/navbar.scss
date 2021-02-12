@@ -11,34 +11,35 @@ a {
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  color: $light-color;
+  color: $text-color;
 
   & a:hover {
-    background-color: $light-color;
-    color: $light-color;
+    background-color: $background-color;
+    color: $button-color;
     transition: 0.5s;
     border-radius: 4px;
   }
 }
 
 .navbar {
-  background-color: $nav-color;
+  background-color: $navbar-color;
 }
 
 .home_logo {
   max-width: 100px;
-  color: $light-color;
+  color: $text-color;
 }
 
 .nav-link-href {
+  font-size: $size-navbar-text;
   border-radius: 4px;
-  color: $light-color;
+  color: $text-color;
   margin: 1rem;
   padding: 7px;
 }
 
 .nav-item {
-  color: $light-color;
+  color: $text-color;
 }
 
 .collapse {
@@ -47,6 +48,7 @@ a {
 }
 
 .navbar-nav {
+  background-color: $navbar-color;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

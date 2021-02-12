@@ -4,11 +4,6 @@
   background: none;
 }
 
-.linkToHome:hover {
-  text-decoration: none;
-  color: $svg-color;
-}
-
 .main-content{
   width: 50%;
   border-radius: 20px;
@@ -17,13 +12,13 @@
   display: flex;
 }
 .company__info{
-  background-color: $svg-color;
+  background-color: $navbar-color;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: $text-color;
 }
 .fa-android{
   font-size:3em;
@@ -68,19 +63,4 @@ form{
   border-bottom-color: #008080;
   box-shadow: 0 0 5px rgba(0,80,80,.4);
   border-radius: 4px;
-}
-.btn{
-  transition: all .5s ease;
-  width: 70%;
-  border-radius: 30px;
-  color:#008080;
-  font-weight: 600;
-  background-color: #fff;
-  border: 1px solid #008080;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-}
-.btn:hover, .btn:focus{
-  background-color: $nav-color;
-  color:#fff;
 }

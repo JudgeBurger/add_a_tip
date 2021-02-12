@@ -7,6 +7,7 @@
 @import "navbar";
 @import "login";
 @import "register";
+@import "home";
 
 html {
     scroll-behavior: smooth;
@@ -16,86 +17,72 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $nav-color;
+    color: $text-color;
 }
 
 body {
-    background-color: $svg-color;
+    background-color: $background-color;
     margin-top: 150px;
 }
 
 h1  {
-    text-align: start;
-    color: $dark-color;
+    color: $text-color;
+    font-family: $font-title;
     font-size: $size-title;
+    text-align: start;
 }
 
 h2 {
-    color: $svg-color;
+    color: $text-color;
+    font-family: $font-nav-title;
+    font-size: 3rem;
+    text-align: center;
 }
 
 h3 {
+    color: $navbar-color;
     font-family: $font-nav-title;
     font-size: 3rem;
-    color: $light-color;
 }
 
 h4 {
-    color: $svg-color;
+    color: $text-color;
 }
 
 p {
-    color: $svg-color;
+    font-size: $size-text;
+    color: $navbar-color;
 }
 
 a {
+    font-size: $size-text;
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
-        color: $dark-color;
-        background-color: $light-color;
+        color: $text-color;
+        background-color: $button-color;
     }
 }
 
 .home-title, .tips-title {
-    color: $dark-color;
+    color: $background-color;
     font-size: 2rem;
 }
 
 .login-wrapper {
-    background-color: $svg-color;
+    background-color: $background-color;
     border-radius: 4px;
     box-shadow: 4px 4px 4px;
 }
 
 @media screen and (max-width: 992px){
     .navbar {
-        background-color: $dark-color;
-        color: $dark-color;
+        background-color: $navbar-color;
+        color: $text-color;
     }
 
     .navbar-toggler-icon, .navbar-toggler {
-        background-color: $light-color;
+        background-color: $navbar-color;
     }
-}
-
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 60px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: $nav-color;
-    color: $light-color;
-    cursor: pointer;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
-#myBtn:hover {
-    background-color: $light-color;
 }

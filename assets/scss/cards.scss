@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #e9ebee;
+  background-color: $navbar-color;
 }
 
 .name {
@@ -19,12 +19,12 @@ body {
 .block-code {
   text-align: center;
   display: block;
-  color: $svg-color;
-  background: $nav-color;
+  color: $text-color;
+  background: $background-color;
   border-radius: 4px;
   width: 100%;
   padding: 30px;
-  box-shadow: 0 0 8px $dark-color;
+  box-shadow: $shadow;
 }
 
 img {
@@ -59,7 +59,7 @@ img {
   font-size: $size-navbar-text;
   font-weight: bold;
   line-height: 1.38;
-  color: $dark-color;
+  color: $background-color;
   text-decoration: none;
   margin-bottom: 2px;
 }

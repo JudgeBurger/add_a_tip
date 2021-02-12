@@ -33,7 +33,6 @@ class TipsType extends AbstractType
             ->add('description', TextareaType::class, [
                 'attr' => [
                     'rows' => '5',
-                    'cols' => '75',
                     'placeholder' => 'Fixtures can be used to create false data for...',
                 ],
             ])
