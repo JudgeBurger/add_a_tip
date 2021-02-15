@@ -34,12 +34,11 @@
                             </div>
                             <div class="modal-body">
                                 {{ form_start(form) }}
-                                <h6>Name : </h6>
-                                <p>{{ form_widget(form.name) }}</p>
-                                <h6>Picture : </h6>
-                                <p>{{ form_widget(form.picture) }}</p>
-                                <h6>Code : </h6>
-                                <p>{{ form_widget(form.code) }}</p>
+                                <div class="col-12 align-items-center justify-content-center">
+                                    <p>{{ form_row(form.name, { 'label': 'Name'}) }}</p>
+                                </div>
+                                <p>{{ form_row(form.picture, {'label': 'Picture'}) }}</p>
+                                <p>{{ form_row(form.code, {'label': 'Code'}) }}</p>
                                 <h6>Languages : </h6>
                                 <p>{{ form_widget(form.languages) }}</p>
                                 <h6>Description : </h6>
@@ -65,10 +64,13 @@
             <div class="f-card mt-5">
                 <div class="header">
                     <img class="co-logo" src="http://placehold.it/40x40"/>
-                    <div class="co-name"><a href="#">{{ tip.author.firstname ~ " " ~ tip.author.lastname }}</a>
+                    <div class="co-name">{{ tip.author.firstname ~ " " ~ tip.author.lastname }}
                     </div>
                     <div class="time">{{ tip.datetime|date("d/m/y h:m") }}</div>
-                    <h1 class="mt-3">{{ tip.name }}</h1>
+                    <h1 class="mt-3">
+                        <a class="link-title" href="{{ path('tips_show', {'id': tip.id}) }}">
+                            {{ tip.name }}
+                    </h1>
                     <div class="reference my-3">
                         <img class="reference-thumb" src="{{ asset('build/code_img.jpg') }}" alt="{{ tip.name }}"/>
                         {% if tip.code is not empty %}

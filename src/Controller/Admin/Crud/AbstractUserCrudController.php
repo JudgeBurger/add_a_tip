@@ -121,7 +121,6 @@ abstract class AbstractUserCrudController extends AbstractCrudController
             yield $lastnameField;
             yield $usernameField;
 
-
             // Account informations panel
             yield $accountInformationsPanel;
             yield $emailField;
