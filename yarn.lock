@@ -1649,6 +1649,11 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+button@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/button/-/button-1.1.1.tgz#f6b9a30b473d0144f174ac379b821daaa93568f5"
+  integrity sha1-9rmjC0c9AUTxdKw3m4Idqqk1aPU=
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"

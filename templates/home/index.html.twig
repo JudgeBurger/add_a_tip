@@ -4,51 +4,54 @@
 
 {% block body %}
 
-    <div class="intro col-12 mt-5 mb-5">
-        <h1>Welcome to you dear user,</h1>
-
-        <h2>I'm sure I'm sure you're wondering what this new site can be? So what is <u>Add Tip</u> ?</h2>
-        <h4>Add tip is more than a reminder.
-            With Add Tip you can add tips and tricks about your projects, you can also discuss around your tips or tips
-            from
-            other users.
-            Thanks to a simple system of Cards, Add Tip helps you never forget what you need. A piece of code, a tip for
-            a
-            current or upcoming project, you can count on Add Tip to store your tips and tricks.
-            You will now discover how your new best friend works.</h4>
-    </div>
-
     <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="col-6 justify-content-center">
-                <h4>
-                    First, you should create your own personal space in order to access to the tips.
-                </h4>
-                <div class="d-flex justify-content-center align-items-center mt-5">
-                    <video controls width="500" autoplay>
 
-                        <source src="{{ asset('build/.webm') }}"
-                                type="video/webm">
+        <h1>Hi all,</h1>
 
-                        Sorry, your browser doesn't support embedded videos.
-                    </video>
-                </div>
+        <p>
+            I am Damien, the creator of <strong><u>ADD TIP</u></strong>. Before presenting the concept to you, allow me to tell you about my
+            career.
+        </p>
+
+        <p> I worked in logistics for 10 years before embarking on a professional reconversion.</p>
+
+        <p>During my five-month training at the Wild Code School, I realised that it was complicated to retain all
+            <strong>informations</strong> in such short time.</p>
+
+        <p>That's when the idea of ADD TIP started to grow in my mind.</p>
+
+        <p>But what exactly is ADD TIP?</p>
+
+        <figure >
+            <blockquote cite="">
+                <p>Knowledge is the key to power, to wisdom.</p>
+            </blockquote>
+            <div class="d-flex align-items-end justify-content-end">
+                <div class="quote">—Confucius, <cite class="quote">Unkown Source</cite></div>
             </div>
+        </figure>
 
-            <div class="col-6">
-                <h4>
-                    After creating your personal space, you just need to log in using the login form.
-                </h4>
-                <div class="d-flex align-items-center justify-content-center mt-5">
-                    <video controls width="500" autoplay>
+        <p>If our brain's storage capacity is about 1 petabyte, <strong>accessing this data</strong> can sometimes be tedious.</p>
 
-                        <source src="{{ asset('build/login.webm') }}"
-                                type="video/webm">
+        <p>It allows you to record code extracts that can be quickly retrieved for <strong>use</strong>, <strong>improvement</strong> or simply
+            <strong>sharing</strong>.</p>
 
-                        Sorry, your browser doesn't support embedded videos.
-                    </video>
-                </div>
-            </div>
+        <p>As a <u>"social network"</u>, ADD TIP will quickly become <u>indispensable</u>.</p>
+
+        <p>Are you ready?</p>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <button class="btn">
+                <a href="{{ path('app_register') }}">
+                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-arrow-right"></i>
+                    Here We Go
+                    <i class="fa fa-arrow-left"></i>
+                    <i class="fa fa-arrow-left"></i>
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </button>
         </div>
     </div>
 {% endblock %}

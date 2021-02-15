@@ -3,20 +3,18 @@
 
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
-$nav-color: rgba(0,0,0,0.7);
-$card: #55A090;
-$background: #103856;
-$svg-color: #E5DBD4;
-$light-color: #fff;
-$dark-color: #000;
-$primary: #BBCED7;
-$danger: #965D5C;
-$info: #BDC649;
+// Website Color
+$navbar-color: #ECECED;
+$button-color: #FFEA30;
+$background-color: #1F2128;
+$text-color: #768991;
 
+// Font Family
 $font-text: 'Zilla Slab', serif;
 $font-title: 'Grandstander', cursive;
 $font-nav-title: 'Permanent Marker', cursive;
 
+// Size Text
 $size-text: calc(16px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
 $size-quote:18px;
 $size-footer-text: 10px;
@@ -24,20 +22,17 @@ $size-navbar-text: 18px;
 $size-intermediate :calc(2.5 * var($size-text));
 $size-title: calc(3 * var($size-text));
 
+// Size Padding
 $padding : 20px;
 $padding-sm : calc(var($padding) *2);
 $padding-lg : calc(var($padding) *4);
 
+// Size Margin
 $margin: 20px;
 $margin-sm : calc(var($margin) *2);
 $margin-lg : calc(var($margin) *4);
 
+// Other properties
 $circle : 50%;
 $border: 5px;
 $shadow: 3px 3px 3px;
-
-$theme-colors: (
-    "primary": $nav-color,
-    "danger": $danger,
-    "info": $info,
-);
