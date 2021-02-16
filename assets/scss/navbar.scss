@@ -22,7 +22,7 @@ a {
 }
 
 .navbar {
-  background-color: $navbar-color;
+  background-color: $background-color;
 }
 
 .home_logo {
@@ -48,7 +48,7 @@ a {
 }
 
 .navbar-nav {
-  background-color: $navbar-color;
+  background-color: $background-color;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

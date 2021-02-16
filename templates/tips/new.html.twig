@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Tips{% endblock %}
+
+{% block body %}
+    <h1>Create new Tips</h1>
+
+    {{ include('tips/_form.html.twig') }}
+
+    <div class="col-6 d-flex align-items-center justify-content-center">
+        <button class="col-6 btn">
+            <a href="{{ path('tips_index') }}">Back</a>
+        </button>
+    </div>
+
+{% endblock %}

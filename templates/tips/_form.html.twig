@@ -12,8 +12,8 @@
                 <div class="row p-0 m-0">
                     <div class="col">
                         <div class="label_tip form-group d-flex flex-column justify-content-center my-3 col-md-12">
-                            <legend>Nom</legend>
-                            {{ form_widget(form.name, {'attr': {'placeholder': 'Créer des fixtures'}}) }}
+                            <legend>Name</legend>
+                            {{ form_widget(form.name, {'attr': {'placeholder': 'Create fixture'}}) }}
                             {% if form.name.vars.errors is not empty %}
                                 <div class="mt-2 text-left alert alert-danger">
                                     {{ form_errors(form.name) }}
@@ -23,8 +23,8 @@
                     </div>
                     <div class="col">
                         <div class="label_tip form-group d-flex flex-column my-3 col-md-12 align-items-center">
-                            <legend>Image</legend>
-                            {{ form_widget(form.picture,{'attr': {'class': 'mx-lg-3 w-100', 'placeholder': 'Choisissez une image'}}) }}
+                            <legend>Picture</legend>
+                            {{ form_widget(form.picture,{'attr': {'class': 'mx-lg-3 w-100', 'placeholder': 'Choose a picture'}}) }}
                             {% if form.picture.vars.errors is not empty %}
                                 <div class="mt-2 text-left alert alert-danger w-100">
                                     {{ form_errors(form.picture) }}
@@ -46,7 +46,7 @@
                     </div>
                     <div class="d-flex flex-lg-row flex-column col-md-3 p-0 justify-content-center">
                         <div class="select-language label_tip form-group d-flex flex-column my-3 col-md-10">
-                            <legend>Langage</legend>
+                            <legend>Language</legend>
                             {{ form_widget(form.languages, {'attr': {'class': 'select-language'}}) }}
                             {% if form.languages.vars.errors is not empty %}
                                 <div class="mt-2 text-left alert alert-danger">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="label_tip form-group d-flex flex-column my-3 col-lg-9 text-truncate">
                         <legend>Description</legend>
-                        {{ form_widget(form.description, {'attr': {'class': 'text-truncate'}}) }}
+                        {{ form_widget(form.description, {'attr': {'placeholder': 'In order to ...'}}) }}
                         {% if form.description.vars.errors is not empty %}
                             <div class="mt-2 text-left alert alert-danger">
                                 {{ form_errors(form.description | nl2br) }}
@@ -66,11 +66,11 @@
                     </div>
                 </div>
                 <div class="btn-group d-flex justify-content-center mt-3 mb-3">
-                    <a class="card-button mr-5 btn-info" href="{{ path('tips_index') }}">Retour</a>
-                    <button class="card-button btn-info mr-5">
-                        {{ button_label|default('Enregistrer') }}
+                    <a class="card-button mr-5 btn" href="{{ path('tips_index') }}">Retour</a>
+                    <button class="card-button btn mr-5">
+                        {{ button_label|default('save') }}
                     </button>
-                    <button type="reset" class="btn-info card-button">Réinitialiser</button>
+                    <button type="reset" class="btn card-button">Reset</button>
                 </div>
             </form>
 

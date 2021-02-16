@@ -22,7 +22,7 @@ html {
 
 body {
     background-color: $background-color;
-    margin-top: 150px;
+    //margin-top: 150px;
 }
 
 h1  {
@@ -78,7 +78,7 @@ a {
 
 @media screen and (max-width: 992px){
     .navbar {
-        background-color: $navbar-color;
+        background-color: $background-color;
         color: $text-color;
     }
 

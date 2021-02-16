@@ -4,61 +4,18 @@
 
 {% block body %}
 
-    <div class="d-flex justify-content-end mx-3 m-0">
-        <h3>Welcome back, {{ app.user.firstname }} !</h3>
-    </div>
+--> Transform in message Flash
+{#    <div class="d-flex justify-content-end mx-3 m-0">#}
+{#        <h3>Welcome back, {{ app.user.firstname }} !</h3>#}
+{#    </div>#}
 
     <div class="container">
-        <div class="f-card align-items-center justify-content-center">
-            <div class="d-flex align-items-center justify-content-center">
+{#        <div class="f-card align-items-center justify-content-center">#}
+{#            <div class="d-flex align-items-center justify-content-center">#}
 
-                <button type="button" class="btn" data-toggle="modal" data-target="#addATip">
-                    Do you want to add a tip ?
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="addATip" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Something not to forget...?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                {% for message in app.flashes('success') %}
-                                    <div class="alert-alert success">
-                                        {{ message }}
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <div class="modal-body">
-                                {{ form_start(form) }}
-                                <div class="col-12 align-items-center justify-content-center">
-                                    <p>{{ form_row(form.name, { 'label': 'Name'}) }}</p>
-                                </div>
-                                <p>{{ form_row(form.picture, {'label': 'Picture'}) }}</p>
-                                <p>{{ form_row(form.code, {'label': 'Code'}) }}</p>
-                                <h6>Languages : </h6>
-                                <p>{{ form_widget(form.languages) }}</p>
-                                <h6>Description : </h6>
-                                <p>{{ form_widget(form.description) }}</p>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <div class="col-12 modal-footer d-flex align-items-center justify-content-center">
-                                    <button type="button" class="col-3 btn mx-3">
-                                        {{ button_label|default('Save') }}
-                                    </button>
-                                    <button type="reset" class="col-3 btn btn-xs">
-                                        Reset
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{#               #}
+{#            </div>#}
+{#        </div>#}
 
         {% for tip in tips %}
             <div class="f-card mt-5">
@@ -100,7 +57,9 @@
             </div>
         {% else %}
             <div class="text-center">
-                Erreur 404 - Tip not Found
+                <h2>
+                    Tip not Found
+                </h2>
             </div>
         {% endfor %}
     </div>
@@ -110,7 +69,7 @@
         function enableCopyButtons(copyButtons) {
             for (let i = 0; i < copyButtons.length; i++) {
                 copyButtons[i].addEventListener('click', (e) => {
-                    e.target.textContent = "Copied !";
+                    e.target.textContent = "Copied";
                 }, false)
             }
         }

@@ -22,23 +22,32 @@ class TipsController extends AbstractController
      */
     public function index(TipsRepository $tipsRepository, Request $request): Response
     {
-        $tips = new Tips();
-        $form = $this->createForm(TipsType::class, $tips);
+        return $this->render('tips/index.html.twig', [
+            'tips' => $tipsRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/new", name="tips_new", methods={"GET","POST"})
+     */
+    public function new(Request $request): Response
+    {
+        $tip = new Tips();
+        $form = $this->createForm(TipsType::class, $tip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('success', 'Tips Created! Knowledge is power');
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($tips);
+            $entityManager->persist($tip);
             $entityManager->flush();
 
             return $this->redirectToRoute('tips_index');
         }
 
-        return $this->render('tips/index.html.twig', [
-            'tips' => $tipsRepository->findAll(),
+        return $this->render('tips/new.html.twig', [
+            'tip' => $tip,
             'form' => $form->createView(),
-            ]);
+        ]);
     }
 
     /**
